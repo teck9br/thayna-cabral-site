@@ -15,7 +15,8 @@ Site do escritório da Dra. Thayná Cabral (OAB/RN 21.175), Natal-RN. Objetivo: 
 
 ## Deploy
 - GitHub: `github.com/teck9br/thayna-cabral-site` (público), branch `main`. Cada push publica o site no Render (static site configurado por `render.yaml`, pasta `site/`).
-- DNS no Registro.br (zona do Registro.br): `A @ 216.24.57.1` e `CNAME www → <serviço>.onrender.com`. O Render emite o SSL sozinho.
+- Render: static site `thayna-cabral-site` (Blueprint "Thaynacabral"), endereço provisório `https://thayna-cabral-site.onrender.com` (no ar desde 23/10/2026).
+- DNS no Registro.br (modo avançado, ativação pedida em 23/10/2026): `A @ 216.24.57.1`, `CNAME www → thayna-cabral-site.onrender.com` e `TXT @ google-site-verification=HrPEgTZx_IGTNxAe20ctzdMsP6YPwVJAE9x7Yb5ywx0` (Search Console, propriedade de domínio). O Render emite o SSL sozinho depois do Verify.
 - Fluxo: editar → `PYTHONUTF8=1 python build.py` → commit → push.
 
 ## Dados (usar sempre iguais)
