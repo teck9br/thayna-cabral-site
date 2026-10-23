@@ -1,0 +1,31 @@
+> **Responda sempre em português do Brasil.**
+
+# Thayná Cabral Advocacia — site
+
+Site do escritório da Dra. Thayná Cabral (OAB/RN 21.175), Natal-RN. Objetivo: atrair clientes pelo WhatsApp e ranquear para buscas locais ("advogada previdenciária Natal", "BPC/LOAS Natal"…). Prioridade das áreas: 1º Previdenciário, 2º Trabalhista, 3º Cível. Modelo de referência: site da Antecipay (`../antecipay-claude-code`).
+
+## Estrutura
+- `site/` — o site publicável (HTML estático, sem framework).
+  - `index.html` — home, **editada à mão**. É a fonte do CSS (`<style>`), do sprite de ícones SVG e do cabeçalho usados pelas outras páginas. JSON-LD: LegalService + Person (OAB) + WebSite + FAQPage (estático; ao mudar o FAQ da home, atualize o bloco `faq-ld`).
+  - O rodapé da home fica entre `<!-- FOOTER -->` e `<!-- /FOOTER -->` e é **gerado** pelo `build.py`: não edite à mão.
+  - `assets/fonts/` (Cormorant Garamond e Plus Jakarta Sans, woff2 variável, hospedadas no site; não usar Google Fonts), `assets/img/` (WebP + PNG/JPG), favicons, `og.jpg` (1200x630).
+- `build.py` — **gerador** das páginas de serviço (`site/<slug>/index.html`), do rodapé da home, do `sitemap.xml` e da seção "Páginas" do `llms.txt`. Rode `PYTHONUTF8=1 python build.py` depois de editar `index.html` ou `build.py`. Para nova página: acrescente um `dict` em `PAGES` (slug, crumb, title, desc, eyebrow, h1, lead, wa, secoes, faq, rel). O build falha se title > 60, description fora de 120–160, mais de um H1 ou < 3 links internos.
+- `gerar_favicon.py` — gera `favicon.ico` (16–64), `favicon-192.png`, `logo-512.png` e `apple-touch-icon.png` a partir do símbolo, com o traço engrossado para ficar legível em 16/32px (o traço original é fino demais e some na aba). Ao regerar, suba o `?v=` dos links de favicon na home, na privacidade e no `build.py`.
+- `Thayna Cabral Advocacia*.dc.html`, `support.js`, `image-slot.js` — arquivos do design original (ferramenta de design). Não são publicados.
+
+## Dados (usar sempre iguais)
+- Dra. Thayná Cabral · OAB/RN 21.175 · WhatsApp (84) 99701-0660 (`5584997010660`)
+- Natal-RN; atendimento presencial com hora marcada e online em todo o Brasil.
+- Domínio: `https://thaynacabraladvocacia.com.br` (registrado no Registro.br em 23/10/2026; constante `BASE` no `build.py` + home, robots, sitemap, llms.txt, privacidade).
+- **Sem e-mail no site** (decisão de 23/10/2026): o domínio não tem caixa de e-mail (sem MX). Quando criar `contato@thaynacabraladvocacia.com.br`, preencha `EMAIL` no `build.py` (o rodapé volta a mostrar) e recoloque em `email` no JSON-LD da home, na privacidade e no llms.txt. Endereço completo ainda não informado.
+
+## Regras de conteúdo
+- Publicidade da advocacia: Provimento 205/2021 do CFOAB. Conteúdo informativo; não prometer resultado, não usar depoimentos de clientes, não usar "especialista" sem título, evitar autoelogio e linguagem de venda.
+- Linguagem simples, sem juridiquês. Fatos jurídicos conferidos e datados (as regras de transição mudam todo ano: revisar a tabela em `aposentadoria-natal` em janeiro).
+- Microsoft Clarity: o evento `whatsapp_click` já é disparado em todo `[data-wa]`; falta instalar o script com o ID próprio do site.
+
+## Pendências
+- Criar o e-mail do domínio; informar endereço; criar Google Meu Negócio; Search Console; perfis sociais.
+- Páginas (23/10/2026): 5 do Previdenciário, 6 do Trabalhista e 5 do Cível, cada área com página-mãe (`AREAS` em `build.py`). A Dra. Thayná ainda precisa revisar os fatos jurídicos antes de publicar.
+- Próximas ideias: blog com artigos (como o da Antecipay), páginas por cidade do RN (Parnamirim, Mossoró, São Gonçalo do Amarante), indenização por danos morais.
+- No site da Antecipay, preencher OAB/foto em `AUTORA` (build_blog.py) e linkar para este site.

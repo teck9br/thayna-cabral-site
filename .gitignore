@@ -1,0 +1,8 @@
+# arquivos do design original (ferramenta de design): não são publicados
+*.dc.html
+Thayna Cabral Advocacia.html
+support.js
+image-slot.js
+.thumbnail
+uploads/
+__pycache__/
