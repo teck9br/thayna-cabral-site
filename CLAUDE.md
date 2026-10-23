@@ -13,6 +13,11 @@ Site do escritório da Dra. Thayná Cabral (OAB/RN 21.175), Natal-RN. Objetivo: 
 - `gerar_favicon.py` — gera `favicon.ico` (16–64), `favicon-192.png`, `logo-512.png` e `apple-touch-icon.png` a partir do símbolo, com o traço engrossado para ficar legível em 16/32px (o traço original é fino demais e some na aba). Ao regerar, suba o `?v=` dos links de favicon na home, na privacidade e no `build.py`.
 - `Thayna Cabral Advocacia*.dc.html`, `support.js`, `image-slot.js` — arquivos do design original (ferramenta de design). Não são publicados.
 
+## Deploy
+- GitHub: `github.com/teck9br/thayna-cabral-site` (público), branch `main`. Cada push publica o site no Render (static site configurado por `render.yaml`, pasta `site/`).
+- DNS no Registro.br (zona do Registro.br): `A @ 216.24.57.1` e `CNAME www → <serviço>.onrender.com`. O Render emite o SSL sozinho.
+- Fluxo: editar → `PYTHONUTF8=1 python build.py` → commit → push.
+
 ## Dados (usar sempre iguais)
 - Dra. Thayná Cabral · OAB/RN 21.175 · WhatsApp (84) 99701-0660 (`5584997010660`)
 - Natal-RN; atendimento presencial com hora marcada e online em todo o Brasil.

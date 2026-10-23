@@ -13,6 +13,5 @@ services:
       - path: /*
         name: X-Content-Type-Options
         value: nosniff
-    domains:
+    domains:  # o Render cria o www com redirecionamento para o domínio principal
       - thaynacabraladvocacia.com.br
-      - www.thaynacabraladvocacia.com.br
