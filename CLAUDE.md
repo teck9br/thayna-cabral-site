@@ -16,8 +16,8 @@ Site do escritório da Dra. Thayná Cabral (OAB/RN 21.175), Natal-RN. Objetivo: 
 ## Deploy
 - GitHub: `github.com/teck9br/thayna-cabral-site` (público), branch `main`. Cada push publica o site no Render (static site configurado por `render.yaml`, pasta `site/`).
 - Render: static site `thayna-cabral-site` (Blueprint "Thaynacabral"), endereço provisório `https://thayna-cabral-site.onrender.com` (no ar desde 23/10/2026).
-- DNS no Registro.br (modo avançado, ativação pedida em 23/10/2026): `A @ 216.24.57.1`, `CNAME www → thayna-cabral-site.onrender.com` e `TXT @ google-site-verification=HrPEgTZx_IGTNxAe20ctzdMsP6YPwVJAE9x7Yb5ywx0` (Search Console, propriedade de domínio). O Render emite o SSL sozinho depois do Verify.
-- Fluxo: editar → `PYTHONUTF8=1 python build.py` → commit → push.
+- DNS no Registro.br (modo avançado, ativo desde 23/10/2026; domínio no ar com HTTPS, `www` e `http` redirecionam para `https://thaynacabraladvocacia.com.br`): `A @ 216.24.57.1`, `CNAME www → thayna-cabral-site.onrender.com` e `TXT @ google-site-verification=HrPEgTZx_IGTNxAe20ctzdMsP6YPwVJAE9x7Yb5ywx0` (Search Console, propriedade de domínio). O Render emite o SSL sozinho depois do Verify.
+- Fluxo: editar → `PYTHONUTF8=1 python build.py` → commit → push → (após ~1 min) `PYTHONUTF8=1 python indexnow.py aposentadoria-natal/` com as páginas alteradas, ou sem argumentos para o sitemap inteiro. A chave fica em `site/f4ac0f0384f532e08a1b1117c2c64527.txt`.
 
 ## Dados (usar sempre iguais)
 - Dra. Thayná Cabral · OAB/RN 21.175 · WhatsApp (84) 99701-0660 (`5584997010660`)
@@ -31,7 +31,6 @@ Site do escritório da Dra. Thayná Cabral (OAB/RN 21.175), Natal-RN. Objetivo: 
 - Microsoft Clarity: o evento `whatsapp_click` já é disparado em todo `[data-wa]`; falta instalar o script com o ID próprio do site.
 
 ## Pendências
-- Criar o e-mail do domínio; informar endereço; criar Google Meu Negócio; Search Console; perfis sociais.
+- Criar o e-mail do domínio; informar endereço; criar Google Meu Negócio; enviar o sitemap no Search Console; perfis sociais.
 - Páginas (23/10/2026): 5 do Previdenciário, 6 do Trabalhista e 5 do Cível, cada área com página-mãe (`AREAS` em `build.py`). A Dra. Thayná ainda precisa revisar os fatos jurídicos antes de publicar.
 - Próximas ideias: blog com artigos (como o da Antecipay), páginas por cidade do RN (Parnamirim, Mossoró, São Gonçalo do Amarante), indenização por danos morais.
-- No site da Antecipay, preencher OAB/foto em `AUTORA` (build_blog.py) e linkar para este site.
