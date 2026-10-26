@@ -33,6 +33,7 @@ Site do escritório da Dra. Thayná Cabral (OAB/RN 21.175), Natal-RN. Objetivo: 
 - Microsoft Clarity: o evento `whatsapp_click` já é disparado em todo `[data-wa]`; falta instalar o script com o ID próprio do site.
 
 ## Pendências
-- Criar o e-mail do domínio; informar endereço; criar Google Meu Negócio; enviar o sitemap no Search Console; perfis sociais.
+- Criar o e-mail do domínio; informar endereço; criar Google Meu Negócio; perfis sociais.
+- Search Console: sitemap enviado em 26/10/2026 e indexação pedida para home, previdenciária, BPC, aposentadoria, trabalhista, danos morais e nome negativado (limite de ~10 pedidos por dia).
 - Páginas (26/10/2026): 5 do Previdenciário, 6 do Trabalhista e 7 do Cível (danos morais e nome negativado entraram pelas sugestões do Ubersuggest), cada área com página-mãe (`AREAS` em `build.py`). A Dra. Thayná ainda precisa revisar os fatos jurídicos antes de publicar.
 - Próximas ideias: blog com artigos (como o da Antecipay), páginas por cidade do RN (Parnamirim, Mossoró, São Gonçalo do Amarante).
