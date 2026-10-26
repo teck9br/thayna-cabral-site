@@ -925,6 +925,8 @@ def render(p):
 <link rel="preload" href="/assets/fonts/cormorant-garamond-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/plus-jakarta-sans-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/cormorant-garamond-latin-wght-italic.woff2" as="font" type="font/woff2" crossorigin>
+<script>document.documentElement.classList.add('js');setTimeout(function(){{if(!window.FX)document.documentElement.classList.remove('js')}},2500)</script>
+<script src="/assets/js/fx.js" defer></script>
 <script type="application/ld+json">
 {json.dumps(ld, ensure_ascii=False, indent=1)}
 </script>
