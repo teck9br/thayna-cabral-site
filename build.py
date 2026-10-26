@@ -83,7 +83,7 @@ PAGES = [
 <p>O escritório fica em Natal-RN e atende com hora marcada. Como o processo previdenciário é todo eletrônico, também atendemos por videochamada clientes do interior do estado e de outras regiões do país, com o mesmo acompanhamento.</p>'''),
         ],
         faq=[
-            ('Preciso de advogado para pedir um benefício no INSS?', 'Não é obrigatório: o pedido pode ser feito pelo próprio segurado no Meu INSS. A orientação de uma advogada ajuda a escolher a regra certa, reunir as provas e evitar negativas e valores menores, que depois só se corrigem com recurso ou ação.'),
+            ('Preciso de advogado previdenciário para pedir um benefício no INSS?', 'Não é obrigatório: o pedido pode ser feito pelo próprio segurado no Meu INSS. A orientação de uma advogada ajuda a escolher a regra certa, reunir as provas e evitar negativas e valores menores, que depois só se corrigem com recurso ou ação.'),
             ('Quanto custa uma advogada previdenciária?', 'Os honorários são combinados na primeira conversa, em contrato escrito, de acordo com a tabela da OAB/RN e o tipo de caso. Você sabe exatamente quanto e como vai pagar antes de começar.'),
             ('O INSS negou meu pedido. O que fazer?', 'Leia o motivo na carta de indeferimento ou no Meu INSS. Dependendo do caso, cabe recurso ao CRPS em até 30 dias, um novo pedido com documentos complementares ou uma ação na Justiça Federal.'),
             ('Vocês atendem quem mora fora de Natal?', 'Sim. O processo previdenciário é eletrônico, e o atendimento pode ser feito por videochamada, com envio de documentos pelo WhatsApp.'),
@@ -96,7 +96,7 @@ PAGES = [
         title='Advogada de Aposentadoria em Natal-RN | Thayná Cabral',
         desc='Aposentadoria por idade, tempo de contribuição, especial, rural e PcD em Natal-RN. Regras de transição de 2026, planejamento e pedido no INSS.',
         eyebrow='Aposentadoria · Natal-RN',
-        h1='Aposentadoria com a regra mais <em>vantajosa</em> para você.',
+        h1='Aposentadoria pelo INSS com a regra mais <em>vantajosa</em> para você.',
         lead='Depois da Reforma da Previdência, existem várias regras de aposentadoria, e cada uma resulta em um valor diferente. Analisamos o seu histórico para pedir o benefício no momento certo e pela regra mais vantajosa para o seu histórico.',
         wa='Olá, Dra. Thayná! Quero saber se já posso me aposentar.',
         secoes=[
@@ -142,7 +142,7 @@ PAGES = [
         slug='bpc-loas-natal',
         crumb='BPC/LOAS',
         title='BPC/LOAS em Natal-RN: Quem Tem Direito | Thayná Cabral',
-        desc='Quem tem direito ao BPC/LOAS, renda exigida, CadÚnico e o que fazer se o INSS negar. Advogada em Natal-RN para idosos e pessoas com deficiência.',
+        desc='Quem tem direito ao BPC/LOAS, como pedir, renda exigida e o que fazer se o INSS negar. Advogada em Natal-RN para idosos e pessoas com deficiência.',
         eyebrow='BPC/LOAS · Natal-RN',
         h1='BPC/LOAS: um salário mínimo por mês para quem mais <em>precisa.</em>',
         lead='O Benefício de Prestação Continuada garante um salário mínimo mensal a idosos e pessoas com deficiência de baixa renda, mesmo sem nunca ter contribuído para o INSS. Ajudamos no pedido e no recurso quando o benefício é negado.',
@@ -156,6 +156,14 @@ PAGES = [
 <li>que estejam inscritas no <strong>CadÚnico</strong>, com o cadastro atualizado.</li>
 </ul>
 <p>Não é preciso ter contribuído para o INSS. O BPC está previsto na Lei Orgânica da Assistência Social (Lei 8.742/1993, por isso o nome LOAS).</p>'''),
+            ('Como pedir o BPC/LOAS', '''
+<ol class="steps-l">
+<li><strong>Inscreva ou atualize o CadÚnico</strong> no CRAS mais perto de casa. As informações de renda e de quem mora na casa precisam bater com as do pedido.</li>
+<li><strong>Faça o pedido no INSS</strong> pelo Meu INSS (site ou aplicativo) ou pelo telefone 135, escolhendo o Benefício Assistencial à Pessoa Idosa ou à Pessoa com Deficiência.</li>
+<li><strong>Separe os documentos:</strong> identidade, CPF e comprovante de residência e, para a pessoa com deficiência, laudos e relatórios médicos com o CID e a duração do impedimento.</li>
+<li><strong>Acompanhe a perícia médica e a avaliação social</strong>, no caso da pessoa com deficiência, e responda às exigências do INSS dentro do prazo.</li>
+</ol>
+<p>A Lei 15.077/2024 tornou obrigatório o <strong>cadastro biométrico</strong> (como o da CNH, do título de eleitor ou da Carteira de Identidade Nacional) para pedir e para manter o benefício.</p>'''),
             ('Qual a renda exigida', '''
 <p>O critério geral é renda familiar <strong>por pessoa de até 1/4 do salário mínimo</strong>. Para calcular, soma-se a renda de quem mora na mesma casa (requerente, cônjuge, pais, irmãos solteiros, filhos e enteados solteiros) e divide-se pelo número de pessoas.</p>
 <p>Esse limite não é absoluto. O Supremo Tribunal Federal já reconheceu que a situação de vulnerabilidade pode ser provada por outros meios, e a Justiça analisa a realidade da família: gastos com remédios, fraldas, tratamentos e condições da moradia.</p>'''),
@@ -300,6 +308,9 @@ PAGES = [
 </div>'''),
             ('Prazo para entrar com a ação', '''
 <p>O trabalhador tem até <strong>2 anos após o fim do contrato</strong> para entrar com a ação, e pode cobrar os direitos dos <strong>últimos 5 anos</strong>, contados da data em que a ação é proposta (art. 7º, XXIX, da Constituição). Cada mês de espera pode representar um mês de direitos perdidos.</p>'''),
+            ('Advogada trabalhista online', '''
+<p>O processo trabalhista é eletrônico, então o atendimento pode ser feito <strong>online</strong>, por videochamada, com envio de documentos pelo WhatsApp. As audiências podem ser presenciais ou por videoconferência, conforme a vara.</p>
+<p>Isso permite atender trabalhadores do interior do Rio Grande do Norte e de outros estados. A ação costuma ser proposta no local onde o trabalho foi prestado (art. 651 da CLT), e avaliamos cada caso antes de começar.</p>'''),
             ('Como funciona o processo', '''
 <ol class="steps-l">
 <li><strong>Análise do caso.</strong> Conferimos contrato, carteira de trabalho, contracheques, extrato do FGTS, termo de rescisão e as provas que você tem, como mensagens e testemunhas.</li>
@@ -380,7 +391,7 @@ PAGES = [
 <li>exposição a <strong>perigo manifesto</strong>, como falta de equipamentos de proteção;</li>
 <li>redução do trabalho de forma a reduzir muito o salário de quem ganha por produção.</li>
 </ul>'''),
-            ('O que você recebe', '''
+            ('Direitos na rescisão indireta', '''
 <p>Reconhecida a rescisão indireta, o trabalhador recebe as mesmas verbas da <a href="/verbas-rescisorias/">demissão sem justa causa</a>: saldo de salário, aviso prévio proporcional, 13º e férias proporcionais com 1/3, saque do FGTS com multa de 40% e as guias do seguro-desemprego. Também podem ser cobradas as dívidas que motivaram a saída, como salários e FGTS atrasados, e, em casos de assédio, indenização por danos morais.</p>'''),
             ('Como fazer da forma certa', '''
 <ol class="steps-l">
@@ -553,8 +564,10 @@ PAGES = [
 <a href="/divorcio-natal/"><strong>Divórcio</strong><span>Em cartório ou na Justiça, com partilha de bens, guarda e pensão.</span></a>
 <a href="/pensao-alimenticia-natal/"><strong>Pensão alimentícia</strong><span>Pedido, revisão e cobrança de pensão atrasada.</span></a>
 <a href="/inventario-natal/"><strong>Inventário</strong><span>Partilha de bens em cartório ou judicial, com prazos e impostos.</span></a>
+<a href="/indenizacao-danos-morais-natal/"><strong>Danos morais</strong><span>Indenização por ofensas, falhas de serviço e acidentes.</span></a>
+<a href="/nome-negativado-indevidamente/"><strong>Nome negativado</strong><span>Retirada do nome do Serasa e SPC e indenização.</span></a>
 </div>
-<p>Também atuamos em indenizações por danos morais e materiais, contratos, ações de cobrança, guarda e regulamentação de convivência.</p>'''),
+<p>Também atuamos em indenizações por danos materiais, contratos, ações de cobrança, guarda e regulamentação de convivência.</p>'''),
             ('Resolver no cartório ou na Justiça', '''
 <p>Muitas questões de família podem ser resolvidas <strong>em cartório</strong>, de forma mais rápida, quando há acordo entre as partes, como divórcio consensual e inventário. Quando não há acordo, ou a lei exige, o caminho é a Justiça, nas Varas de Família e Cíveis da Comarca de Natal ou nos Juizados Especiais Cíveis para causas de menor valor.</p>'''),
             ('Como funciona o atendimento', '''
@@ -585,7 +598,7 @@ PAGES = [
         secoes=[
             ('Situações mais comuns', '''
 <ul>
-<li><strong>Nome negativado indevidamente</strong> no Serasa ou SPC por dívida já paga ou que não existe: segundo o STJ, o dano moral é presumido;</li>
+<li><strong><a href="/nome-negativado-indevidamente/">Nome negativado indevidamente</a></strong> no Serasa ou SPC por dívida já paga ou que não existe: segundo o STJ, o dano moral é presumido;</li>
 <li><strong>cobrança indevida paga:</strong> o consumidor tem direito à devolução em dobro do que pagou a mais, com correção (art. 42, parágrafo único, do CDC), salvo engano justificável;</li>
 <li><strong>descontos não autorizados</strong> em conta, cartão ou benefício do INSS, como empréstimos e seguros que você não contratou;</li>
 <li><strong>plano de saúde</strong> que nega cirurgia, exame, medicamento ou internação indicada pelo médico;</li>
@@ -615,6 +628,93 @@ PAGES = [
             ('O plano de saúde negou meu tratamento. O que fazer?', 'Peça a negativa por escrito e o relatório médico. Em casos urgentes, é possível pedir uma decisão liminar na Justiça para garantir o tratamento rapidamente.'),
         ],
         rel=['advogada-civel-natal', 'revisao-beneficio-inss', 'inventario-natal'],
+    ),
+    dict(
+        area='civ',
+        slug='indenizacao-danos-morais-natal',
+        crumb='Danos morais',
+        title='Indenização por Danos Morais em Natal-RN | Thayná Cabral',
+        desc='Quando cabe indenização por danos morais, como provar, qual o prazo e onde pedir. Advogada em Natal-RN com atendimento presencial e online.',
+        eyebrow='Danos morais · Natal-RN',
+        h1='Indenização por danos morais: quando o prejuízo vai além do <em>dinheiro.</em>',
+        lead='Ofensas, negativação indevida, falhas graves de serviço e acidentes podem gerar o dever de indenizar. Explicamos se o seu caso tem fundamento, quais provas reunir e qual o caminho mais adequado.',
+        wa='Olá, Dra. Thayná! Quero saber se o meu caso dá direito a indenização por danos morais.',
+        secoes=[
+            ('O que é dano moral', '''
+<p>Dano moral é a ofensa a direitos ligados à pessoa, como a <strong>honra, a imagem, a intimidade e a integridade física e psíquica</strong>. Quem causa esse dano por ação, omissão ou negligência tem o dever de indenizar (arts. 186 e 927 do Código Civil e art. 5º, V e X, da Constituição).</p>
+<p>Nem todo aborrecimento gera indenização. A Justiça analisa a gravidade do fato, a repercussão na vida da pessoa e as provas apresentadas.</p>'''),
+            ('Situações que costumam gerar indenização', '''
+<ul>
+<li><a href="/nome-negativado-indevidamente/">nome negativado indevidamente</a> no Serasa ou SPC;</li>
+<li>descontos não autorizados em conta ou no benefício do INSS;</li>
+<li>ofensas e exposição em redes sociais e grupos de WhatsApp;</li>
+<li>acidentes de trânsito com lesão;</li>
+<li>falha grave de serviço, como <a href="/direito-do-consumidor-natal/">plano de saúde</a> que nega tratamento urgente;</li>
+<li>erro médico e falhas no atendimento de saúde;</li>
+<li><a href="/acidente-de-trabalho/">acidente ou doença causada pelo trabalho</a>, que é julgado pela Justiça do Trabalho.</li>
+</ul>'''),
+            ('Danos morais, materiais e estéticos', '''
+<p>O <strong>dano material</strong> é o prejuízo financeiro comprovado: o que você gastou ou perdeu (danos emergentes) e o que deixou de ganhar (lucros cessantes). O <strong>dano moral</strong> é o sofrimento causado pelo fato. Quando há marca ou deformidade permanente, pode haver também <strong>dano estético</strong>. Os três podem ser pedidos na mesma ação.</p>'''),
+            ('Prazo para pedir', '''
+<ul>
+<li><strong>3 anos</strong> é a regra geral para a reparação civil (art. 206, §3º, V, do Código Civil);</li>
+<li><strong>5 anos</strong> quando o dano vem de produto ou serviço, numa relação de consumo (art. 27 do CDC);</li>
+<li>na Justiça do Trabalho, <strong>2 anos</strong> após o fim do contrato.</li>
+</ul>
+<p>Em regra, o prazo conta a partir do momento em que a pessoa soube do dano e de quem o causou.</p>'''),
+            ('Provas que ajudam', '''
+<ul>
+<li>prints com data, link e nome do autor; para conteúdo que pode ser apagado, a <strong>ata notarial</strong> em cartório dá mais segurança;</li>
+<li>boletim de ocorrência, laudos, receitas e atestados médicos;</li>
+<li>protocolos de atendimento, e-mails e conversas com a empresa;</li>
+<li>contato de testemunhas que presenciaram o fato.</li>
+</ul>'''),
+        ],
+        faq=[
+            ('Qual o valor da indenização por danos morais?', 'Não existe tabela. O juiz considera a gravidade do fato, a repercussão, a situação das partes e decisões em casos parecidos. Por isso não é possível saber o valor antes da sentença.'),
+            ('Preciso de advogado para pedir danos morais?', 'No Juizado Especial Cível, em causas de até 20 salários mínimos, não é obrigatório na primeira instância. Entre 20 e 40 salários mínimos, e para recorrer, é obrigatório. Acima disso, a ação vai para a Justiça comum.'),
+            ('Ofensa em grupo de WhatsApp dá direito a indenização?', 'Pode dar, conforme o conteúdo e o alcance da ofensa. Guarde prints que mostrem o autor, a data e o grupo. Também pode haver crime contra a honra, e nesse caso o prazo para a queixa-crime é de 6 meses a partir do dia em que você soube quem é o autor.'),
+            ('Quanto tempo demora um processo de danos morais?', 'Depende do caso e de onde ele tramita. No Juizado Especial costuma ser mais rápido, e muitos processos terminam em acordo já na audiência de conciliação.'),
+        ],
+        rel=['nome-negativado-indevidamente', 'direito-do-consumidor-natal', 'advogada-civel-natal'],
+    ),
+    dict(
+        area='civ',
+        slug='nome-negativado-indevidamente',
+        crumb='Nome negativado',
+        title='Nome Negativado Indevidamente: O Que Fazer | Natal-RN',
+        desc='Nome no Serasa ou SPC por dívida paga, que não é sua ou sem aviso? Veja como limpar o nome e quando cabe indenização. Advogada em Natal-RN.',
+        eyebrow='Direito do consumidor · Natal-RN',
+        h1='Nome negativado indevidamente: como limpar o nome e quando cabe <em>indenização.</em>',
+        lead='Dívida já paga, conta que você não abriu, cobrança de valor errado ou negativação sem aviso. Nesses casos, é possível pedir a retirada do nome dos cadastros e, conforme o caso, indenização.',
+        wa='Olá, Dra. Thayná! Meu nome foi negativado indevidamente e preciso de orientação.',
+        secoes=[
+            ('Quando a negativação é indevida', '''
+<ul>
+<li><strong>dívida já paga:</strong> depois do pagamento, o credor tem <strong>5 dias úteis</strong> para pedir a retirada do nome (Súmula 548 do STJ);</li>
+<li><strong>dívida que não é sua:</strong> contas, cartões ou empréstimos abertos por terceiros com os seus dados;</li>
+<li><strong>valor errado</strong> ou dívida que está sendo discutida;</li>
+<li><strong>sem aviso prévio:</strong> você deve ser comunicado por escrito antes da inclusão (art. 43, §2º, do CDC);</li>
+<li><strong>mais de 5 anos:</strong> a informação negativa não pode ficar nos cadastros por mais de 5 anos (art. 43, §1º, do CDC), mesmo que a dívida não tenha sido paga.</li>
+</ul>'''),
+            ('O que fazer agora', '''
+<ol class="steps-l">
+<li><strong>Consulte o seu CPF</strong> de graça no Serasa, no SPC, na Boa Vista e no Registrato, do Banco Central, e salve os comprovantes da consulta.</li>
+<li><strong>Reúna as provas:</strong> comprovantes de pagamento, contratos, faturas e, em caso de fraude, o boletim de ocorrência.</li>
+<li><strong>Reclame com a empresa</strong> e no consumidor.gov.br, e anote os protocolos.</li>
+<li><strong>Se não resolver,</strong> é possível pedir na Justiça a retirada do nome com urgência (liminar) e indenização.</li>
+</ol>'''),
+            ('Quando cabe indenização', '''
+<p>Segundo o STJ, a inscrição indevida em cadastro de inadimplentes gera <strong>dano moral presumido</strong>: não é preciso provar o constrangimento. A exceção é quando a pessoa já tinha outras negativações legítimas na mesma época (Súmula 385 do STJ). Mesmo nesse caso, é possível pedir a retirada da negativação indevida.</p>
+<p>Em fraudes bancárias praticadas por terceiros, o banco responde pelos danos (Súmula 479 do STJ). Veja também a página sobre <a href="/indenizacao-danos-morais-natal/">indenização por danos morais</a>.</p>'''),
+        ],
+        faq=[
+            ('Quanto tempo a empresa tem para tirar meu nome depois que eu pago?', 'Cinco dias úteis, contados do pagamento integral da dívida (Súmula 548 do STJ). Se o nome continuar negativado depois disso, guarde o comprovante e a consulta atualizada.'),
+            ('Tenho direito a indenização se já tinha outra negativação?', 'Em regra, não, se as outras negativações eram legítimas e anteriores (Súmula 385 do STJ). Ainda assim, é possível exigir a retirada da negativação indevida.'),
+            ('Descobri uma dívida de um cartão que nunca pedi. E agora?', 'Faça um boletim de ocorrência, conteste a dívida com a empresa e guarde os protocolos. A empresa responde pelos danos de fraude feita por terceiros, e a Justiça pode determinar a retirada do nome com urgência.'),
+            ('Preciso pagar para consultar meu nome?', 'Não. Serasa, SPC e Boa Vista oferecem consulta gratuita do CPF, e o Registrato, do Banco Central, mostra gratuitamente empréstimos e contas em seu nome.'),
+        ],
+        rel=['indenizacao-danos-morais-natal', 'direito-do-consumidor-natal', 'advogada-civel-natal'],
     ),
     dict(
         area='civ',

@@ -1,22 +1,22 @@
 {
  "/": {
-  "hash": "2f53aa406759",
+  "hash": "0b2712e6a708",
   "data": "2026-10-26"
  },
  "/advogada-previdenciaria-natal/": {
-  "hash": "9c71e63e2f5b",
+  "hash": "a61536cb6b86",
   "data": "2026-10-26"
  },
  "/aposentadoria-natal/": {
-  "hash": "99b20f39e70f",
+  "hash": "ebbe3b439499",
   "data": "2026-10-26"
  },
  "/bpc-loas-natal/": {
-  "hash": "ac9b193c26ed",
+  "hash": "995d5a6819c6",
   "data": "2026-10-26"
  },
  "/auxilio-doenca-negado/": {
-  "hash": "e611e6b7c8bb",
+  "hash": "72a701304314",
   "data": "2026-10-26"
  },
  "/revisao-beneficio-inss/": {
@@ -24,7 +24,7 @@
   "data": "2026-10-26"
  },
  "/advogada-trabalhista-natal/": {
-  "hash": "b6cb969ea897",
+  "hash": "2fdb80a4039c",
   "data": "2026-10-26"
  },
  "/verbas-rescisorias/": {
@@ -32,7 +32,7 @@
   "data": "2026-10-26"
  },
  "/rescisao-indireta/": {
-  "hash": "18b7674c9fbc",
+  "hash": "bc7ee1de62a8",
   "data": "2026-10-26"
  },
  "/horas-extras/": {
@@ -48,11 +48,11 @@
   "data": "2026-10-26"
  },
  "/advogada-civel-natal/": {
-  "hash": "e3133753b3f0",
+  "hash": "0d01d83d224e",
   "data": "2026-10-26"
  },
  "/direito-do-consumidor-natal/": {
-  "hash": "f7885d3e52a1",
+  "hash": "b1801aaee5bc",
   "data": "2026-10-26"
  },
  "/divorcio-natal/": {
@@ -69,6 +69,14 @@
  },
  "/privacidade.html": {
   "hash": "c4a065a56612",
+  "data": "2026-10-26"
+ },
+ "/indenizacao-danos-morais-natal/": {
+  "hash": "f436e4097c69",
+  "data": "2026-10-26"
+ },
+ "/nome-negativado-indevidamente/": {
+  "hash": "3e848296985a",
   "data": "2026-10-26"
  }
 }
