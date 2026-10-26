@@ -11,18 +11,20 @@
 <meta property="og:type" content="website">
 <meta property="og:locale" content="pt_BR">
 <meta property="og:site_name" content="Thayná Cabral Advocacia">
-<meta property="og:title" content="Acidente de trabalho: estabilidade, benefício e indenização.">
+<meta property="og:title" content="Acidente de trabalho: estabilidade, benefício e indenização | Thayná Cabral Advocacia">
 <meta property="og:description" content="Sofreu acidente de trabalho ou doença ocupacional? Veja CAT, estabilidade de 12 meses, benefício do INSS e indenização da empresa. Advogada em Natal-RN.">
 <meta property="og:url" content="https://thaynacabraladvocacia.com.br/acidente-de-trabalho/">
 <meta property="og:image" content="https://thaynacabraladvocacia.com.br/og.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Dra. Thayná Cabral, advogada em Natal-RN, OAB/RN 21.175">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="/favicon.ico?v=2" sizes="any">
 <link rel="icon" href="/favicon-192.png?v=2" type="image/png" sizes="192x192">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png?v=2">
 <link rel="preload" href="/assets/fonts/cormorant-garamond-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/plus-jakarta-sans-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/cormorant-garamond-latin-wght-italic.woff2" as="font" type="font/woff2" crossorigin>
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
@@ -121,7 +123,7 @@
      "name": "Qual o prazo para pedir indenização?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "A ação contra a empresa segue o prazo trabalhista: até 2 anos após o fim do contrato, ou, em regra, contado da ciência inequívoca da incapacidade, conforme o caso."
+      "text": "A ação contra a empresa segue o prazo trabalhista: 5 anos contados da ciência inequívoca da incapacidade, respeitado o limite de 2 anos após o fim do contrato."
      }
     }
    ]
@@ -130,15 +132,15 @@
 }
 </script>
 <style>
-@font-face{font-family:'Cormorant Garamond';src:url(/assets/fonts/cormorant-garamond-latin-wght-normal.woff2) format('woff2');font-weight:300 700;font-style:normal;font-display:swap}
-@font-face{font-family:'Cormorant Garamond';src:url(/assets/fonts/cormorant-garamond-latin-wght-italic.woff2) format('woff2');font-weight:300 700;font-style:italic;font-display:swap}
-@font-face{font-family:'Plus Jakarta Sans';src:url(/assets/fonts/plus-jakarta-sans-latin-wght-normal.woff2) format('woff2');font-weight:200 800;font-style:normal;font-display:swap}
+@font-face{font-family:'Cormorant Garamond';src:url(/assets/fonts/cormorant-garamond-latin-wght-normal.woff2) format('woff2');font-weight:300 700;font-style:normal;font-display:block}
+@font-face{font-family:'Cormorant Garamond';src:url(/assets/fonts/cormorant-garamond-latin-wght-italic.woff2) format('woff2');font-weight:300 700;font-style:italic;font-display:block}
+@font-face{font-family:'Plus Jakarta Sans';src:url(/assets/fonts/plus-jakarta-sans-latin-wght-normal.woff2) format('woff2');font-weight:200 800;font-style:normal;font-display:block}
 @font-face{font-family:'Cormorant Fallback';src:local('Georgia');size-adjust:88%;ascent-override:92%;descent-override:29%}
 @font-face{font-family:'Jakarta Fallback';src:local('Arial');size-adjust:104%;ascent-override:98%;descent-override:22%}
 
 :root{
   --ink:#0F172A; --ink-2:#1E293B; --text:#334155; --muted:#475569; --soft:#64748B;
-  --gold:#C5A059; --gold-d:#8C6B2E; --gold-l:#DCC089; --sand:#F2EEE6; --night:#0B1120;
+  --gold:#C5A059; --gold-d:#7D5F28; --gold-l:#DCC089; --sand:#F2EEE6; --night:#0B1120;
   --serif:'Cormorant Garamond','Cormorant Fallback',Georgia,serif;
   --sans:'Plus Jakarta Sans','Jakarta Fallback',system-ui,sans-serif;
   --glass-bg:rgba(255,255,255,.5);
@@ -166,7 +168,7 @@ a:hover{color:var(--gold)}
 .sec{position:relative;padding:var(--sec-y) var(--pad-x)}
 .sec--sand{background:rgba(242,238,230,.35)}
 .eyebrow{display:flex;align-items:center;gap:14px;font-size:12px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:var(--gold-d)}
-.eyebrow::before,.eyebrow--c::after{content:"";width:40px;height:1px;background:var(--gold)}
+.eyebrow::before,.eyebrow--c::after{content:"";width:40px;height:1px;flex-shrink:0;background:var(--gold)}
 .h2{margin:0;font-family:var(--serif);font-weight:400;font-size:clamp(34px,4vw,54px);line-height:1.1;color:var(--ink);text-wrap:balance}
 .h2 em,h1 em{font-style:italic;color:var(--gold-d)}
 .lead{margin:0;font-size:16px;line-height:1.7;color:var(--muted);text-wrap:pretty}
@@ -197,6 +199,7 @@ a:hover{color:var(--gold)}
 .menu-btn[aria-expanded="true"] .m{display:none}
 .mnav{display:none;margin:10px auto 0;max-width:1280px;border-radius:28px;padding:8px 24px 24px;flex-direction:column;background:rgba(255,255,255,.75)}
 .mnav.open{display:flex}
+@media (min-width:960px){.mnav.open{display:none}}
 .mnav a{padding:16px 0;border-bottom:1px solid rgba(15,23,42,.08);font-family:var(--serif);font-size:24px;color:var(--ink)}
 .mnav .btn{margin-top:24px;justify-content:center;border:0;font-family:var(--sans);font-size:14px;height:52px}
 @media (max-width:959px){.nav,.hdr__cta{display:none}.menu-btn{display:inline-flex}}
@@ -280,7 +283,7 @@ a:hover{color:var(--gold)}
 .steps{max-width:1040px;margin:0 auto;border-radius:40px;padding:clamp(48px,6vw,80px) clamp(24px,5vw,72px);background:rgba(255,255,255,.42)}
 .steps ol{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:40px 48px;counter-reset:s}
 .steps li{display:flex;flex-direction:column;gap:12px;counter-increment:s}
-.steps li::before{content:counter(s,upper-roman);font-family:var(--serif);font-size:44px;line-height:1;color:var(--gold)}
+.steps li::before{content:counter(s,upper-roman);font-family:var(--serif);font-size:44px;line-height:1;color:var(--gold-d)}
 .steps h3{margin:0;font-family:var(--serif);font-weight:500;font-size:26px}
 .steps p{margin:0;font-size:15px;line-height:1.7;color:var(--muted)}
 .steps .center-head{margin-bottom:56px}
@@ -290,6 +293,7 @@ a:hover{color:var(--gold)}
 .faq__head{display:flex;flex-direction:column;gap:24px;max-width:420px}
 .faq__list{display:flex;flex-direction:column;gap:12px}
 .qa{border-radius:22px;overflow:hidden}
+@media (max-width:420px){.cred__card{aspect-ratio:auto;padding:40px 24px;gap:20px}}
 .qa summary{list-style:none;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:22px 24px 22px 28px;cursor:pointer;font-family:var(--serif);font-size:clamp(20px,1.8vw,24px);font-weight:500;line-height:1.3;color:var(--ink);transition:color .25s}
 .qa summary::-webkit-details-marker{display:none}
 .qa summary:hover{color:var(--gold-d)}
@@ -321,7 +325,7 @@ a:hover{color:var(--gold)}
 .ftr__legal div{display:flex;flex-wrap:wrap;gap:24px}
 .ftr__legal a{color:#94A3B8;font-size:12px;display:inline}
 
-.wa{position:fixed;right:clamp(16px,3vw,32px);bottom:clamp(16px,3vw,32px);z-index:60;width:62px;height:62px;border-radius:50%;background:#25D366;color:#fff;display:flex;align-items:center;justify-content:center;box-shadow:inset 0 1px 0 rgba(255,255,255,.5),0 14px 30px -8px rgba(15,23,42,.45),0 0 0 6px rgba(37,211,102,.15);transition:transform .3s}
+.wa{position:fixed;right:clamp(16px,3vw,32px);bottom:clamp(16px,3vw,32px);z-index:60;width:62px;height:62px;border-radius:50%;background:#128C4A;color:#fff;display:flex;align-items:center;justify-content:center;box-shadow:inset 0 1px 0 rgba(255,255,255,.5),0 14px 30px -8px rgba(15,23,42,.45),0 0 0 6px rgba(37,211,102,.15);transition:transform .3s}
 .wa:hover{transform:scale(1.08);color:#fff}
 .wa svg{width:30px;height:30px;fill:currentColor}
 .btn .wa-i{width:20px;height:20px;fill:currentColor}
@@ -339,7 +343,7 @@ a:hover{color:var(--gold)}
 .phero h1{margin:0;max-width:900px;font-family:var(--serif);font-weight:400;font-size:clamp(38px,4.6vw,64px);line-height:1.08;letter-spacing:-.01em;text-wrap:balance}
 .phero .hero__sub{max-width:720px}
 .layout{max-width:1280px;margin:0 auto;padding:0 var(--pad-x) var(--sec-y);display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:clamp(40px,5vw,80px);align-items:start}
-@media (max-width:959px){.layout{grid-template-columns:1fr}}
+@media (max-width:959px){.layout{grid-template-columns:minmax(0,1fr)}}
 .prose{max-width:760px;font-size:16px;line-height:1.8;color:var(--text)}
 .prose h2{margin:56px 0 16px;font-family:var(--serif);font-weight:500;font-size:clamp(28px,3vw,38px);line-height:1.15;color:var(--ink);text-wrap:balance}
 .prose h2:first-child{margin-top:0}
@@ -351,7 +355,7 @@ a:hover{color:var(--gold)}
 .prose a{color:var(--gold-d);border-bottom:1px solid rgba(197,160,89,.4)}
 .steps-l{margin:0 0 16px;padding:0;list-style:none;counter-reset:s;display:flex;flex-direction:column;gap:16px}
 .steps-l li{position:relative;padding-left:48px;counter-increment:s}
-.steps-l li::before{content:counter(s,upper-roman);position:absolute;left:0;top:-2px;font-family:var(--serif);font-size:26px;color:var(--gold)}
+.steps-l li::before{content:counter(s,upper-roman);position:absolute;left:0;top:-2px;font-family:var(--serif);font-size:26px;color:var(--gold-d)}
 .table-wrap{overflow-x:auto;margin:0 0 16px;border-radius:20px;border:1px solid rgba(197,160,89,.3);background:rgba(255,255,255,.6)}
 .prose table{width:100%;border-collapse:collapse;font-size:14px;line-height:1.55;min-width:520px}
 .prose th,.prose td{padding:14px 18px;text-align:left;vertical-align:top;border-bottom:1px solid rgba(15,23,42,.07)}
@@ -476,7 +480,7 @@ a:hover{color:var(--gold)}
   </article>
   <aside class="aside glass" aria-label="Fale com a advogada">
     <div class="aside__who">
-      <picture><source srcset="/assets/img/thayna-cabral.webp" type="image/webp"><img src="/assets/img/thayna-cabral.jpg" alt="Dra. Thayná Cabral" width="64" height="64" loading="lazy"></picture>
+      <picture><source srcset="/assets/img/thayna-cabral.webp" type="image/webp"><img src="/assets/img/thayna-cabral.jpg" alt="" width="64" height="64" loading="lazy"></picture>
       <div><strong>Dra. Thayná Cabral</strong><span>Advogada · OAB/RN 21.175</span></div>
     </div>
     <p>Envie um resumo da sua situação pelo WhatsApp. Respondemos para marcar o atendimento, presencial em Natal ou online.</p>
@@ -511,7 +515,7 @@ a:hover{color:var(--gold)}
       </details>
       <details class="qa glass">
         <summary><h3>Qual o prazo para pedir indenização?</h3><span class="plus" aria-hidden="true"><svg class="ico"><use href="#i-plus"/></svg></span></summary>
-        <div class="qa__a"><p>A ação contra a empresa segue o prazo trabalhista: até 2 anos após o fim do contrato, ou, em regra, contado da ciência inequívoca da incapacidade, conforme o caso.</p></div>
+        <div class="qa__a"><p>A ação contra a empresa segue o prazo trabalhista: 5 anos contados da ciência inequívoca da incapacidade, respeitado o limite de 2 anos após o fim do contrato.</p></div>
       </details>
     </div>
   </div>
@@ -540,7 +544,7 @@ a:hover{color:var(--gold)}
     <div class="ftr__grid">
       <div class="ftr__col">
         <img src="/assets/img/logotipo-light.webp" alt="Thayná Cabral Advocacia" width="190" height="106" loading="lazy" style="width:190px;height:auto">
-        <p>Advogada em Natal-RN. Direito Previdenciário, Trabalhista e Cível com atendimento humanizado e técnico.</p>
+        <p>Advogada em Natal-RN. Direito Previdenciário, Trabalhista e Cível com atendimento presencial e online.</p>
         <div class="ftr__line"><svg class="ico" aria-hidden="true"><use href="#i-pin"/></svg>Natal, Rio Grande do Norte<br>Presencial com hora marcada e online</div>
         <a data-wa href="https://wa.me/5584997010660?text=Ol%C3%A1%2C%20Dra.%20Thayn%C3%A1%21%20Gostaria%20de%20agendar%20uma%20consulta." target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg>(84) 99701-0660</a>
         
@@ -584,6 +588,7 @@ a:hover{color:var(--gold)}
   function set(o){b.setAttribute('aria-expanded',o);b.setAttribute('aria-label',o?'Fechar menu':'Abrir menu');m.classList.toggle('open',o)}
   b.addEventListener('click',function(){set(b.getAttribute('aria-expanded')!=='true')});
   m.addEventListener('click',function(e){if(e.target.closest('a'))set(false)});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&b.getAttribute('aria-expanded')==='true'){set(false);b.focus()}});
 })();
 document.addEventListener('click',function(e){var a=e.target.closest('[data-wa]');if(a&&window.clarity)window.clarity('event','whatsapp_click')});
 </script>

@@ -2,6 +2,7 @@
 # Uso (Windows): PYTHONUTF8=1 python build.py
 # Lê de site/index.html o CSS, os ícones (sprite SVG) e o cabeçalho, gera as páginas de
 # serviço em site/<slug>/index.html e atualiza o rodapé da home, o sitemap.xml e o llms.txt.
+import hashlib
 import html
 import json
 import re
@@ -49,7 +50,7 @@ PAGES = [
         title='Advogada Previdenciária em Natal-RN | Thayná Cabral',
         desc='Advogada previdenciária em Natal-RN: aposentadoria, BPC/LOAS, auxílio-doença, revisão e recursos contra o INSS. Atendimento presencial e online.',
         eyebrow='Direito Previdenciário · Natal-RN',
-        h1='Advogada previdenciária em Natal para resolver o seu caso com o <em>INSS</em>.',
+        h1='Advogada previdenciária em Natal para orientar o seu caso com o <em>INSS</em>.',
         lead='Pedidos de aposentadoria, BPC/LOAS, auxílio-doença, revisões e recursos contra benefícios negados. Atendimento no escritório em Natal ou online, com explicação clara de cada etapa.',
         wa='Olá, Dra. Thayná! Preciso de orientação sobre um benefício do INSS.',
         secoes=[
@@ -96,20 +97,20 @@ PAGES = [
         desc='Aposentadoria por idade, tempo de contribuição, especial, rural e PcD em Natal-RN. Regras de transição de 2026, planejamento e pedido no INSS.',
         eyebrow='Aposentadoria · Natal-RN',
         h1='Aposentadoria com a regra mais <em>vantajosa</em> para você.',
-        lead='Depois da Reforma da Previdência, existem várias regras de aposentadoria, e cada uma resulta em um valor diferente. Analisamos o seu histórico para pedir o benefício no momento certo e pela regra que paga mais.',
+        lead='Depois da Reforma da Previdência, existem várias regras de aposentadoria, e cada uma resulta em um valor diferente. Analisamos o seu histórico para pedir o benefício no momento certo e pela regra mais vantajosa para o seu histórico.',
         wa='Olá, Dra. Thayná! Quero saber se já posso me aposentar.',
         secoes=[
             ('Tipos de aposentadoria', '''
 <ul>
-<li><strong>Aposentadoria por idade (urbana):</strong> para quem começou a contribuir depois da Reforma (13/11/2019), 62 anos para mulheres e 65 para homens, com pelo menos 15 anos de contribuição para elas e 20 para eles. Homens que já contribuíam antes da Reforma precisam de 15 anos.</li>
+<li><strong>Aposentadoria por idade (urbana):</strong> 62 anos para mulheres e 65 para homens. Tempo mínimo de contribuição: 15 anos para mulheres; para homens, 15 anos se já contribuíam antes da Reforma (13/11/2019) e 20 anos se começaram depois.</li>
 <li><strong>Aposentadoria rural:</strong> 55 anos para mulheres e 60 para homens, com 15 anos de atividade rural comprovada, inclusive em regime de economia familiar. É muito comum no interior do Rio Grande do Norte.</li>
 <li><strong>Aposentadoria especial:</strong> para quem trabalhou exposto a agentes nocivos à saúde (ruído, produtos químicos, agentes biológicos), comprovados por PPP e laudos.</li>
-<li><strong>Aposentadoria da pessoa com deficiência:</strong> prevista na Lei Complementar 142/2013, com tempo de contribuição reduzido conforme o grau da deficiência, ou por idade (55 anos para mulheres e 60 para homens, com 15 anos de contribuição).</li>
+<li><strong>Aposentadoria da pessoa com deficiência:</strong> prevista na Lei Complementar 142/2013, com tempo de contribuição reduzido conforme o grau da deficiência, ou por idade (55 anos para mulheres e 60 para homens, com 15 anos de contribuição e deficiência comprovada durante igual período).</li>
 <li><strong>Regras de transição:</strong> para quem já contribuía antes da Reforma, como as regras de pontos, de idade mínima progressiva e de pedágio.</li>
 </ul>'''),
             ('Regras de transição em 2026', '''
 <p>Quem já contribuía antes de 13/11/2019 pode usar regras de transição, que costumam ser mais vantajosas. Em 2026:</p>
-<div class="table-wrap"><table>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Tabela: regras de transição em 2026"><table>
 <thead><tr><th>Regra</th><th>Mulheres</th><th>Homens</th></tr></thead>
 <tbody>
 <tr><td>Pontos (idade + tempo de contribuição)</td><td>93 pontos e 30 anos de contribuição</td><td>103 pontos e 35 anos de contribuição</td></tr>
@@ -130,7 +131,7 @@ PAGES = [
 </ul>'''),
         ],
         faq=[
-            ('Qual a idade para se aposentar em 2026?', 'Na regra geral, 62 anos para mulheres e 65 para homens. Quem já contribuía antes da Reforma de 2019 pode se aposentar antes por uma regra de transição: em 2026, a idade mínima progressiva é de 59 anos e 6 meses para mulheres e 64 anos e 6 meses para homens, com tempo de contribuição mínimo.'),
+            ('Qual a idade para se aposentar em 2026?', 'Na regra geral, 62 anos para mulheres e 65 para homens. Quem já contribuía antes da Reforma de 2019 pode se aposentar antes por uma regra de transição: em 2026, a idade mínima progressiva é de 59 anos e 6 meses para mulheres e 64 anos e 6 meses para homens, com 30 anos de contribuição (mulheres) ou 35 (homens).'),
             ('Trabalhei na roça sem carteira assinada. Esse tempo conta?', 'Sim. O trabalho rural, inclusive em regime de economia familiar, pode ser reconhecido com documentos da época e testemunhas, e conta para a aposentadoria rural ou somado ao tempo urbano na aposentadoria híbrida.'),
             ('Quanto tempo o INSS leva para analisar a aposentadoria?', 'O prazo varia conforme a agência e o tipo de benefício. Um pedido bem documentado tende a ser analisado mais rápido e corre menos risco de exigências e negativas.'),
             ('Posso continuar trabalhando depois de aposentado?', 'Na maioria das aposentadorias, sim. A exceção é a aposentadoria especial: quem a recebe não pode continuar exercendo atividade exposta a agentes nocivos.'),
@@ -174,7 +175,7 @@ PAGES = [
 </ul>'''),
         ],
         faq=[
-            ('Quem recebe Bolsa Família pode receber BPC?', 'O valor do Bolsa Família não entra no cálculo da renda para o BPC. Ter o benefício não impede o pedido, mas o cadastro no CadÚnico precisa estar correto e atualizado.'),
+            ('Quem recebe Bolsa Família pode receber BPC?', 'Receber Bolsa Família não impede o pedido. Desde junho de 2025 (Decreto 12.534/2025), o INSS passou a somar o Bolsa Família na renda da família; a regra é questionada na Justiça, e há decisões que a afastam. O cadastro no CadÚnico precisa estar correto e atualizado.'),
             ('Criança com autismo tem direito ao BPC?', 'Pode ter. O transtorno do espectro autista é considerado deficiência para todos os efeitos legais. Se a família tiver baixa renda e o impedimento for de longo prazo, a criança pode receber o BPC.'),
             ('O BPC foi negado por renda. Ainda tenho chance?', 'Sim, em muitos casos. A Justiça analisa a situação concreta da família, como gastos com saúde e condições de moradia, e não apenas o limite de 1/4 do salário mínimo.'),
             ('Quanto tempo demora o BPC?', 'Depende da fila do INSS, da perícia e da avaliação social. Um pedido com CadÚnico em dia e laudos completos tende a andar mais rápido.'),
@@ -235,7 +236,7 @@ PAGES = [
         desc='Revisão de aposentadoria e pensão do INSS: erros de cálculo, tempo especial ou rural ignorado e salários errados. Prazo de 10 anos. Advogada em Natal-RN.',
         eyebrow='Revisão de benefício · Natal-RN',
         h1='Revisão de aposentadoria: quando o INSS <em>calculou errado.</em>',
-        lead='Erros no cadastro e no cálculo do INSS são comuns e podem reduzir o seu benefício por toda a vida. A revisão corrige o valor e pode garantir o pagamento das diferenças dos últimos anos.',
+        lead='Erros no cadastro e no cálculo do INSS são comuns e podem reduzir o seu benefício por toda a vida. A revisão corrige o valor e permite cobrar as diferenças dos últimos 5 anos.',
         wa='Olá, Dra. Thayná! Quero saber se minha aposentadoria pode ser revisada.',
         secoes=[
             ('Quando a revisão é possível', '''
@@ -251,7 +252,7 @@ PAGES = [
 <p>O prazo para revisar o ato de concessão é de <strong>10 anos</strong>, contados do mês seguinte ao do primeiro pagamento (art. 103 da Lei 8.213/1991). Passado esse prazo, o direito à revisão se perde.</p>
 <p>As diferenças atrasadas são pagas, em regra, dos <strong>últimos 5 anos</strong> antes do pedido. Por isso, quanto antes a revisão for feita, maior o valor recuperado.</p>'''),
             ('E a revisão da vida toda?', '''
-<p>A chamada revisão da vida toda, que permitia incluir os salários anteriores a julho de 1994 no cálculo, <strong>foi afastada pelo Supremo Tribunal Federal em 2024</strong>. Desconfie de quem ainda oferece essa revisão como garantia de ganho. Existem outras revisões possíveis, que dependem da análise do seu processo de concessão.</p>'''),
+<p>A chamada revisão da vida toda, que permitia incluir os salários anteriores a julho de 1994 no cálculo, <strong>foi afastada pelo Supremo Tribunal Federal em 2024</strong>. Hoje essa revisão não é mais possível. Existem outras revisões possíveis, que dependem da análise do seu processo de concessão.</p>'''),
             ('Como analisamos o seu benefício', '''
 <ol class="steps-l">
 <li>Pedimos a cópia do processo administrativo e a carta de concessão, que mostra como o INSS fez o cálculo.</li>
@@ -326,7 +327,7 @@ PAGES = [
         wa='Olá, Dra. Thayná! A empresa não pagou (ou pagou errado) minha rescisão.',
         secoes=[
             ('O que você recebe em cada tipo de saída', '''
-<div class="table-wrap"><table>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Tabela: verbas por tipo de saída"><table>
 <thead><tr><th>Tipo de saída</th><th>Verbas</th></tr></thead>
 <tbody>
 <tr><td>Demissão sem justa causa</td><td>Saldo de salário, aviso prévio, 13º proporcional, férias vencidas e proporcionais com 1/3, saque do FGTS com multa de 40% e seguro-desemprego.</td></tr>
@@ -410,6 +411,7 @@ PAGES = [
         secoes=[
             ('O que conta como hora extra', '''
 <p>A jornada normal é de até <strong>8 horas por dia e 44 por semana</strong> (art. 7º, XIII, da Constituição), salvo regras específicas da categoria. O tempo além disso é hora extra e deve ser pago com adicional de, no mínimo, <strong>50%</strong>. O trabalho em domingos e feriados sem folga compensatória é pago em dobro.</p>
+<p>Situações comuns:</p>
 <ul>
 <li>chegar antes do horário ou sair depois, com o ponto "britânico" (sempre igual);</li>
 <li>intervalo de almoço menor que 1 hora em jornadas acima de 6 horas;</li>
@@ -478,7 +480,7 @@ PAGES = [
         ],
         faq=[
             ('Trabalhei como MEI, mas cumpria horário e recebia ordens. Tenho direitos?', 'Pode ter. Se estavam presentes pessoalidade, habitualidade, subordinação e salário, a Justiça pode reconhecer o vínculo de emprego mesmo com contrato de prestação de serviços ou CNPJ.'),
-            ('Qual o prazo para pedir o reconhecimento do vínculo?', 'A ação deve ser proposta em até 2 anos após o fim do trabalho. O reconhecimento do vínculo em si é declarado, e as verbas podem ser cobradas dos últimos 5 anos.'),
+            ('Qual o prazo para pedir o reconhecimento do vínculo?', 'A cobrança das verbas deve ser feita em até 2 anos após o fim do trabalho, alcançando os últimos 5 anos. Já o pedido de anotação na carteira para fins previdenciários não prescreve (art. 11, §1º, da CLT).'),
             ('O tempo sem carteira conta para a aposentadoria?', 'Sim, quando o vínculo é reconhecido e as contribuições ficam registradas. Esse é um ponto que costuma ser esquecido e pode antecipar a aposentadoria.'),
             ('Ainda trabalho sem registro. Posso pedir a carteira assinada?', 'Sim. O registro é obrigação do empregador desde o primeiro dia. Avaliamos com você se é o caso de conversar, notificar ou entrar com ação.'),
         ],
@@ -528,7 +530,7 @@ PAGES = [
             ('Fui demitido logo depois de voltar do afastamento. Pode?', 'Se você recebeu auxílio acidentário, tem estabilidade de 12 meses após o retorno. A demissão sem justa causa nesse período pode gerar reintegração ou indenização do período restante.'),
             ('A empresa não emitiu a CAT. E agora?', 'A CAT pode ser emitida pelo próprio trabalhador, por familiar, sindicato, médico ou autoridade pública, inclusive pela internet. A falta da CAT não impede o reconhecimento do acidente.'),
             ('Doença psicológica pode ser acidente de trabalho?', 'Pode. Depressão, ansiedade e síndrome de burnout ligadas às condições de trabalho podem ser reconhecidas como doença ocupacional, com os mesmos direitos.'),
-            ('Qual o prazo para pedir indenização?', 'A ação contra a empresa segue o prazo trabalhista: até 2 anos após o fim do contrato, ou, em regra, contado da ciência inequívoca da incapacidade, conforme o caso.'),
+            ('Qual o prazo para pedir indenização?', 'A ação contra a empresa segue o prazo trabalhista: 5 anos contados da ciência inequívoca da incapacidade, respeitado o limite de 2 anos após o fim do contrato.'),
         ],
         rel=['advogada-trabalhista-natal', 'auxilio-doenca-negado', 'verbas-rescisorias'],
     ),
@@ -578,7 +580,7 @@ PAGES = [
         desc='Nome negativado indevidamente, cobrança indevida, plano de saúde que negou cobertura ou voo cancelado? Veja seus direitos. Advogada em Natal-RN.',
         eyebrow='Direito do consumidor · Natal-RN',
         h1='Problemas com empresas e bancos? Conheça os seus direitos de <em>consumidor.</em>',
-        lead='Negativação indevida, cobranças que você não reconhece, plano de saúde que nega tratamento e voos cancelados. O Código de Defesa do Consumidor garante a devolução de valores e, em muitos casos, indenização.',
+        lead='Negativação indevida, cobranças que você não reconhece, plano de saúde que nega tratamento e voos cancelados. O Código de Defesa do Consumidor prevê a devolução de valores e, conforme o caso, indenização.',
         wa='Olá, Dra. Thayná! Tenho um problema com uma empresa e preciso de orientação.',
         secoes=[
             ('Situações mais comuns', '''
@@ -696,7 +698,7 @@ PAGES = [
         title='Advogada de Inventário em Natal-RN | Thayná Cabral',
         desc='Inventário em cartório ou judicial em Natal-RN: prazo de 2 meses, ITCMD, documentos e partilha entre herdeiros. Advogada para inventário e partilha.',
         eyebrow='Inventário · Natal-RN',
-        h1='Inventário: a partilha dos bens com segurança e sem <em>atrasos.</em>',
+        h1='Inventário: a partilha dos bens com orientação sobre prazos, impostos e <em>documentos.</em>',
         lead='Quando alguém falece deixando bens, é o inventário que transfere o patrimônio aos herdeiros. Ele pode ser feito em cartório, quando há acordo, ou na Justiça. Orientamos sobre prazos, impostos e documentos.',
         wa='Olá, Dra. Thayná! Preciso de orientação sobre inventário.',
         secoes=[
@@ -706,8 +708,8 @@ PAGES = [
 <li><strong>inventário judicial:</strong> obrigatório quando não há acordo entre os herdeiros e em outros casos previstos em lei.</li>
 </ul>'''),
             ('Prazo e impostos', '''
-<p>O inventário deve ser aberto em até <strong>2 meses</strong> a partir do falecimento (art. 611 do Código de Processo Civil). O atraso pode gerar multa sobre o ITCMD, o imposto estadual sobre heranças, cobrado no Rio Grande do Norte pela Secretaria da Fazenda (SET-RN).</p>
-<p>Enquanto o inventário não termina, os bens não podem ser vendidos ou transferidos normalmente, e contas bancárias e imóveis ficam bloqueados para os herdeiros.</p>'''),
+<p>O inventário deve ser aberto em até <strong>2 meses</strong> a partir do falecimento (art. 611 do Código de Processo Civil). O atraso pode gerar multa sobre o ITCMD, o imposto estadual sobre heranças, cobrado no Rio Grande do Norte pela Secretaria de Estado da Tributação (SET-RN).</p>
+<p>Enquanto o inventário não termina, os bens, em regra, só podem ser vendidos ou transferidos com autorização judicial (alvará), e contas bancárias e imóveis ficam indisponíveis para os herdeiros.</p>'''),
             ('Documentos necessários', '''
 <ul>
 <li>certidão de óbito e documentos pessoais do falecido;</li>
@@ -717,7 +719,7 @@ PAGES = [
 <li>certidões negativas de débitos do falecido e testamento, se houver.</li>
 </ul>'''),
             ('Quem são os herdeiros', '''
-<p>Pelo Código Civil, os herdeiros necessários são os <strong>descendentes</strong> (filhos, netos), os <strong>ascendentes</strong> (pais, avós) e o <strong>cônjuge ou companheiro</strong>, que concorre com eles conforme o regime de bens. Na falta desses, herdam os irmãos, sobrinhos, tios e primos, nessa ordem.</p>'''),
+<p>Pelo Código Civil, os herdeiros necessários são os <strong>descendentes</strong> (filhos, netos), os <strong>ascendentes</strong> (pais, avós) e o <strong>cônjuge</strong> (a situação do companheiro em união estável é tratada de forma semelhante pelos tribunais). Com os filhos, o cônjuge concorre conforme o regime de bens; com os pais, herda independentemente do regime. Na falta desses, herdam os irmãos, sobrinhos, tios e primos, nessa ordem.</p>'''),
         ],
         faq=[
             ('Qual o prazo para abrir o inventário?', 'Dois meses a partir do falecimento. Passado esse prazo, o inventário ainda pode ser feito, mas pode haver multa sobre o imposto de herança (ITCMD).'),
@@ -752,7 +754,7 @@ PAGE_CSS = '''
 .phero h1{margin:0;max-width:900px;font-family:var(--serif);font-weight:400;font-size:clamp(38px,4.6vw,64px);line-height:1.08;letter-spacing:-.01em;text-wrap:balance}
 .phero .hero__sub{max-width:720px}
 .layout{max-width:1280px;margin:0 auto;padding:0 var(--pad-x) var(--sec-y);display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:clamp(40px,5vw,80px);align-items:start}
-@media (max-width:959px){.layout{grid-template-columns:1fr}}
+@media (max-width:959px){.layout{grid-template-columns:minmax(0,1fr)}}
 .prose{max-width:760px;font-size:16px;line-height:1.8;color:var(--text)}
 .prose h2{margin:56px 0 16px;font-family:var(--serif);font-weight:500;font-size:clamp(28px,3vw,38px);line-height:1.15;color:var(--ink);text-wrap:balance}
 .prose h2:first-child{margin-top:0}
@@ -764,7 +766,7 @@ PAGE_CSS = '''
 .prose a{color:var(--gold-d);border-bottom:1px solid rgba(197,160,89,.4)}
 .steps-l{margin:0 0 16px;padding:0;list-style:none;counter-reset:s;display:flex;flex-direction:column;gap:16px}
 .steps-l li{position:relative;padding-left:48px;counter-increment:s}
-.steps-l li::before{content:counter(s,upper-roman);position:absolute;left:0;top:-2px;font-family:var(--serif);font-size:26px;color:var(--gold)}
+.steps-l li::before{content:counter(s,upper-roman);position:absolute;left:0;top:-2px;font-family:var(--serif);font-size:26px;color:var(--gold-d)}
 .table-wrap{overflow-x:auto;margin:0 0 16px;border-radius:20px;border:1px solid rgba(197,160,89,.3);background:rgba(255,255,255,.6)}
 .prose table{width:100%;border-collapse:collapse;font-size:14px;line-height:1.55;min-width:520px}
 .prose th,.prose td{padding:14px 18px;text-align:left;vertical-align:top;border-bottom:1px solid rgba(15,23,42,.07)}
@@ -808,7 +810,7 @@ def footer():
     <div class="ftr__grid">
       <div class="ftr__col">
         <img src="/assets/img/logotipo-light.webp" alt="Thayná Cabral Advocacia" width="190" height="106" loading="lazy" style="width:190px;height:auto">
-        <p>Advogada em Natal-RN. Direito Previdenciário, Trabalhista e Cível com atendimento humanizado e técnico.</p>
+        <p>Advogada em Natal-RN. Direito Previdenciário, Trabalhista e Cível com atendimento presencial e online.</p>
         <div class="ftr__line">{ico('pin')}Natal, Rio Grande do Norte<br>Presencial com hora marcada e online</div>
         <a data-wa href="{html.escape(w)}" target="_blank" rel="noopener">{ico('wa')}{WA_LABEL}</a>
         {f'<a href="mailto:{EMAIL}">{ico("mail")}{EMAIL}</a>' if EMAIL else ''}
@@ -895,7 +897,7 @@ def render(p):
     rel = ''.join(
         f'<a href="/{s}/"><strong>{BY_SLUG[s]["crumb"]}</strong><span>{html.escape(BY_SLUG[s]["desc"].split(". ")[0])}.</span></a>'
         for s in p['rel'])
-    og_title = re.sub('<[^>]+>', '', p['h1'])
+    og_title = re.sub('<[^>]+>', '', p['h1']).rstrip('.') + ' | Thayná Cabral Advocacia'
     return f'''<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -915,12 +917,14 @@ def render(p):
 <meta property="og:image" content="{BASE}/og.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Dra. Thayná Cabral, advogada em Natal-RN, {OAB}">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="/favicon.ico?v=2" sizes="any">
 <link rel="icon" href="/favicon-192.png?v=2" type="image/png" sizes="192x192">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png?v=2">
 <link rel="preload" href="/assets/fonts/cormorant-garamond-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/plus-jakarta-sans-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/cormorant-garamond-latin-wght-italic.woff2" as="font" type="font/woff2" crossorigin>
 <script type="application/ld+json">
 {json.dumps(ld, ensure_ascii=False, indent=1)}
 </script>
@@ -954,7 +958,7 @@ def render(p):
   </article>
   <aside class="aside glass" aria-label="Fale com a advogada">
     <div class="aside__who">
-      <picture><source srcset="/assets/img/thayna-cabral.webp" type="image/webp"><img src="/assets/img/thayna-cabral.jpg" alt="Dra. Thayná Cabral" width="64" height="64" loading="lazy"></picture>
+      <picture><source srcset="/assets/img/thayna-cabral.webp" type="image/webp"><img src="/assets/img/thayna-cabral.jpg" alt="" width="64" height="64" loading="lazy"></picture>
       <div><strong>Dra. Thayná Cabral</strong><span>Advogada · {OAB}</span></div>
     </div>
     <p>Envie um resumo da sua situação pelo WhatsApp. Respondemos para marcar o atendimento, presencial em Natal ou online.</p>
@@ -971,7 +975,7 @@ def render(p):
   <div class="wrap faq">
     <div class="faq__head">
       <p class="eyebrow" style="margin:0">Perguntas Frequentes</p>
-      <h2 id="faq-t" class="h2">Dúvidas sobre <em>{p['crumb'][0].lower() + p['crumb'][1:] if p['crumb'] != 'BPC/LOAS' else 'BPC/LOAS'}.</em></h2>
+      <h2 id="faq-t" class="h2">Dúvidas sobre <em>{p['crumb'] if p['crumb'].startswith(('Direito', 'BPC')) else p['crumb'][0].lower() + p['crumb'][1:]}.</em></h2>
       <p class="lead">Não encontrou a sua dúvida? Envie pelo WhatsApp e retornamos com orientação.</p>
     </div>
     <div class="faq__list">
@@ -1007,6 +1011,7 @@ def render(p):
   function set(o){{b.setAttribute('aria-expanded',o);b.setAttribute('aria-label',o?'Fechar menu':'Abrir menu');m.classList.toggle('open',o)}}
   b.addEventListener('click',function(){{set(b.getAttribute('aria-expanded')!=='true')}});
   m.addEventListener('click',function(e){{if(e.target.closest('a'))set(false)}});
+  document.addEventListener('keydown',function(e){{if(e.key==='Escape'&&b.getAttribute('aria-expanded')==='true'){{set(false);b.focus()}}}});
 }})();
 document.addEventListener('click',function(e){{var a=e.target.closest('[data-wa]');if(a&&window.clarity)window.clarity('event','whatsapp_click')}});
 </script>
@@ -1030,8 +1035,19 @@ def check(p, out):
 
 
 def build_sitemap():
+    # o lastmod só muda quando o conteúdo do <main> muda (CSS, cabeçalho e rodapé não contam)
     urls = ['/'] + [f'/{p["slug"]}/' for p in PAGES] + ['/privacidade.html']
-    body = '\n'.join(f'  <url><loc>{BASE}{u}</loc><lastmod>{HOJE}</lastmod></url>' for u in urls)
+    reg = Path(__file__).parent / 'lastmod.json'
+    datas = json.loads(reg.read_text(encoding='utf-8')) if reg.exists() else {}
+    for u in urls:
+        f = ROOT / u.strip('/') if u.endswith('.html') else ROOT / u.strip('/') / 'index.html'
+        s = f.read_text(encoding='utf-8')
+        m = re.search(r'<main.*?</main>', s, re.S)
+        h = hashlib.sha1((m.group(0) if m else s).encode()).hexdigest()[:12]
+        if datas.get(u, {}).get('hash') != h:
+            datas[u] = {'hash': h, 'data': HOJE}
+    reg.write_text(json.dumps(datas, indent=1) + '\n', encoding='utf-8', newline='\n')
+    body = '\n'.join(f'  <url><loc>{BASE}{u}</loc><lastmod>{datas[u]["data"]}</lastmod></url>' for u in urls)
     (ROOT / 'sitemap.xml').write_text(
         f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n{body}\n</urlset>\n',
         encoding='utf-8', newline='\n')

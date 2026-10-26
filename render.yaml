@@ -13,5 +13,11 @@ services:
       - path: /*
         name: X-Content-Type-Options
         value: nosniff
+      - path: /*
+        name: Strict-Transport-Security
+        value: max-age=31536000
+      - path: /assets/img/*
+        name: Cache-Control
+        value: public, max-age=2592000
     domains:  # o Render cria o www com redirecionamento para o domínio principal
       - thaynacabraladvocacia.com.br
