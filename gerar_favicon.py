@@ -9,8 +9,8 @@ src = str(Path(__file__).parent); site = src + "/site"; out = sys.argv[1] if len
 sim = Image.open(src + '/assets/simbolo-gold.png').convert('RGBA')
 sim = sim.crop(sim.getbbox())
 alpha = sim.split()[3]
-NAVY = (11, 17, 32, 255)
-GOLD = (222, 188, 112)
+CREME = (242, 238, 230, 255)  # mesmo tom do --sand do site
+GOLD = (140, 107, 46)  # --gold-d antigo: legível sobre o creme
 
 
 def icon(size, pad, stroke_px, radius=0.22, bg=True):
@@ -28,7 +28,7 @@ def icon(size, pad, stroke_px, radius=0.22, bg=True):
     if bg:
         m = Image.new('L', (S, S), 0)
         ImageDraw.Draw(m).rounded_rectangle([0, 0, S - 1, S - 1], radius=round(S * radius), fill=255)
-        canvas.paste(Image.new('RGBA', (S, S), NAVY), (0, 0), m)
+        canvas.paste(Image.new('RGBA', (S, S), CREME), (0, 0), m)
     gold = Image.new('RGBA', a.size, GOLD + (255,))
     canvas.paste(gold, ((S - a.width) // 2, (S - a.height) // 2), a)
     return canvas.resize((size, size), Image.LANCZOS)
