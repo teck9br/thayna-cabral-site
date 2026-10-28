@@ -51,7 +51,7 @@ PAGES = [
         desc='Advogada previdenciária em Natal-RN: aposentadoria, BPC/LOAS, auxílio-doença, revisão e recursos contra o INSS. Atendimento presencial e online.',
         eyebrow='Direito Previdenciário · Natal-RN',
         h1='Advogada previdenciária em Natal para orientar o seu caso com o <em>INSS</em>.',
-        lead='Pedidos de aposentadoria, BPC/LOAS, auxílio-doença, revisões e recursos contra benefícios negados. Atendimento no escritório em Natal ou online, com explicação clara de cada etapa.',
+        lead='Pedidos de aposentadoria, BPC/LOAS, auxílio-doença, salário-maternidade, revisões e recursos contra benefícios negados, no INSS e na Justiça. Atendimento no escritório em Natal ou online, com explicação clara de cada etapa.',
         wa='Olá, Dra. Thayná! Preciso de orientação sobre um benefício do INSS.',
         secoes=[
             ('Quando procurar uma advogada previdenciária', '''
@@ -70,8 +70,9 @@ PAGES = [
 <a href="/bpc-loas-natal/"><strong>BPC/LOAS</strong><span>Benefício de um salário mínimo para idosos e pessoas com deficiência de baixa renda.</span></a>
 <a href="/auxilio-doenca-negado/"><strong>Auxílio-doença negado</strong><span>Recurso e ação judicial quando a perícia do INSS nega ou corta o benefício.</span></a>
 <a href="/revisao-beneficio-inss/"><strong>Revisão de benefício</strong><span>Correção de erros no cálculo de aposentadorias e pensões já concedidas.</span></a>
+<a href="/salario-maternidade-natal/"><strong>Salário-maternidade</strong><span>Para empregadas, autônomas, MEI, desempregadas e trabalhadoras rurais.</span></a>
 </div>
-<p>Também atuamos em pensão por morte, aposentadoria por incapacidade permanente (antiga aposentadoria por invalidez), salário-maternidade, auxílio-acidente e planejamento previdenciário.</p>'''),
+<p>Também atuamos em pensão por morte, aposentadoria por incapacidade permanente (antiga aposentadoria por invalidez), auxílio-acidente e planejamento previdenciário. Os casos são conduzidos tanto no INSS (via administrativa) quanto na Justiça (via judicial).</p>'''),
             ('Como funciona o caminho até o benefício', '''
 <ol class="steps-l">
 <li><strong>Análise dos documentos.</strong> Conferimos o CNIS, as carteiras de trabalho e os laudos para descobrir o que você já tem de direito e o que falta provar.</li>
@@ -88,7 +89,7 @@ PAGES = [
             ('O INSS negou meu pedido. O que fazer?', 'Leia o motivo na carta de indeferimento ou no Meu INSS. Dependendo do caso, cabe recurso ao CRPS em até 30 dias, um novo pedido com documentos complementares ou uma ação na Justiça Federal.'),
             ('Vocês atendem quem mora fora de Natal?', 'Sim. O processo previdenciário é eletrônico, e o atendimento pode ser feito por videochamada, com envio de documentos pelo WhatsApp.'),
         ],
-        rel=['aposentadoria-natal', 'bpc-loas-natal', 'auxilio-doenca-negado', 'revisao-beneficio-inss'],
+        rel=['aposentadoria-natal', 'bpc-loas-natal', 'auxilio-doenca-negado', 'revisao-beneficio-inss', 'salario-maternidade-natal'],
     ),
     dict(
         slug='aposentadoria-natal',
@@ -276,6 +277,51 @@ PAGES = [
         ],
         rel=['advogada-previdenciaria-natal', 'aposentadoria-natal', 'auxilio-doenca-negado'],
     ),
+    dict(
+        slug='salario-maternidade-natal',
+        crumb='Salário-maternidade',
+        title='Salário-Maternidade: Quem Tem Direito | Advogada em Natal',
+        desc='Salário-maternidade para empregada, autônoma, MEI, desempregada e trabalhadora rural: requisitos, valor, prazo e o que fazer se o INSS negar.',
+        eyebrow='Salário-maternidade · Natal-RN',
+        h1='Salário-maternidade: quem tem direito e como pedir ao <em>INSS.</em>',
+        lead='O benefício vale para quem tem carteira assinada, para autônomas, MEI, trabalhadoras rurais e até para quem está desempregada. Explicamos os requisitos, o valor e o que fazer se o pedido for negado.',
+        wa='Olá, Dra. Thayná! Preciso de orientação sobre salário-maternidade.',
+        secoes=[
+            ('Quem tem direito', '''
+<p>O salário-maternidade é pago por <strong>120 dias</strong> à segurada do INSS em caso de parto, adoção ou guarda judicial para fins de adoção. Têm direito:</p>
+<ul>
+<li><strong>empregadas com carteira assinada</strong> e empregadas domésticas;</li>
+<li><strong>contribuintes individuais</strong> (autônomas), <strong>MEI</strong> e <strong>facultativas</strong>, como donas de casa que pagam o carnê;</li>
+<li><strong>trabalhadoras rurais</strong> em regime de economia familiar (seguradas especiais), mesmo sem ter pago o INSS;</li>
+<li><strong>desempregadas</strong> que ainda mantêm a qualidade de segurada, em regra até 12 meses após a última contribuição, prazo que pode ser maior em alguns casos.</li>
+</ul>
+<p>Em caso de adoção, o benefício também pode ser pago ao homem segurado. Se a mãe falecer, o cônjuge ou companheiro segurado pode receber o período restante.</p>'''),
+            ('Carência: é preciso ter contribuído quanto tempo?', '''
+<p>Para empregadas, domésticas e trabalhadoras avulsas, <strong>não há carência</strong>: basta ser segurada. A lei exigia 10 contribuições de autônomas e facultativas, mas em 2024 o <strong>STF declarou essa exigência inconstitucional</strong> (ADIs 2110 e 2111). Hoje, o essencial é comprovar a <strong>qualidade de segurada</strong> na data do parto.</p>
+<p>A trabalhadora rural precisa comprovar a <strong>atividade no campo</strong> antes do parto, com documentos como a autodeclaração, a CAF (antiga DAP), notas de venda da produção e declaração do sindicato.</p>'''),
+            ('Valor e quem paga', '''
+<ul>
+<li><strong>empregada:</strong> o salário integral, pago pela empresa, que depois compensa com o INSS;</li>
+<li><strong>doméstica:</strong> o último salário de contribuição, pago pelo INSS;</li>
+<li><strong>autônoma e facultativa:</strong> a média das últimas contribuições, pago pelo INSS;</li>
+<li><strong>trabalhadora rural e MEI:</strong> em regra, um salário mínimo;</li>
+<li><strong>desempregada:</strong> pago diretamente pelo INSS, com base nas últimas contribuições.</li>
+</ul>'''),
+            ('Como pedir e o que fazer se o INSS negar', '''
+<ol class="steps-l">
+<li><strong>Pedido no Meu INSS</strong> (site ou aplicativo) ou pelo telefone 135, com a certidão de nascimento ou o termo de guarda. Quem tem carteira assinada pede na própria empresa.</li>
+<li><strong>Prazo:</strong> o pedido pode ser feito a partir de 28 dias antes do parto. Se você não pediu na época, ainda é possível pedir depois: as parcelas prescrevem em 5 anos.</li>
+<li><strong>Se for negado,</strong> cabe recurso ao CRPS em 30 dias ou ação na Justiça Federal. As negativas mais comuns são por perda da qualidade de segurada e falta de prova da atividade rural.</li>
+</ol>'''),
+        ],
+        faq=[
+            ('Estou desempregada. Tenho direito ao salário-maternidade?', 'Pode ter, se o parto acontecer enquanto você ainda mantém a qualidade de segurada, em regra até 12 meses após a última contribuição ou o fim do emprego. Esse prazo pode ser maior para quem tem muitas contribuições ou recebeu seguro-desemprego.'),
+            ('Sou MEI. Preciso ter 10 contribuições?', 'Desde a decisão do STF de 2024 nas ADIs 2110 e 2111, a exigência de 10 contribuições para autônomas e facultativas foi considerada inconstitucional. É preciso estar com as contribuições em dia e manter a qualidade de segurada.'),
+            ('Meu filho já nasceu há mais de um ano. Ainda posso pedir?', 'Sim. O direito ao benefício não se perde com o tempo, mas só podem ser cobrados os valores dos últimos 5 anos. Quanto antes o pedido, melhor.'),
+            ('Trabalhadora rural que nunca pagou o INSS recebe?', 'Sim, se comprovar a atividade rural em regime de economia familiar. O valor é de um salário mínimo, e a prova é feita com documentos e, se preciso, testemunhas.'),
+        ],
+        rel=['advogada-previdenciaria-natal', 'auxilio-doenca-negado', 'aposentadoria-natal'],
+    ),
 
     # ------------------------------------------------------------ Trabalhista
     dict(
@@ -286,7 +332,7 @@ PAGES = [
         desc='Advogada trabalhista em Natal-RN: verbas rescisórias, rescisão indireta, horas extras, vínculo sem carteira e acidente de trabalho. Presencial e online.',
         eyebrow='Direito Trabalhista · Natal-RN',
         h1='Advogada trabalhista em Natal para defender os direitos de quem <em>trabalha.</em>',
-        lead='Verbas rescisórias não pagas, horas extras, trabalho sem carteira, rescisão indireta e acidente de trabalho. Analisamos o seu caso e explicamos, com clareza, o que pode ser cobrado da empresa.',
+        lead='Verbas rescisórias não pagas, horas extras, trabalho sem carteira, rescisão indireta e acidente de trabalho. Analisamos o seu caso, explicamos com clareza o que pode ser cobrado da empresa e acompanhamos você de perto em cada etapa.',
         wa='Olá, Dra. Thayná! Preciso de orientação sobre uma questão trabalhista.',
         secoes=[
             ('Quando procurar uma advogada trabalhista', '''
@@ -552,7 +598,7 @@ PAGES = [
         slug='advogada-civel-natal',
         crumb='Direito Cível',
         title='Advogada Cível e de Família em Natal-RN | Thayná Cabral',
-        desc='Advogada cível em Natal-RN: direito do consumidor, indenizações, divórcio, pensão alimentícia e inventário. Atendimento presencial e online.',
+        desc='Advogada cível em Natal-RN: consumidor, direito bancário, indenizações, divórcio, pensão alimentícia e inventário. Atendimento presencial e online.',
         eyebrow='Direito Cível e Família · Natal-RN',
         h1='Advogada cível em Natal para proteger você, a sua família e o seu <em>patrimônio.</em>',
         lead='Problemas com empresas e bancos, indenizações, divórcio, pensão alimentícia e inventário. Orientação clara para resolver, sempre que possível, de forma rápida e com menos desgaste.',
@@ -566,6 +612,7 @@ PAGES = [
 <a href="/inventario-natal/"><strong>Inventário</strong><span>Partilha de bens em cartório ou judicial, com prazos e impostos.</span></a>
 <a href="/indenizacao-danos-morais-natal/"><strong>Danos morais</strong><span>Indenização por ofensas, falhas de serviço e acidentes.</span></a>
 <a href="/nome-negativado-indevidamente/"><strong>Nome negativado</strong><span>Retirada do nome do Serasa e SPC e indenização.</span></a>
+<a href="/direito-bancario-natal/"><strong>Direito bancário</strong><span>Juros abusivos, consignado não contratado, cartão RMC e golpes.</span></a>
 </div>
 <p>Também atuamos em indenizações por danos materiais, contratos, ações de cobrança, guarda e regulamentação de convivência.</p>'''),
             ('Resolver no cartório ou na Justiça', '''
@@ -583,7 +630,7 @@ PAGES = [
             ('Quanto custa?', 'Os honorários são combinados na primeira conversa, em contrato escrito, de acordo com a tabela da OAB/RN e a complexidade do caso.'),
             ('Atendem fora de Natal?', 'Sim. Processos judiciais são eletrônicos e muitos atos de cartório podem ser feitos de forma digital, o que permite atender clientes de outras cidades.'),
         ],
-        rel=['direito-do-consumidor-natal', 'divorcio-natal', 'pensao-alimenticia-natal', 'inventario-natal'],
+        rel=['direito-do-consumidor-natal', 'direito-bancario-natal', 'divorcio-natal', 'pensao-alimenticia-natal', 'inventario-natal'],
     ),
     dict(
         area='civ',
@@ -715,6 +762,50 @@ PAGES = [
             ('Preciso pagar para consultar meu nome?', 'Não. Serasa, SPC e Boa Vista oferecem consulta gratuita do CPF, e o Registrato, do Banco Central, mostra gratuitamente empréstimos e contas em seu nome.'),
         ],
         rel=['indenizacao-danos-morais-natal', 'direito-do-consumidor-natal', 'advogada-civel-natal'],
+    ),
+    dict(
+        area='civ',
+        slug='direito-bancario-natal',
+        crumb='Direito bancário',
+        title='Advogada de Direito Bancário em Natal-RN | Thayná Cabral',
+        desc='Juros abusivos, empréstimo consignado que você não fez, cartão RMC, golpe do Pix e dívidas que não cabem no orçamento. Advogada em Natal-RN.',
+        eyebrow='Direito bancário · Natal-RN',
+        h1='Problemas com banco: juros abusivos, descontos e <em>golpes.</em>',
+        lead='Empréstimos que você não contratou, descontos no benefício do INSS, juros muito acima do mercado e golpes em conta. A relação com o banco é de consumo, e a lei protege o cliente.',
+        wa='Olá, Dra. Thayná! Tenho um problema com um banco e preciso de orientação.',
+        secoes=[
+            ('Situações mais comuns', '''
+<ul>
+<li><strong>empréstimo consignado que você não pediu</strong>, descontado do salário ou do benefício do INSS;</li>
+<li><strong>cartão de crédito consignado (RMC ou RCC)</strong> contratado como se fosse empréstimo, com desconto mensal que não diminui a dívida;</li>
+<li><strong>juros muito acima da média de mercado</strong> em empréstimos, financiamentos e cartão;</li>
+<li><strong>tarifas e seguros</strong> cobrados sem autorização;</li>
+<li><strong>golpes e fraudes</strong> em conta, Pix e cartão clonado;</li>
+<li><strong>dívidas que comprometem o sustento</strong> da família (superendividamento).</li>
+</ul>'''),
+            ('O que a lei garante', '''
+<ul>
+<li>o banco responde pelos danos de <strong>fraudes praticadas por terceiros</strong> nas operações bancárias (Súmula 479 do STJ);</li>
+<li>quem pagou valor indevido tem direito à <strong>devolução em dobro</strong>, com correção (art. 42, parágrafo único, do CDC), salvo engano justificável;</li>
+<li>os juros podem ser revistos quando ficam <strong>muito acima da taxa média</strong> divulgada pelo Banco Central para o mesmo tipo de operação, segundo o STJ. Juros acima de 12% ao ano, por si sós, não são abusivos (Súmula 382 do STJ);</li>
+<li>a <strong>Lei do Superendividamento</strong> (Lei 14.181/2021) permite renegociar todas as dívidas de consumo em um plano de pagamento que preserve o mínimo para viver.</li>
+</ul>'''),
+            ('O que fazer agora', '''
+<ol class="steps-l">
+<li><strong>Reúna os documentos:</strong> extratos, contratos, faturas e o extrato de empréstimos do Meu INSS, se for aposentado ou pensionista.</li>
+<li><strong>Consulte o Registrato</strong>, do Banco Central, que mostra de graça os empréstimos e contas em seu nome.</li>
+<li><strong>Reclame no banco</strong>, na ouvidoria e no consumidor.gov.br, e anote os protocolos.</li>
+<li><strong>Em caso de golpe com Pix,</strong> avise o banco imediatamente e peça a devolução pelo MED (Mecanismo Especial de Devolução), além de registrar boletim de ocorrência.</li>
+<li><strong>Se não resolver,</strong> é possível pedir na Justiça a suspensão dos descontos, a devolução dos valores e, conforme o caso, indenização.</li>
+</ol>'''),
+        ],
+        faq=[
+            ('Apareceu um empréstimo no meu benefício que eu não fiz. O que fazer?', 'Confira o extrato de empréstimos no Meu INSS, reclame no banco e no consumidor.gov.br e registre boletim de ocorrência. Na Justiça, é possível pedir a suspensão dos descontos, a devolução em dobro do que foi descontado e, conforme o caso, indenização.'),
+            ('O que é o cartão RMC e por que o desconto não acaba?', 'É o cartão de crédito consignado: o desconto mensal paga só o valor mínimo da fatura, e o restante continua rendendo juros. Quando o cliente pensou que contratava um empréstimo comum e não foi informado com clareza, o contrato pode ser questionado.'),
+            ('Caí em um golpe do Pix. O banco tem que devolver?', 'Depende de como o golpe aconteceu. Se houve falha de segurança do banco, ele responde pelo prejuízo (Súmula 479 do STJ). Avise o banco imediatamente e peça a devolução pelo MED: quanto mais rápido, maior a chance de recuperar o dinheiro.'),
+            ('Posso revisar os juros do meu financiamento?', 'Pode, quando a taxa do contrato fica muito acima da média de mercado divulgada pelo Banco Central na época da contratação. Analisamos o contrato para ver se vale a pena.'),
+        ],
+        rel=['direito-do-consumidor-natal', 'nome-negativado-indevidamente', 'advogada-civel-natal'],
     ),
     dict(
         area='civ',
