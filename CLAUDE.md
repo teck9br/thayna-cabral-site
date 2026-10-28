@@ -34,6 +34,6 @@ Site do escritório da Dra. Thayná Cabral (OAB/RN 21.175), Natal-RN. Objetivo: 
 
 ## Pendências
 - Criar o e-mail do domínio; informar endereço; criar Google Meu Negócio; perfis sociais.
-- Search Console: sitemap enviado em 26/10/2026; indexação pedida para todas as páginas em 26 e 28/10/2026, **menos `inventario-natal/`** (cota diária estourou: pedir em outro dia). Limite de ~10 pedidos por dia. IndexNow enviado para o sitemap inteiro em 28/10/2026.
-- Páginas (26/10/2026): 5 do Previdenciário, 6 do Trabalhista e 7 do Cível (danos morais e nome negativado entraram pelas sugestões do Ubersuggest), cada área com página-mãe (`AREAS` em `build.py`). A Dra. Thayná ainda precisa revisar os fatos jurídicos antes de publicar.
+- Search Console: sitemap enviado em 26/10/2026; indexação pedida para todas as páginas em 26 e 28/10/2026, **menos `inventario-natal/`, `salario-maternidade-natal/` e `direito-bancario-natal/`** (as duas últimas criadas em 28/10/2026) (cota diária estourou: pedir em outro dia). Limite de ~10 pedidos por dia. IndexNow enviado para o sitemap inteiro em 28/10/2026.
+- Páginas: 6 do Previdenciário, 6 do Trabalhista e 8 do Cível (danos morais e nome negativado entraram pelas sugestões do Ubersuggest; salário-maternidade e direito bancário pelas anotações da Dra. em 28/10/2026), cada área com página-mãe (`AREAS` em `build.py`). A Dra. Thayná ainda precisa revisar os fatos jurídicos antes de publicar.
 - Próximas ideias: blog com artigos (como o da Antecipay), páginas por cidade do RN (Parnamirim, Mossoró, São Gonçalo do Amarante).
