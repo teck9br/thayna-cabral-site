@@ -6,3 +6,8 @@ image-slot.js
 .thumbnail
 uploads/
 __pycache__/
+
+# Skills do Claude Code / agentes (locais, não fazem parte do site)
+.agents/
+.claude/
+skills-lock.json
