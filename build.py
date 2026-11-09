@@ -936,51 +936,52 @@ def area(p):
 # ---------------------------------------------------------------- partes comuns
 
 PAGE_CSS = '''
-.crumbs{max-width:1280px;margin:0 auto;padding:32px var(--pad-x) 0;font-size:13px;color:var(--soft)}
+.crumbs{max-width:calc(1200px + 2*var(--pad-x));margin:0 auto;padding:28px var(--pad-x) 0;font-size:14px;color:var(--soft)}
 .crumbs ol{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
-.crumbs li+li::before{content:"/";margin-right:8px;color:#CBD5E1}
+.crumbs li+li::before{content:"/";margin-right:8px;color:var(--gold)}
 .crumbs a{color:var(--muted)}
-.crumbs a:hover{color:var(--gold-d)}
-.phero{max-width:1280px;margin:0 auto;padding:clamp(32px,5vw,64px) var(--pad-x) clamp(48px,6vw,80px);display:flex;flex-direction:column;gap:28px}
-.phero h1{margin:0;max-width:900px;font-family:var(--serif);font-weight:400;font-size:clamp(38px,4.6vw,64px);line-height:1.08;letter-spacing:-.01em;text-wrap:balance}
-.phero .hero__sub{max-width:720px}
-.layout{max-width:1280px;margin:0 auto;padding:0 var(--pad-x) var(--sec-y);display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:clamp(40px,5vw,80px);align-items:start}
+.crumbs a:hover{color:var(--ink)}
+.phero{max-width:calc(1200px + 2*var(--pad-x));margin:0 auto;padding:clamp(28px,4vw,56px) var(--pad-x) clamp(40px,5vw,72px);display:flex;flex-direction:column;gap:22px}
+.phero h1{margin:0;max-width:16em;font-family:var(--serif);font-weight:500;font-size:clamp(38px,4.6vw,62px);line-height:1.05;letter-spacing:-.01em;color:var(--ink);text-wrap:balance}
+.phero .hero__sub{max-width:38em}
+.layout{max-width:calc(1200px + 2*var(--pad-x));margin:0 auto;padding:clamp(40px,5vw,64px) var(--pad-x) var(--sec-y);border-top:1px solid var(--line);display:grid;grid-template-columns:minmax(0,1fr) 320px;gap:clamp(40px,5vw,80px);align-items:start}
 @media (max-width:959px){.layout{grid-template-columns:minmax(0,1fr)}}
-.prose{max-width:760px;font-size:16px;line-height:1.8;color:var(--text)}
-.prose h2{margin:56px 0 16px;font-family:var(--serif);font-weight:500;font-size:clamp(28px,3vw,38px);line-height:1.15;color:var(--ink);text-wrap:balance}
+.prose{max-width:40em;color:var(--text)}
+.prose h2{margin:56px 0 14px;font-family:var(--serif);font-weight:500;font-size:clamp(28px,3vw,38px);line-height:1.12;color:var(--ink);text-wrap:balance}
 .prose h2:first-child{margin-top:0}
 .prose p{margin:0 0 16px;text-wrap:pretty}
 .prose ul{margin:0 0 16px;padding:0;list-style:none;display:flex;flex-direction:column;gap:10px}
-.prose ul li{position:relative;padding-left:24px}
-.prose ul li::before{content:"";position:absolute;left:0;top:.85em;width:12px;height:1px;background:var(--gold)}
+.prose ul li{position:relative;padding-left:26px}
+.prose ul li::before{content:"";position:absolute;left:2px;top:.85em;width:14px;height:1px;background:var(--gold)}
 .prose strong{color:var(--ink);font-weight:600}
-.prose a{color:var(--gold-d);border-bottom:1px solid rgba(197,160,89,.4)}
+.prose a{color:var(--gold-d);text-decoration:underline;text-decoration-color:rgba(168,133,63,.5);text-underline-offset:4px}
+.prose a:hover{color:var(--ink)}
 .steps-l{margin:0 0 16px;padding:0;list-style:none;counter-reset:s;display:flex;flex-direction:column;gap:16px}
 .steps-l li{position:relative;padding-left:48px;counter-increment:s}
 .steps-l li::before{content:counter(s,upper-roman);position:absolute;left:0;top:-2px;font-family:var(--serif);font-size:26px;color:var(--gold-d)}
-.table-wrap{overflow-x:auto;margin:0 0 16px;border-radius:20px;border:1px solid rgba(197,160,89,.3);background:rgba(255,255,255,.6)}
-.prose table{width:100%;border-collapse:collapse;font-size:14px;line-height:1.55;min-width:520px}
-.prose th,.prose td{padding:14px 18px;text-align:left;vertical-align:top;border-bottom:1px solid rgba(15,23,42,.07)}
-.prose th{font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-d)}
+.table-wrap{overflow-x:auto;margin:0 0 16px;border-top:1px solid var(--ink);border-bottom:1px solid var(--line)}
+.prose table{width:100%;border-collapse:collapse;font-size:15px;line-height:1.55;min-width:520px}
+.prose th,.prose td{padding:14px 16px 14px 0;text-align:left;vertical-align:top;border-bottom:1px solid var(--line)}
+.prose th{font-size:15px;font-weight:600;color:var(--ink)}
 .prose tr:last-child td{border-bottom:0}
-.links{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:12px;margin:0 0 20px}
-.prose .links a,.related a{display:flex;flex-direction:column;gap:6px;padding:22px 24px;border-radius:22px;border:var(--glass-line);background:var(--glass-bg);box-shadow:var(--glass-shadow);color:var(--ink);transition:transform .3s,background .3s}
-.prose .links a:hover,.related a:hover{transform:translateY(-4px);background:rgba(255,255,255,.75);color:var(--ink)}
-.prose .links strong,.related strong{font-family:var(--serif);font-size:22px;font-weight:500}
-.prose .links span,.related span{font-size:14px;line-height:1.6;color:var(--muted)}
-.note{margin-top:40px;padding:20px 24px;border-left:2px solid var(--gold);background:rgba(242,238,230,.5);border-radius:0 16px 16px 0;font-size:14px;line-height:1.7;color:var(--muted)}
-.aside{position:sticky;top:110px;border-radius:28px;padding:28px;display:flex;flex-direction:column;gap:18px}
+.links{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:0 24px;margin:0 0 20px;border-top:1px solid var(--line)}
+.prose .links a,.related a{display:flex;flex-direction:column;gap:4px;padding:18px 0;border-bottom:1px solid var(--line);color:var(--ink);text-decoration:none}
+.prose .links a:hover strong,.related a:hover strong{color:var(--gold-d)}
+.prose .links strong,.related strong{font-family:var(--serif);font-size:23px;font-weight:500;line-height:1.2;transition:color .2s}
+.prose .links span,.related span{font-size:15px;line-height:1.6;color:var(--muted)}
+.note{margin-top:40px;padding:18px 22px;border-left:2px solid var(--gold);background:var(--sand);font-size:15px;line-height:1.7;color:var(--muted)}
+.aside{position:sticky;top:104px;padding:28px;display:flex;flex-direction:column;gap:18px}
 .aside__who{display:flex;align-items:center;gap:14px}
-.aside__who img{width:64px;height:64px;border-radius:50%;object-fit:cover;object-position:50% 25%;border:1px solid rgba(197,160,89,.6)}
-.aside__who strong{display:block;font-family:var(--serif);font-size:22px;font-weight:500}
-.aside__who span{font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-d)}
-.aside p{margin:0;font-size:14px;line-height:1.7;color:var(--muted)}
-.aside .btn{justify-content:center;height:54px;padding:0 20px;font-size:13px}
-.aside ul{margin:0;padding:16px 0 0;border-top:1px solid rgba(197,160,89,.25);list-style:none;display:flex;flex-direction:column;gap:8px;font-size:13px;color:var(--muted)}
+.aside__who img{width:64px;height:64px;border-radius:50%;object-fit:cover;object-position:50% 25%}
+.aside__who strong{display:block;font-family:var(--serif);font-size:23px;font-weight:600;color:var(--ink)}
+.aside__who span{font-size:14px;color:var(--muted)}
+.aside p{margin:0;font-size:15px;line-height:1.7;color:var(--muted)}
+.aside .btn{padding:0 20px}
+.aside ul{margin:0;padding:16px 0 0;border-top:1px solid var(--line);list-style:none;display:flex;flex-direction:column;gap:8px;font-size:15px;color:var(--muted)}
 .aside li{display:flex;gap:10px;align-items:center}
-.aside li .ico{color:var(--gold-d);font-size:16px}
+.aside li .ico{color:var(--gold-d);font-size:17px}
 @media (max-width:959px){.aside{position:static}}
-.related{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:16px}
+.related{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:0 32px;border-top:1px solid var(--ink)}
 '''
 
 
@@ -1098,7 +1099,7 @@ def render(p):
 <meta name="description" content="{html.escape(p['desc'])}">
 <link rel="canonical" href="{url}">
 <meta name="robots" content="index, follow, max-image-preview:large">
-<meta name="theme-color" content="#0B1120">
+<meta name="theme-color" content="#141D33">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="pt_BR">
 <meta property="og:site_name" content="Thayná Cabral Advocacia">
@@ -1115,7 +1116,6 @@ def render(p):
 <link rel="apple-touch-icon" href="/apple-touch-icon.png?v=3">
 <link rel="preload" href="/assets/fonts/cormorant-garamond-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/plus-jakarta-sans-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="/assets/fonts/cormorant-garamond-latin-wght-italic.woff2" as="font" type="font/woff2" crossorigin>
 <script>document.documentElement.classList.add('js');setTimeout(function(){{if(!window.FX)document.documentElement.classList.remove('js')}},2500)</script>
 <script src="/assets/js/fx.js" defer></script>
 <script type="application/ld+json">
@@ -1152,7 +1152,7 @@ def render(p):
   <aside class="aside glass" aria-label="Fale com a advogada">
     <div class="aside__who">
       <picture><source srcset="/assets/img/thayna-cabral.webp" type="image/webp"><img src="/assets/img/thayna-cabral.jpg" alt="" width="64" height="64" loading="lazy"></picture>
-      <div><strong>Dra. Thayná Cabral</strong><span>Advogada · {OAB}</span></div>
+      <div><strong>Dra. Thayná Cabral</strong><span>Advogada, {OAB}</span></div>
     </div>
     <p>Envie um resumo da sua situação pelo WhatsApp. Respondemos para marcar o atendimento, presencial em Natal ou online.</p>
     <a class="btn btn--gold" data-wa href="{w}" target="_blank" rel="noopener"><svg class="wa-i" aria-hidden="true"><use href="#i-wa"/></svg>Falar no WhatsApp</a>
@@ -1167,8 +1167,7 @@ def render(p):
 <section id="duvidas" class="sec sec--sand" aria-labelledby="faq-t">
   <div class="wrap faq">
     <div class="faq__head">
-      <p class="eyebrow" style="margin:0">Perguntas Frequentes</p>
-      <h2 id="faq-t" class="h2">Dúvidas sobre <em>{p['crumb'] if p['crumb'].startswith(('Direito', 'BPC')) else p['crumb'][0].lower() + p['crumb'][1:]}.</em></h2>
+      <h2 id="faq-t" class="h2">Dúvidas sobre {p['crumb'] if p['crumb'].startswith(('Direito', 'BPC')) else p['crumb'][0].lower() + p['crumb'][1:]}</h2>
       <p class="lead">Não encontrou a sua dúvida? Envie pelo WhatsApp e retornamos com orientação.</p>
     </div>
     <div class="faq__list">
@@ -1179,7 +1178,7 @@ def render(p):
 
 <section class="sec" aria-labelledby="rel-t">
   <div class="wrap">
-    <div class="sec__head"><div><p class="eyebrow" style="margin:0">Veja também</p><h2 id="rel-t" class="h2">Outros temas do <em>{area(p)['nome']}.</em></h2></div></div>
+    <div class="sec__head"><div><h2 id="rel-t" class="h2">Outros temas do {area(p)['nome']}</h2></div></div>
     <div class="related">{rel}</div>
   </div>
 </section>
@@ -1187,9 +1186,9 @@ def render(p):
 <section class="sec" style="padding-top:0" aria-labelledby="cta-t">
   <div class="cta glass">
     <img src="/assets/img/simbolo-gold.webp" alt="" width="145" height="144" loading="lazy">
-    <h2 id="cta-t" class="h2">Quer entender o seu caso? <em>Converse com a Dra. Thayná.</em></h2>
+    <h2 id="cta-t" class="h2">Quer entender o seu caso? Converse com a Dra. Thayná.</h2>
     <p class="lead">Conte um pouco sobre a sua situação. Retornamos com clareza sobre os próximos passos.</p>
-    <a class="btn btn--gold" style="height:60px;padding:0 32px;margin-top:8px" data-wa href="{w}" target="_blank" rel="noopener"><svg class="wa-i" aria-hidden="true"><use href="#i-wa"/></svg><span class="long">Falar com a advogada no WhatsApp</span><span class="short">Falar no WhatsApp</span></a>
+    <a class="btn btn--gold" data-wa href="{w}" target="_blank" rel="noopener"><svg class="wa-i" aria-hidden="true"><use href="#i-wa"/></svg><span class="long">Falar com a advogada no WhatsApp</span><span class="short">Falar no WhatsApp</span></a>
   </div>
 </section>
 </main>
