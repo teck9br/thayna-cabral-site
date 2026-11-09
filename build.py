@@ -268,6 +268,9 @@ PAGES = [
 <li>Comparamos o cálculo com o seu CNIS, as carteiras de trabalho e os documentos de tempo especial ou rural.</li>
 <li>Se houver diferença, explicamos quanto o benefício pode aumentar e qual o caminho: pedido de revisão no INSS ou ação na Justiça Federal.</li>
 </ol>'''),
+            ('Como os atrasados são pagos depois da ação', '''
+<p>Quando a revisão é ganha na Justiça Federal, as diferenças atrasadas são pagas por requisição judicial. Até <strong>60 salários mínimos</strong>, o pagamento sai por <strong>RPV</strong>, em poucos meses. Acima disso, vira <strong>precatório</strong>, que entra no orçamento da União e costuma ser pago no ano seguinte ou depois, conforme a data em que foi expedido.</p>
+<p>Expliquei em detalhes como funciona o precatório do INSS, como consultar e quando ele é pago neste artigo: <a href="https://antecipayprecatorios.com.br/blog/precatorio-inss/" target="_blank" rel="noopener">precatório do INSS: o que é e quando é pago</a>.</p>'''),
         ],
         faq=[
             ('Pedir revisão pode diminuir minha aposentadoria?', 'Em situações específicas, sim, por isso a análise prévia é essencial. Antes de qualquer pedido, conferimos se a revisão é vantajosa.'),
