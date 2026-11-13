@@ -71,8 +71,9 @@ PAGES = [
 <a href="/auxilio-doenca-negado/"><strong>Auxílio-doença negado</strong><span>Recurso e ação judicial quando a perícia do INSS nega ou corta o benefício.</span></a>
 <a href="/revisao-beneficio-inss/"><strong>Revisão de benefício</strong><span>Correção de erros no cálculo de aposentadorias e pensões já concedidas.</span></a>
 <a href="/salario-maternidade-natal/"><strong>Salário-maternidade</strong><span>Para empregadas, autônomas, MEI, desempregadas e trabalhadoras rurais.</span></a>
+<a href="/pensao-por-morte-natal/"><strong>Pensão por morte</strong><span>Para cônjuge, companheiro, filhos e outros dependentes de quem faleceu.</span></a>
 </div>
-<p>Também atuamos em pensão por morte, aposentadoria por incapacidade permanente (antiga aposentadoria por invalidez), auxílio-acidente e planejamento previdenciário. Os casos são conduzidos tanto no INSS (via administrativa) quanto na Justiça (via judicial).</p>'''),
+<p>Também atuamos em aposentadoria por incapacidade permanente (antiga aposentadoria por invalidez), auxílio-acidente e planejamento previdenciário. Os casos são conduzidos tanto no INSS (via administrativa) quanto na Justiça (via judicial).</p>'''),
             ('Como funciona o caminho até o benefício', '''
 <ol class="steps-l">
 <li><strong>Análise dos documentos.</strong> Conferimos o CNIS, as carteiras de trabalho e os laudos para descobrir o que você já tem de direito e o que falta provar.</li>
@@ -89,7 +90,7 @@ PAGES = [
             ('O INSS negou meu pedido. O que fazer?', 'Leia o motivo na carta de indeferimento ou no Meu INSS. Dependendo do caso, cabe recurso ao CRPS em até 30 dias, um novo pedido com documentos complementares ou uma ação na Justiça Federal.'),
             ('Vocês atendem quem mora fora de Natal?', 'Sim. O processo previdenciário é eletrônico, e o atendimento pode ser feito por videochamada, com envio de documentos pelo WhatsApp.'),
         ],
-        rel=['aposentadoria-natal', 'bpc-loas-natal', 'auxilio-doenca-negado', 'revisao-beneficio-inss', 'salario-maternidade-natal'],
+        rel=['aposentadoria-natal', 'bpc-loas-natal', 'auxilio-doenca-negado', 'revisao-beneficio-inss', 'salario-maternidade-natal', 'pensao-por-morte-natal'],
     ),
     dict(
         slug='aposentadoria-natal',
@@ -324,6 +325,64 @@ PAGES = [
             ('Trabalhadora rural que nunca pagou o INSS recebe?', 'Sim, se comprovar a atividade rural em regime de economia familiar. O valor é de um salário mínimo, e a prova é feita com documentos e, se preciso, testemunhas.'),
         ],
         rel=['advogada-previdenciaria-natal', 'auxilio-doenca-negado', 'aposentadoria-natal'],
+    ),
+    dict(
+        slug='pensao-por-morte-natal',
+        crumb='Pensão por morte',
+        title='Pensão por Morte do INSS em Natal-RN | Thayná Cabral',
+        desc='Quem tem direito à pensão por morte do INSS, quanto tempo dura, qual o valor e o que fazer se o pedido for negado. Advogada em Natal-RN, presencial e online.',
+        eyebrow='Pensão por morte · Natal-RN',
+        h1='Pensão por morte: o amparo da família quando o segurado <em>falece.</em>',
+        lead='A pensão por morte é paga pelo INSS aos dependentes de quem contribuía ou já era aposentado. Orientamos sobre quem tem direito, o prazo para pedir, a duração do benefício e o recurso quando o INSS nega.',
+        wa='Olá, Dra. Thayná! Quero saber sobre pensão por morte do INSS.',
+        secoes=[
+            ('Quem tem direito à pensão por morte', '''
+<p>Recebem a pensão os <strong>dependentes</strong> do segurado que faleceu, em três classes. Se existe dependente de uma classe, os das classes seguintes não recebem:</p>
+<ul>
+<li><strong>1ª classe:</strong> cônjuge, companheiro ou companheira em união estável e filhos menores de 21 anos, ou de qualquer idade se forem inválidos ou tiverem deficiência intelectual, mental ou grave. Enteado e menor sob tutela entram como filhos, se provada a dependência econômica;</li>
+<li><strong>2ª classe:</strong> pais, se provarem que dependiam economicamente do filho;</li>
+<li><strong>3ª classe:</strong> irmãos menores de 21 anos, inválidos ou com deficiência, também com prova de dependência econômica.</li>
+</ul>
+<p>A dependência do cônjuge, do companheiro e dos filhos é presumida. A pensão não exige número mínimo de contribuições, mas quem faleceu precisava ter <strong>qualidade de segurado</strong>: estar contribuindo, estar no período de graça depois da última contribuição ou já ser aposentado.</p>'''),
+            ('Quanto tempo dura a pensão do cônjuge', '''
+<p>A duração para o cônjuge ou companheiro depende da idade dele na data do óbito, desde que o falecido tivesse pelo menos <strong>18 contribuições</strong> e o casamento ou a união tivesse pelo menos <strong>2 anos</strong>. Sem esses dois requisitos, a pensão dura 4 meses.</p>
+<div class="table-wrap"><table>
+<tr><th>Idade do cônjuge no óbito</th><th>Duração da pensão</th></tr>
+<tr><td>Menos de 22 anos</td><td>3 anos</td></tr>
+<tr><td>22 a 27 anos</td><td>6 anos</td></tr>
+<tr><td>28 a 30 anos</td><td>10 anos</td></tr>
+<tr><td>31 a 41 anos</td><td>15 anos</td></tr>
+<tr><td>42 a 44 anos</td><td>20 anos</td></tr>
+<tr><td>45 anos ou mais</td><td>Vitalícia</td></tr>
+</table></div>
+<p>Idades da Portaria ME 424/2020, válidas para óbitos a partir de 2021. Se o óbito decorreu de acidente ou de doença do trabalho, a regra das 18 contribuições e dos 2 anos não se aplica.</p>'''),
+            ('Qual o valor da pensão', '''
+<p>Desde a Reforma da Previdência (EC 103/2019), a pensão é formada por uma <strong>cota familiar de 50%</strong> da aposentadoria que o falecido recebia, ou da que teria direito se fosse aposentado por incapacidade, <strong>mais 10% por dependente</strong>, até o limite de 100%.</p>
+<p>Exemplo: viúva com um filho menor recebe 70% (50% + 10% + 10%). Quando o filho completa 21 anos, a cota dele acaba e não passa para a mãe. Se houver dependente inválido ou com deficiência grave, a pensão é de 100%. Quando a pensão é a única renda formal do dependente, ela não pode ser menor que o salário mínimo (R$ 1.621,00 em 2026).</p>'''),
+            ('Prazo para pedir e documentos', '''
+<p>Para receber desde a data do óbito, o pedido deve ser feito em até <strong>90 dias</strong>, ou em até <strong>180 dias</strong> para filhos menores de 16 anos. Depois desse prazo, a pensão é paga a partir da data do pedido. O pedido é feito pelo Meu INSS ou pelo telefone 135, com:</p>
+<ul>
+<li>certidão de óbito e documentos de identidade e CPF do falecido e dos dependentes;</li>
+<li>certidão de casamento ou de nascimento dos filhos;</li>
+<li>na união estável, provas da vida em comum, como conta conjunta, comprovante de mesmo endereço, plano de saúde ou seguro com o companheiro como dependente.</li>
+</ul>
+<p>A lei exige ao menos um <strong>documento</strong> da união produzido nos 24 meses anteriores ao óbito: só testemunhas não bastam.</p>'''),
+            ('Por que o INSS nega a pensão', '''
+<ul>
+<li>o INSS entendeu que o falecido tinha perdido a qualidade de segurado;</li>
+<li>a união estável não foi aceita por falta de documentos;</li>
+<li>a dependência econômica dos pais ou dos irmãos não foi provada;</li>
+<li>o filho maior de 21 anos tem invalidez ou deficiência que a perícia não reconheceu.</li>
+</ul>
+<p>Muitas vezes o falecido trabalhava sem carteira, estava doente sem receber benefício ou tinha contribuições não registradas. Nesses casos, é possível provar o vínculo e a qualidade de segurado no recurso ou na Justiça Federal.</p>'''),
+        ],
+        faq=[
+            ('Pensão por morte precisa de carência?', 'Não. Basta que o falecido tivesse qualidade de segurado na data do óbito. O número de contribuições influencia apenas a duração da pensão do cônjuge.'),
+            ('Aposentada pode receber pensão por morte do marido?', 'Pode. A Reforma da Previdência permite acumular aposentadoria e pensão, mas o benefício de menor valor é pago com redução, em faixas. O de maior valor é pago por inteiro.'),
+            ('Ex-esposa que recebia pensão alimentícia tem direito?', 'Sim. O ex-cônjuge divorciado ou separado que recebia pensão alimentícia concorre com os outros dependentes, mas a pensão por morte dura apenas o prazo que restava da pensão alimentícia, se ela tinha prazo.'),
+            ('Perdi o prazo de 90 dias. Perdi a pensão?', 'Não. O direito à pensão continua. O que muda é a data de início: os valores passam a contar a partir da data do pedido, e não do óbito.'),
+        ],
+        rel=['advogada-previdenciaria-natal', 'aposentadoria-natal', 'inventario-natal'],
     ),
 
     # ------------------------------------------------------------ Trabalhista
@@ -601,23 +660,35 @@ PAGES = [
         slug='advogada-civel-natal',
         crumb='Direito Cível',
         title='Advogada Cível e de Família em Natal-RN | Thayná Cabral',
-        desc='Advogada cível em Natal-RN: consumidor, direito bancário, indenizações, divórcio, pensão alimentícia e inventário. Atendimento presencial e online.',
+        desc='Advogada cível em Natal-RN: golpes bancários e do Pix, divórcio, guarda, pensão alimentícia, inventário e indenizações. Atendimento presencial e online.',
         eyebrow='Direito Cível e Família · Natal-RN',
         h1='Advogada cível em Natal para proteger você, a sua família e o seu <em>patrimônio.</em>',
-        lead='Problemas com empresas e bancos, indenizações, divórcio, pensão alimentícia e inventário. Orientação clara para resolver, sempre que possível, de forma rápida e com menos desgaste.',
+        lead='Golpes e fraudes bancárias, divórcio, guarda, pensão alimentícia, inventário e indenizações. Orientação clara para resolver, sempre que possível, de forma rápida e com menos desgaste.',
         wa='Olá, Dra. Thayná! Preciso de orientação sobre uma questão cível ou de família.',
         secoes=[
             ('O que fazemos no Direito Cível', '''
+<h3>Golpes e fraudes bancárias</h3>
 <div class="links">
-<a href="/direito-do-consumidor-natal/"><strong>Direito do consumidor</strong><span>Nome negativado, cobrança indevida, plano de saúde, voos e compras.</span></a>
-<a href="/divorcio-natal/"><strong>Divórcio</strong><span>Em cartório ou na Justiça, com partilha de bens, guarda e pensão.</span></a>
-<a href="/pensao-alimenticia-natal/"><strong>Pensão alimentícia</strong><span>Pedido, revisão e cobrança de pensão atrasada.</span></a>
-<a href="/inventario-natal/"><strong>Inventário</strong><span>Partilha de bens em cartório ou judicial, com prazos e impostos.</span></a>
-<a href="/indenizacao-danos-morais-natal/"><strong>Danos morais</strong><span>Indenização por ofensas, falhas de serviço e acidentes.</span></a>
-<a href="/nome-negativado-indevidamente/"><strong>Nome negativado</strong><span>Retirada do nome do Serasa e SPC e indenização.</span></a>
-<a href="/direito-bancario-natal/"><strong>Direito bancário</strong><span>Juros abusivos, consignado não contratado, cartão RMC e golpes.</span></a>
+<a href="/direito-bancario-natal/"><strong>Golpes do Pix e fraudes</strong><span>Transferências feitas por golpistas e falhas de segurança do banco.</span></a>
+<a href="/direito-bancario-natal/"><strong>Empréstimos não contratados</strong><span>Descontos indevidos no salário ou no benefício e cartão consignado (RMC).</span></a>
+<a href="/direito-bancario-natal/"><strong>Juros abusivos</strong><span>Juros acima da média do mercado e cobranças indevidas.</span></a>
+<a href="/direito-do-consumidor-natal/"><strong>Direito do consumidor</strong><span>Cobrança indevida, plano de saúde, voos e compras.</span></a>
 </div>
-<p>Também atuamos em indenizações por danos materiais, contratos, ações de cobrança, guarda e regulamentação de convivência.</p>'''),
+<h3>Direito de Família</h3>
+<div class="links">
+<a href="/divorcio-natal/"><strong>Divórcio e partilha de bens</strong><span>Em cartório ou na Justiça, conforme o regime de bens.</span></a>
+<a href="/divorcio-natal/#filhos-guarda-convivencia-e-pensao"><strong>Guarda e visitas</strong><span>Guarda dos filhos e regulamentação de visitas (convivência).</span></a>
+<a href="/pensao-alimenticia-natal/"><strong>Pensão alimentícia</strong><span>Pedido, revisão, exoneração e cobrança de pensão atrasada.</span></a>
+</div>
+<h3>Direito das Sucessões</h3>
+<div class="links">
+<a href="/inventario-natal/"><strong>Inventário judicial e extrajudicial</strong><span>Partilha de bens e direitos hereditários, com prazos e impostos.</span></a>
+</div>
+<h3>Responsabilidade Civil</h3>
+<div class="links">
+<a href="/indenizacao-danos-morais-natal/"><strong>Danos morais e materiais</strong><span>Indenização por ofensas, falhas de serviço e acidentes.</span></a>
+<a href="/nome-negativado-indevidamente/"><strong>Negativação indevida</strong><span>Retirada do nome do Serasa e SPC e indenização.</span></a>
+</div>'''),
             ('Resolver no cartório ou na Justiça', '''
 <p>Muitas questões de família podem ser resolvidas <strong>em cartório</strong>, de forma mais rápida, quando há acordo entre as partes, como divórcio consensual e inventário. Quando não há acordo, ou a lei exige, o caminho é a Justiça, nas Varas de Família e Cíveis da Comarca de Natal ou nos Juizados Especiais Cíveis para causas de menor valor.</p>'''),
             ('Como funciona o atendimento', '''
@@ -831,7 +902,7 @@ PAGES = [
             ('Partilha de bens', '''
 <p>A divisão depende do <strong>regime de bens</strong>. No mais comum, a comunhão parcial (aplicada quando não há pacto antenupcial), dividem-se os bens adquiridos de forma onerosa durante o casamento. Ficam de fora, em regra, os bens anteriores ao casamento e os recebidos por herança ou doação. Na união estável, sem contrato escrito, valem as mesmas regras da comunhão parcial.</p>'''),
             ('Filhos: guarda, convivência e pensão', '''
-<p>A <strong>guarda compartilhada</strong> é a regra quando ambos os pais estão aptos (Lei 13.058/2014). Ela divide as decisões sobre a vida da criança, mas não significa que a criança more metade do tempo com cada um. Também são definidos o regime de convivência e a <a href="/pensao-alimenticia-natal/">pensão alimentícia</a>.</p>'''),
+<p>A <strong>guarda compartilhada</strong> é a regra quando ambos os pais estão aptos (Lei 13.058/2014). Ela divide as decisões sobre a vida da criança, mas não significa que a criança more metade do tempo com cada um. Também são definidos o regime de convivência (a antiga regulamentação de visitas) e a <a href="/pensao-alimenticia-natal/">pensão alimentícia</a>.</p>'''),
             ('Documentos para o divórcio', '''
 <ul>
 <li>certidão de casamento atualizada e pacto antenupcial, se houver;</li>
@@ -864,7 +935,7 @@ PAGES = [
             ('Até quando a pensão é paga', '''
 <ul>
 <li>Para filhos, em regra, até os 18 anos, podendo se estender até os 24 anos se estiverem cursando faculdade ou curso técnico;</li>
-<li>a pensão <strong>não termina automaticamente</strong> aos 18 anos: o fim depende de decisão judicial (Súmula 358 do STJ);</li>
+<li>a pensão <strong>não termina automaticamente</strong> aos 18 anos: o fim depende de uma ação de <strong>exoneração de alimentos</strong> e de decisão judicial (Súmula 358 do STJ);</li>
 <li>a gestante pode pedir <strong>alimentos gravídicos</strong> durante a gravidez (Lei 11.804/2008), que se convertem em pensão após o nascimento;</li>
 <li>na falta ou impossibilidade dos pais, os avós podem ser chamados a complementar.</li>
 </ul>'''),
@@ -936,6 +1007,12 @@ AREAS = {
 def area(p):
     return AREAS[p.get('area', 'prev')]
 
+
+from posts import POSTS as TODOS_POSTS  # noqa: E402
+
+POSTS = sorted([q for q in TODOS_POSTS if q.get('publicar')], key=lambda q: q['publicado'], reverse=True)
+BY_POST = {q['slug']: q for q in POSTS}
+
 # ---------------------------------------------------------------- partes comuns
 
 PAGE_CSS = '''
@@ -985,6 +1062,14 @@ PAGE_CSS = '''
 .aside li .ico{color:var(--gold-d);font-size:17px}
 @media (max-width:959px){.aside{position:static}}
 .related{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:0 32px;border-top:1px solid var(--ink)}
+.art-meta{margin:0;font-size:15px;line-height:1.6;color:var(--muted)}
+.art-meta a{color:var(--gold-d);text-decoration:underline;text-decoration-color:rgba(168,133,63,.5);text-underline-offset:4px}
+.answer{margin:0 0 40px;padding:22px 24px;border-left:2px solid var(--gold);background:var(--sand)}
+.answer>strong{display:block;margin-bottom:8px;font-family:var(--serif);font-size:23px;font-weight:500;color:var(--ink)}
+.answer p{margin:0}
+.hubcta{margin:48px 0 0;padding:24px 0;border-top:1px solid var(--ink);border-bottom:1px solid var(--line)}
+.hubcta>strong{display:block;margin-bottom:8px;font-family:var(--serif);font-size:26px;font-weight:500;line-height:1.2}
+.hubcta p{margin:0}
 '''
 
 
@@ -1014,7 +1099,8 @@ def footer():
         <span>Escritório</span>
         <a href="/#sobre">Sobre a advogada</a>
         <a href="/#areas">Áreas de atuação</a>
-        <a href="/#duvidas">Perguntas frequentes</a>
+        <a href="/#duvidas">Perguntas frequentes</a>{'''
+        <a href="/blog/">Blog</a>''' if POSTS else ''}
         <a href="https://antecipayprecatorios.com.br/equipe/thayna-cabral/" target="_blank" rel="noopener">Artigos sobre precatórios</a>
       </nav>
     </div>
@@ -1081,33 +1167,91 @@ def jsonld(p):
     }, crumbs
 
 
-def render(p):
-    url = f'{BASE}/{p["slug"]}/'
-    ld, crumbs = jsonld(p)
-    w = html.escape(wa(p['wa']))
-    crumbs_html = ''.join(
+MESES = ['janeiro', 'fevereiro', 'março', 'abril', 'maio', 'junho', 'julho', 'agosto', 'setembro', 'outubro', 'novembro', 'dezembro']
+
+
+def data_br(d):
+    a, m, dia = d.split('-')
+    return f'{int(dia)} de {MESES[int(m) - 1]} de {a}'
+
+
+def strip(t):
+    return re.sub('<[^>]+>', '', t)
+
+
+def crumbs_html(crumbs):
+    return ''.join(
         f'<li><a href="{u.replace(BASE, "")}">{html.escape(n)}</a></li>' if i < len(crumbs) - 1 else f'<li aria-current="page">{html.escape(n)}</li>'
         for i, (n, u) in enumerate(crumbs))
-    secoes = '\n'.join(f'<h2 id="{slugify(h)}">{h}</h2>{b}' for h, b in p['secoes'])
-    rel = ''.join(
-        f'<a href="/{s}/"><strong>{BY_SLUG[s]["crumb"]}</strong><span>{html.escape(BY_SLUG[s]["desc"].split(". ")[0])}.</span></a>'
-        for s in p['rel'])
-    og_title = re.sub('<[^>]+>', '', p['h1']).rstrip('.') + ' | Thayná Cabral Advocacia'
+
+
+def breadcrumb_ld(crumbs):
+    return {'@type': 'BreadcrumbList',
+            'itemListElement': [{'@type': 'ListItem', 'position': i + 1, 'name': n, 'item': u} for i, (n, u) in enumerate(crumbs)]}
+
+
+def btn_wa(w, cls='btn btn--gold'):
+    return (f'<a class="{cls}" data-wa href="{w}" target="_blank" rel="noopener"><svg class="wa-i" aria-hidden="true"><use href="#i-wa"/></svg>'
+            '<span class="long">Falar com a advogada no WhatsApp</span><span class="short">Falar no WhatsApp</span></a>')
+
+
+def aside(w, extra=''):
+    return f'''  <aside class="aside glass" aria-label="Fale com a advogada">
+    <div class="aside__who">
+      <picture><source srcset="/assets/img/thayna-cabral.webp" type="image/webp"><img src="/assets/img/thayna-cabral.jpg" alt="" width="64" height="64" loading="lazy"></picture>
+      <div><strong>Dra. Thayná Cabral</strong><span>Advogada, {OAB}</span></div>
+    </div>
+    <p>Envie um resumo da sua situação pelo WhatsApp. Respondemos para marcar o atendimento, presencial em Natal ou online.</p>
+    <a class="btn btn--gold" data-wa href="{w}" target="_blank" rel="noopener"><svg class="wa-i" aria-hidden="true"><use href="#i-wa"/></svg>Falar no WhatsApp</a>
+    <ul>
+      <li>{ico('pin')}Natal-RN e online</li>
+      <li>{ico('clock')}Consulta com hora marcada</li>
+      <li>{ico('seal')}{OAB}</li>
+    </ul>{extra}
+  </aside>'''
+
+
+def faq_sec(titulo, faq):
+    return f'''<section id="duvidas" class="sec sec--sand" aria-labelledby="faq-t">
+  <div class="wrap faq">
+    <div class="faq__head">
+      <h2 id="faq-t" class="h2">{titulo}</h2>
+      <p class="lead">Não encontrou a sua dúvida? Envie pelo WhatsApp e retornamos com orientação.</p>
+    </div>
+    <div class="faq__list">
+{faq_html(faq)}
+    </div>
+  </div>
+</section>'''
+
+
+def cta_sec(w):
+    return f'''<section class="sec" style="padding-top:0" aria-labelledby="cta-t">
+  <div class="cta glass">
+    <img src="/assets/img/simbolo-gold.webp" alt="" width="145" height="144" loading="lazy">
+    <h2 id="cta-t" class="h2">Quer entender o seu caso? Converse com a Dra. Thayná.</h2>
+    <p class="lead">Conte um pouco sobre a sua situação. Retornamos com clareza sobre os próximos passos.</p>
+    {btn_wa(w)}
+  </div>
+</section>'''
+
+
+def shell(title, desc, url, og_title, og_type, ld, main, w):
     return f'''<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>{html.escape(p['title'])}</title>
-<meta name="description" content="{html.escape(p['desc'])}">
+<title>{html.escape(title)}</title>
+<meta name="description" content="{html.escape(desc)}">
 <link rel="canonical" href="{url}">
 <meta name="robots" content="index, follow, max-image-preview:large">
 <meta name="theme-color" content="#141D33">
-<meta property="og:type" content="website">
+<meta property="og:type" content="{og_type}">
 <meta property="og:locale" content="pt_BR">
 <meta property="og:site_name" content="Thayná Cabral Advocacia">
 <meta property="og:title" content="{html.escape(og_title)}">
-<meta property="og:description" content="{html.escape(p['desc'])}">
+<meta property="og:description" content="{html.escape(desc)}">
 <meta property="og:url" content="{url}">
 <meta property="og:image" content="{BASE}/og.jpg">
 <meta property="og:image:width" content="1200">
@@ -1135,65 +1279,7 @@ def render(p):
 {HEADER}
 
 <main id="conteudo">
-<nav class="crumbs" aria-label="Você está em"><ol>{crumbs_html}</ol></nav>
-
-<section class="phero" aria-labelledby="h1">
-  <p class="eyebrow" style="margin:0">{p['eyebrow']}</p>
-  <h1 id="h1">{p['h1']}</h1>
-  <p class="hero__sub">{p['lead']}</p>
-  <div class="hero__ctas">
-    <a class="btn btn--gold" data-wa href="{w}" target="_blank" rel="noopener"><svg class="wa-i" aria-hidden="true"><use href="#i-wa"/></svg><span class="long">Falar com a advogada no WhatsApp</span><span class="short">Falar no WhatsApp</span></a>
-    <a class="link" href="#duvidas">Ver perguntas frequentes</a>
-  </div>
-</section>
-
-<div class="layout">
-  <article class="prose">
-{secoes}
-    <p class="note">Conteúdo informativo, atualizado em 2026. Cada caso tem particularidades e precisa de análise individual dos documentos.</p>
-  </article>
-  <aside class="aside glass" aria-label="Fale com a advogada">
-    <div class="aside__who">
-      <picture><source srcset="/assets/img/thayna-cabral.webp" type="image/webp"><img src="/assets/img/thayna-cabral.jpg" alt="" width="64" height="64" loading="lazy"></picture>
-      <div><strong>Dra. Thayná Cabral</strong><span>Advogada, {OAB}</span></div>
-    </div>
-    <p>Envie um resumo da sua situação pelo WhatsApp. Respondemos para marcar o atendimento, presencial em Natal ou online.</p>
-    <a class="btn btn--gold" data-wa href="{w}" target="_blank" rel="noopener"><svg class="wa-i" aria-hidden="true"><use href="#i-wa"/></svg>Falar no WhatsApp</a>
-    <ul>
-      <li>{ico('pin')}Natal-RN e online</li>
-      <li>{ico('clock')}Consulta com hora marcada</li>
-      <li>{ico('seal')}{OAB}</li>
-    </ul>
-  </aside>
-</div>
-
-<section id="duvidas" class="sec sec--sand" aria-labelledby="faq-t">
-  <div class="wrap faq">
-    <div class="faq__head">
-      <h2 id="faq-t" class="h2">Dúvidas sobre {p['crumb'] if p['crumb'].startswith(('Direito', 'BPC')) else p['crumb'][0].lower() + p['crumb'][1:]}</h2>
-      <p class="lead">Não encontrou a sua dúvida? Envie pelo WhatsApp e retornamos com orientação.</p>
-    </div>
-    <div class="faq__list">
-{faq_html(p['faq'])}
-    </div>
-  </div>
-</section>
-
-<section class="sec" aria-labelledby="rel-t">
-  <div class="wrap">
-    <div class="sec__head"><div><h2 id="rel-t" class="h2">Outros temas do {area(p)['nome']}</h2></div></div>
-    <div class="related">{rel}</div>
-  </div>
-</section>
-
-<section class="sec" style="padding-top:0" aria-labelledby="cta-t">
-  <div class="cta glass">
-    <img src="/assets/img/simbolo-gold.webp" alt="" width="145" height="144" loading="lazy">
-    <h2 id="cta-t" class="h2">Quer entender o seu caso? Converse com a Dra. Thayná.</h2>
-    <p class="lead">Conte um pouco sobre a sua situação. Retornamos com clareza sobre os próximos passos.</p>
-    <a class="btn btn--gold" data-wa href="{w}" target="_blank" rel="noopener"><svg class="wa-i" aria-hidden="true"><use href="#i-wa"/></svg><span class="long">Falar com a advogada no WhatsApp</span><span class="short">Falar no WhatsApp</span></a>
-  </div>
-</section>
+{main}
 </main>
 
 {footer()}
@@ -1215,23 +1301,221 @@ document.addEventListener('click',function(e){{var a=e.target.closest('[data-wa]
 '''
 
 
-def check(p, out):
+def post_card(q):
+    return f'<a href="/blog/{q["slug"]}/"><strong>{html.escape(q["title"])}</strong><span>{html.escape(q["desc"].split(". ")[0].rstrip("."))}.</span></a>'
+
+
+def posts_da_pagina(p):
+    # artigos ligados a esta página de serviço; a página-mãe da área também mostra os artigos das páginas da área
+    ar = area(p)
+    if p['slug'] == ar['head']:
+        return [q for q in POSTS if area(q) is ar][:6]
+    return [q for q in POSTS if q['hub'] == p['slug']]
+
+
+def render(p):
+    url = f'{BASE}/{p["slug"]}/'
+    ld, crumbs = jsonld(p)
+    w = html.escape(wa(p['wa']))
+    secoes = '\n'.join(f'<h2 id="{slugify(h)}">{h}</h2>{b}' for h, b in p['secoes'])
+    rel = ''.join(
+        f'<a href="/{s}/"><strong>{BY_SLUG[s]["crumb"]}</strong><span>{html.escape(BY_SLUG[s]["desc"].split(". ")[0])}.</span></a>'
+        for s in p['rel'])
+    artigos = posts_da_pagina(p)
+    blog = f'''
+<section class="sec" aria-labelledby="blog-t">
+  <div class="wrap">
+    <div class="sec__head"><div><h2 id="blog-t" class="h2">Artigos sobre {p['crumb'] if p['crumb'].startswith(('Direito', 'BPC')) else p['crumb'][0].lower() + p['crumb'][1:]}</h2></div></div>
+    <div class="related">{''.join(post_card(q) for q in artigos)}</div>
+  </div>
+</section>
+''' if artigos else ''
+    og_title = strip(p['h1']).rstrip('.') + ' | Thayná Cabral Advocacia'
+    main = f'''<nav class="crumbs" aria-label="Você está em"><ol>{crumbs_html(crumbs)}</ol></nav>
+
+<section class="phero" aria-labelledby="h1">
+  <p class="eyebrow" style="margin:0">{p['eyebrow']}</p>
+  <h1 id="h1">{p['h1']}</h1>
+  <p class="hero__sub">{p['lead']}</p>
+  <div class="hero__ctas">
+    {btn_wa(w)}
+    <a class="link" href="#duvidas">Ver perguntas frequentes</a>
+  </div>
+</section>
+
+<div class="layout">
+  <article class="prose">
+{secoes}
+    <p class="note">Conteúdo informativo, atualizado em 2026. Cada caso tem particularidades e precisa de análise individual dos documentos.</p>
+  </article>
+{aside(w)}
+</div>
+
+{faq_sec('Dúvidas sobre ' + (p['crumb'] if p['crumb'].startswith(('Direito', 'BPC')) else p['crumb'][0].lower() + p['crumb'][1:]), p['faq'])}
+{blog}
+<section class="sec" aria-labelledby="rel-t">
+  <div class="wrap">
+    <div class="sec__head"><div><h2 id="rel-t" class="h2">Outros temas do {area(p)['nome']}</h2></div></div>
+    <div class="related">{rel}</div>
+  </div>
+</section>
+
+{cta_sec(w)}'''
+    return shell(p['title'], p['desc'], url, og_title, 'website', ld, main, w)
+
+
+# ---------------------------------------------------------------- blog
+
+def autora_ld():
+    return {
+        '@type': 'Person', '@id': f'{BASE}/#thayna', 'name': 'Thayná Cabral', 'honorificPrefix': 'Dra.',
+        'jobTitle': 'Advogada', 'url': f'{BASE}/#sobre', 'image': f'{BASE}/assets/img/thayna-cabral.jpg',
+        'worksFor': {'@id': f'{BASE}/#escritorio'},
+        'hasCredential': {'@type': 'EducationalOccupationalCredential', 'credentialCategory': 'Inscrição na Ordem dos Advogados do Brasil',
+                          'name': OAB, 'recognizedBy': {'@type': 'Organization', 'name': 'Ordem dos Advogados do Brasil, Seccional Rio Grande do Norte'}},
+    }
+
+
+def escritorio_ld():
+    return {'@type': 'LegalService', '@id': f'{BASE}/#escritorio', 'name': 'Thayná Cabral Advocacia', 'url': f'{BASE}/',
+            'telephone': '+55-84-99701-0660', 'image': f'{BASE}/og.jpg', 'logo': f'{BASE}/logo-512.png',
+            'address': {'@type': 'PostalAddress', 'addressLocality': 'Natal', 'addressRegion': 'RN', 'addressCountry': 'BR'}}
+
+
+def minutos(q):
+    texto = strip(q['answer'] + ' '.join(h + b for h, b in q['secoes']) + ' '.join(a + b for a, b in q['faq']))
+    return max(3, round(len(texto.split()) / 200))
+
+
+def render_post(q):
+    url = f'{BASE}/blog/{q["slug"]}/'
+    hub = BY_SLUG[q['hub']]
+    crumbs = [('Início', f'{BASE}/'), ('Blog', f'{BASE}/blog/'), (q['crumb'], url)]
+    ld = {'@context': 'https://schema.org', '@graph': [
+        {'@type': 'BlogPosting', '@id': url + '#artigo', 'headline': q['title'], 'description': q['desc'],
+         'datePublished': q['publicado'], 'dateModified': q['atualizado'], 'inLanguage': 'pt-BR',
+         'author': {'@id': f'{BASE}/#thayna'}, 'publisher': {'@id': f'{BASE}/#escritorio'},
+         'mainEntityOfPage': url, 'image': f'{BASE}/og.jpg', 'articleSection': area(q)['nome'],
+         'isPartOf': {'@type': 'Blog', '@id': f'{BASE}/blog/#blog'}},
+        autora_ld(), escritorio_ld(), breadcrumb_ld(crumbs)]}
+    w = html.escape(wa(q['wa']))
+    secoes = '\n'.join(f'<h2 id="{slugify(h)}">{h}</h2>{b}' for h, b in q['secoes'])
+    hub_nome = hub['crumb'] if hub['crumb'].startswith(('Direito', 'BPC')) else hub['crumb'][0].lower() + hub['crumb'][1:]
+    rel = ''.join(post_card(BY_POST[s]) for s in q['rel'])
+    rel += f'<a href="/{hub["slug"]}/"><strong>{html.escape(hub["crumb"])} em Natal</strong><span>{html.escape(hub["desc"].split(". ")[0].rstrip("."))}.</span></a>'
+    datas = f'Publicado em {data_br(q["publicado"])}' + (f' · Atualizado em {data_br(q["atualizado"])}' if q['atualizado'] != q['publicado'] else '')
+    main = f'''<nav class="crumbs" aria-label="Você está em"><ol>{crumbs_html(crumbs)}</ol></nav>
+
+<section class="phero" aria-labelledby="h1">
+  <p class="eyebrow" style="margin:0">{area(q)['nome']}</p>
+  <h1 id="h1">{q['title']}</h1>
+  <p class="hero__sub">{q['lead']}</p>
+  <p class="art-meta">Por <a href="/#sobre">Dra. Thayná Cabral</a>, advogada, {OAB} · {datas} · {minutos(q)} min de leitura</p>
+</section>
+
+<div class="layout">
+  <article class="prose">
+    <div class="answer"><strong>Resposta rápida</strong><p>{q['answer']}</p></div>
+{secoes}
+    <div class="hubcta">
+      <strong>{html.escape(q['cta'][0])}</strong>
+      <p>{q['cta'][1]} Veja como funciona o atendimento em <a href="/{hub['slug']}/">{hub_nome} em Natal</a>.</p>
+    </div>
+    <p class="note">Conteúdo informativo, atualizado em {data_br(q['atualizado'])}. As regras do INSS e da Justiça mudam com frequência e cada caso tem particularidades que precisam de análise individual dos documentos.</p>
+  </article>
+{aside(w)}
+</div>
+
+{faq_sec('Perguntas frequentes', q['faq'])}
+
+<section class="sec" aria-labelledby="rel-t">
+  <div class="wrap">
+    <div class="sec__head"><div><h2 id="rel-t" class="h2">Leia também</h2></div></div>
+    <div class="related">{rel}</div>
+  </div>
+</section>
+
+{cta_sec(w)}'''
+    return shell(q['seo'], q['desc'], url, strip(q['title']) + ' | Thayná Cabral Advocacia', 'article', ld, main, w)
+
+
+BLOG_SEO = 'Blog sobre INSS, trabalho e família | Thayná Cabral'
+BLOG_DESC = 'Artigos da Dra. Thayná Cabral, advogada em Natal-RN: aposentadoria, BPC/LOAS, auxílio-doença, pensão por morte, direitos trabalhistas e família.'
+
+
+def render_blog():
+    url = f'{BASE}/blog/'
+    crumbs = [('Início', f'{BASE}/'), ('Blog', url)]
+    ld = {'@context': 'https://schema.org', '@graph': [
+        {'@type': 'Blog', '@id': url + '#blog', 'name': 'Blog da Thayná Cabral Advocacia', 'url': url, 'inLanguage': 'pt-BR',
+         'description': BLOG_DESC, 'author': {'@id': f'{BASE}/#thayna'}, 'publisher': {'@id': f'{BASE}/#escritorio'},
+         'blogPost': [{'@type': 'BlogPosting', 'headline': q['title'], 'url': f'{url}{q["slug"]}/', 'datePublished': q['publicado']} for q in POSTS]},
+        autora_ld(), escritorio_ld(), breadcrumb_ld(crumbs)]}
+    grupos = ''
+    for k, ar in AREAS.items():
+        qs = [q for q in POSTS if area(q) is ar]
+        if not qs:
+            continue
+        grupos += f'''
+<section class="sec" aria-labelledby="g-{k}">
+  <div class="wrap">
+    <div class="sec__head"><div><h2 id="g-{k}" class="h2">{ar['nome']}</h2></div><a class="link" href="/{ar['head']}/">{ar['curto']} em Natal</a></div>
+    <div class="related">{''.join(post_card(q) for q in qs)}</div>
+  </div>
+</section>'''
+    w = html.escape(wa('Olá, Dra. Thayná! Li o blog e gostaria de tirar uma dúvida sobre o meu caso.'))
+    main = f'''<nav class="crumbs" aria-label="Você está em"><ol>{crumbs_html(crumbs)}</ol></nav>
+
+<section class="phero" aria-labelledby="h1">
+  <h1 id="h1">Seus direitos explicados sem juridiquês.</h1>
+  <p class="hero__sub">Artigos da Dra. Thayná Cabral sobre INSS, trabalho e família: quem tem direito, como pedir e o que fazer quando o pedido é negado.</p>
+</section>
+{grupos}
+
+{cta_sec(w)}'''
+    return shell(BLOG_SEO, BLOG_DESC, url, 'Blog da Thayná Cabral Advocacia', 'website', ld, main, w)
+
+
+def check(title, desc, caminho, out):
     erros = []
-    if len(p['title']) > 60:
-        erros.append(f'title com {len(p["title"])} caracteres')
-    if not 120 <= len(p['desc']) <= 160:
-        erros.append(f'description com {len(p["desc"])} caracteres')
+    if len(title) > 60:
+        erros.append(f'title com {len(title)} caracteres')
+    if not 120 <= len(desc) <= 160:
+        erros.append(f'description com {len(desc)} caracteres')
     if out.count('<h1') != 1:
         erros.append('mais de um H1')
-    internos = set(re.findall(r'href="(/[a-z][^"#]*/)"', out)) - {'/' + p['slug'] + '/'}
+    internos = set(re.findall(r'href="(/[a-z][^"#]*/)"', out)) - {caminho}
     if len(internos) < 3:
         erros.append(f'só {len(internos)} links internos')
     return erros
 
 
+def check_post(q):
+    erros = []
+    for campo in ('slug', 'hub', 'crumb', 'title', 'seo', 'desc', 'lead', 'answer', 'secoes', 'faq', 'cta', 'wa', 'publicado', 'atualizado'):
+        if not q.get(campo):
+            erros.append(f'falta {campo}')
+    if q.get('hub') not in BY_SLUG:
+        erros.append(f'hub "{q.get("hub")}" não é uma página de serviço')
+    for s in q.get('rel', []):
+        if s not in BY_POST:
+            erros.append(f'rel "{s}" não é um artigo publicado')
+    for campo in ('publicado', 'atualizado'):
+        if not re.fullmatch(r'\d{4}-\d{2}-\d{2}', q.get(campo, '')):
+            erros.append(f'{campo} fora do formato AAAA-MM-DD')
+    if q.get('atualizado', '') < q.get('publicado', ''):
+        erros.append('atualizado antes de publicado')
+    if q.get('slug') != slugify(q.get('slug', '')):
+        erros.append('slug com acento, maiúscula ou espaço')
+    return erros
+
+
 def build_sitemap():
     # o lastmod só muda quando o conteúdo do <main> muda (CSS, cabeçalho e rodapé não contam)
-    urls = ['/'] + [f'/{p["slug"]}/' for p in PAGES] + ['/privacidade.html']
+    urls = ['/'] + [f'/{p["slug"]}/' for p in PAGES]
+    if POSTS:
+        urls += ['/blog/'] + [f'/blog/{q["slug"]}/' for q in POSTS]
+    urls.append('/privacidade.html')
     reg = Path(__file__).parent / 'lastmod.json'
     datas = json.loads(reg.read_text(encoding='utf-8')) if reg.exists() else {}
     for u in urls:
@@ -1253,6 +1537,9 @@ def build_llms():
     s = p.read_text(encoding='utf-8')
     linhas = ['- [Página inicial](%s/): áreas de atuação, sobre a advogada, como funciona o atendimento e perguntas frequentes.' % BASE]
     linhas += [f'- [{pg["crumb"]}]({BASE}/{pg["slug"]}/): {pg["desc"]}' for pg in PAGES]
+    if POSTS:
+        linhas.append(f'- [Blog]({BASE}/blog/): {BLOG_DESC}')
+        linhas += [f'- [Artigo: {q["title"]}]({BASE}/blog/{q["slug"]}/): {q["desc"]}' for q in POSTS]
     linhas.append(f'- [Política de Privacidade]({BASE}/privacidade.html)')
     s = re.sub(r'(## Páginas\n).*?(\n\n## )', lambda m: m.group(1) + '\n'.join(linhas) + m.group(2), s, flags=re.S)
     p.write_text(s, encoding='utf-8', newline='\n')
@@ -1275,11 +1562,39 @@ if __name__ == '__main__':
         d = ROOT / p['slug']
         d.mkdir(exist_ok=True)
         (d / 'index.html').write_text(out, encoding='utf-8', newline='\n')
-        erros = check(p, out)
+        erros = check(p['title'], p['desc'], f'/{p["slug"]}/', out)
         falhas += bool(erros)
         print(f'{"OK " if not erros else "ERRO"} /{p["slug"]}/  title {len(p["title"])} · desc {len(p["desc"])}' + (' · ' + '; '.join(erros) if erros else ''))
+
+    blog = ROOT / 'blog'
+    if POSTS:
+        blog.mkdir(exist_ok=True)
+        out = render_blog()
+        (blog / 'index.html').write_text(out, encoding='utf-8', newline='\n')
+        erros = check(BLOG_SEO, BLOG_DESC, '/blog/', out)
+        falhas += bool(erros)
+        print(f'{"OK " if not erros else "ERRO"} /blog/  title {len(BLOG_SEO)} · desc {len(BLOG_DESC)}' + (' · ' + '; '.join(erros) if erros else ''))
+        for q in POSTS:
+            out = render_post(q)
+            d = blog / q['slug']
+            d.mkdir(exist_ok=True)
+            (d / 'index.html').write_text(out, encoding='utf-8', newline='\n')
+            erros = check_post(q) + check(q['seo'], q['desc'], f'/blog/{q["slug"]}/', out)
+            falhas += bool(erros)
+            print(f'{"OK " if not erros else "ERRO"} /blog/{q["slug"]}/  title {len(q["seo"])} · desc {len(q["desc"])}' + (' · ' + '; '.join(erros) if erros else ''))
+    # artigo que saiu da lista (ou voltou a rascunho) não pode ficar no ar
+    if blog.exists():
+        for d in blog.iterdir():
+            if d.is_dir() and d.name not in BY_POST:
+                (d / 'index.html').unlink(missing_ok=True)
+                d.rmdir()
+                print(f'removido /blog/{d.name}/ (não está publicado)')
+        if not POSTS:
+            (blog / 'index.html').unlink(missing_ok=True)
+            blog.rmdir()
+            print('removido /blog/ (nenhum artigo publicado)')
     update_index_footer()
     build_sitemap()
     build_llms()
-    print('home (rodapé), sitemap.xml e llms.txt atualizados')
+    print(f'home (rodapé), sitemap.xml e llms.txt atualizados · {len(POSTS)} artigo(s) no blog')
     raise SystemExit(1 if falhas else 0)

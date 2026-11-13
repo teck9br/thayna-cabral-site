@@ -1,0 +1,923 @@
+{
+  "seed": "advogado previdenciário natal",
+  "gerado_em": "2026-11-12",
+  "pillar": {
+    "title": "Advogada previdenciária em Natal",
+    "keyword": "advogado previdenciário natal rn",
+    "volume": 110,
+    "template": "landing-page",
+    "wordCount": 1200,
+    "url": "/advogada-previdenciaria-natal/",
+    "status": "written"
+  },
+  "clusters": [
+    {
+      "name": "Aposentadoria",
+      "color": "#141D33",
+      "posts": [
+        {
+          "title": "Aposentadoria em Natal (página de serviço)",
+          "keyword": "aposentadoria natal",
+          "volume": 0,
+          "secondary": [],
+          "template": "landing-page",
+          "wordCount": 1200,
+          "url": "/aposentadoria-natal/",
+          "status": "written",
+          "intent": "transacional",
+          "role": "hub"
+        },
+        {
+          "title": "Aposentadoria por idade da mulher: idade, carência e valor",
+          "keyword": "aposentadoria por idade para mulher",
+          "volume": 22200,
+          "secondary": [
+            "aposentadoria por idade mulher que nunca contribuiu (390)",
+            "valor da aposentadoria por idade (1.000)",
+            "carência aposentadoria por idade (390)"
+          ],
+          "template": "explainer",
+          "wordCount": 1500,
+          "url": "/blog/aposentadoria-por-idade-mulher/",
+          "status": "planned",
+          "intent": "informacional",
+          "role": "spoke"
+        },
+        {
+          "title": "Aposentadoria rural por idade: quem tem direito e como provar",
+          "keyword": "aposentadoria por idade rural",
+          "volume": 14700,
+          "secondary": [
+            "rural aposentadoria por idade (8.100)",
+            "aposentadoria por idade híbrida (1.310)"
+          ],
+          "template": "explainer",
+          "wordCount": 1500,
+          "url": "/blog/aposentadoria-rural/",
+          "status": "planned",
+          "intent": "informacional",
+          "role": "spoke"
+        },
+        {
+          "title": "Nunca contribuí com o INSS: posso me aposentar?",
+          "keyword": "aposentadoria por idade nunca contribuiu",
+          "volume": 12300,
+          "secondary": [
+            "aposentadoria por idade para quem nunca contribuiu (4.400)",
+            "aposentadoria por idade sem contribuir (1.300)"
+          ],
+          "template": "explainer",
+          "wordCount": 1200,
+          "url": "/blog/aposentadoria-quem-nunca-contribuiu/",
+          "status": "planned",
+          "intent": "informacional",
+          "role": "spoke"
+        },
+        {
+          "title": "Aposentadoria especial: quem tem direito em 2026",
+          "keyword": "aposentadoria especial",
+          "volume": 90500,
+          "secondary": [
+            "vigilante aposentadoria especial (5.400)",
+            "aposentadoria especial enfermagem (1.300)",
+            "idade mínima aposentadoria especial (1.900)"
+          ],
+          "template": "explainer",
+          "wordCount": 1800,
+          "url": "/blog/aposentadoria-especial/",
+          "status": "planned",
+          "intent": "informacional",
+          "role": "spoke"
+        }
+      ]
+    },
+    {
+      "name": "BPC/LOAS",
+      "color": "#A8853F",
+      "posts": [
+        {
+          "title": "BPC/LOAS em Natal (página de serviço)",
+          "keyword": "bpc loas quem tem direito",
+          "volume": 9900,
+          "secondary": [],
+          "template": "landing-page",
+          "wordCount": 1200,
+          "url": "/bpc-loas-natal/",
+          "status": "written",
+          "intent": "transacional",
+          "role": "hub"
+        },
+        {
+          "title": "Como pedir o BPC/LOAS passo a passo",
+          "keyword": "como dar entrada no bpc loas",
+          "volume": 2180,
+          "secondary": [
+            "bpc loas como solicitar (880)"
+          ],
+          "template": "how-to",
+          "wordCount": 1300,
+          "url": "/blog/como-pedir-bpc-loas/",
+          "status": "planned",
+          "intent": "informacional",
+          "role": "spoke"
+        },
+        {
+          "title": "BPC/LOAS para autismo: requisitos e laudo",
+          "keyword": "bpc loas para autistas",
+          "volume": 870,
+          "secondary": [
+            "bpc loas para autismo (390)"
+          ],
+          "template": "explainer",
+          "wordCount": 1200,
+          "url": "/blog/bpc-loas-autismo/",
+          "status": "planned",
+          "intent": "informacional",
+          "role": "spoke"
+        },
+        {
+          "title": "Renda por pessoa no BPC/LOAS: como o INSS calcula",
+          "keyword": "bpc loas renda familiar",
+          "volume": 0,
+          "secondary": [
+            "qual o valor do bpc loas (720)"
+          ],
+          "template": "explainer",
+          "wordCount": 1200,
+          "url": "/blog/bpc-loas-renda/",
+          "status": "planned",
+          "intent": "informacional",
+          "role": "spoke"
+        }
+      ]
+    },
+    {
+      "name": "Auxílio-doença",
+      "color": "#7A5E2A",
+      "posts": [
+        {
+          "title": "Auxílio-doença negado (página de serviço)",
+          "keyword": "auxílio doença negado",
+          "volume": 10,
+          "secondary": [],
+          "template": "landing-page",
+          "wordCount": 1200,
+          "url": "/auxilio-doenca-negado/",
+          "status": "written",
+          "intent": "transacional",
+          "role": "hub"
+        },
+        {
+          "title": "Auxílio-doença: quem tem direito e qual a carência",
+          "keyword": "auxílio doença quem tem direito",
+          "volume": 7880,
+          "secondary": [
+            "quem tem direito ao auxílio doença (1.600)",
+            "auxílio doença carência (1.000)",
+            "mei tem direito a auxílio doença (1.000)"
+          ],
+          "template": "explainer",
+          "wordCount": 1500,
+          "url": "/blog/auxilio-doenca-quem-tem-direito/",
+          "status": "planned",
+          "intent": "informacional",
+          "role": "spoke"
+        },
+        {
+          "title": "Valor do auxílio-doença: como é calculado",
+          "keyword": "auxílio doença valor",
+          "volume": 9200,
+          "secondary": [
+            "cálculo auxílio doença (1.300)",
+            "calculadora auxílio doença (1.000)"
+          ],
+          "template": "explainer",
+          "wordCount": 1300,
+          "url": "/blog/valor-auxilio-doenca/",
+          "status": "planned",
+          "intent": "informacional",
+          "role": "spoke"
+        },
+        {
+          "title": "Prorrogação do auxílio-doença: prazo e documentos",
+          "keyword": "pedido de prorrogação de auxílio doença",
+          "volume": 1620,
+          "secondary": [
+            "precisa de novo atestado (320)"
+          ],
+          "template": "how-to",
+          "wordCount": 1200,
+          "url": "/blog/prorrogacao-auxilio-doenca/",
+          "status": "planned",
+          "intent": "informacional",
+          "role": "spoke"
+        },
+        {
+          "title": "INSS negou e a empresa não aceita a volta: quem paga?",
+          "keyword": "se o inss negar o auxílio doença quem paga",
+          "volume": 1270,
+          "secondary": [
+            "auxílio doença negado retorno ao trabalho (390)"
+          ],
+          "template": "explainer",
+          "wordCount": 1300,
+          "url": "/blog/inss-negou-quem-paga-salario/",
+          "status": "planned",
+          "intent": "informacional",
+          "role": "spoke"
+        }
+      ]
+    },
+    {
+      "name": "Pensão por morte",
+      "color": "#B4472E",
+      "posts": [
+        {
+          "title": "Pensão por morte em Natal (NOVA página de serviço)",
+          "keyword": "pensão por morte",
+          "volume": 14800,
+          "secondary": [
+            "pensão por morte quem tem direito (2.900)",
+            "quem tem direito à pensão por morte (3.600)"
+          ],
+          "template": "landing-page",
+          "wordCount": 1300,
+          "url": "/pensao-por-morte-natal/",
+          "status": "planned",
+          "intent": "transacional",
+          "role": "hub"
+        },
+        {
+          "title": "Tabela de idade da pensão por morte: quando é vitalícia",
+          "keyword": "tabela de idade para receber pensão por morte",
+          "volume": 7350,
+          "secondary": [
+            "pensão por morte é vitalícia (720)",
+            "como saber se a pensão por morte é vitalícia (720)"
+          ],
+          "template": "explainer",
+          "wordCount": 1300,
+          "url": "/blog/pensao-por-morte-tabela-idade/",
+          "status": "planned",
+          "intent": "informacional",
+          "role": "spoke"
+        },
+        {
+          "title": "Pensão por morte para filhos: até que idade e qual o valor",
+          "keyword": "pensão por morte para filhos",
+          "volume": 4700,
+          "secondary": [
+            "qual o valor da pensão por morte para filho (720)",
+            "filho menor tem direito a pensão por morte do pai (590)"
+          ],
+          "template": "explainer",
+          "wordCount": 1300,
+          "url": "/blog/pensao-por-morte-filhos/",
+          "status": "planned",
+          "intent": "informacional",
+          "role": "spoke"
+        },
+        {
+          "title": "Aposentada pode receber pensão por morte? Regras do acúmulo",
+          "keyword": "sou aposentada posso receber pensão por morte do meu marido",
+          "volume": 2150,
+          "secondary": [
+            "é possível receber pensão por morte e aposentadoria (880)",
+            "cálculo pensão cumulada com aposentadoria (390)"
+          ],
+          "template": "explainer",
+          "wordCount": 1200,
+          "url": "/blog/acumular-pensao-e-aposentadoria/",
+          "status": "planned",
+          "intent": "informacional",
+          "role": "spoke"
+        }
+      ]
+    }
+  ],
+  "links": [
+    {
+      "from": "pillar",
+      "to": "cluster-0-post-0",
+      "type": "mandatory",
+      "anchor": "aposentadoria natal",
+      "from_url": "/advogada-previdenciaria-natal/",
+      "to_url": "/aposentadoria-natal/"
+    },
+    {
+      "from": "cluster-0-post-0",
+      "to": "pillar",
+      "type": "mandatory",
+      "anchor": "advogada previdenciária em Natal",
+      "from_url": "/aposentadoria-natal/",
+      "to_url": "/advogada-previdenciaria-natal/"
+    },
+    {
+      "from": "cluster-0-post-1",
+      "to": "cluster-0-post-0",
+      "type": "mandatory",
+      "anchor": "aposentadoria em natal",
+      "from_url": "/blog/aposentadoria-por-idade-mulher/",
+      "to_url": "/aposentadoria-natal/"
+    },
+    {
+      "from": "cluster-0-post-0",
+      "to": "cluster-0-post-1",
+      "type": "mandatory",
+      "anchor": "aposentadoria por idade para mulher",
+      "from_url": "/aposentadoria-natal/",
+      "to_url": "/blog/aposentadoria-por-idade-mulher/"
+    },
+    {
+      "from": "cluster-0-post-1",
+      "to": "cluster-0-post-2",
+      "type": "recommended",
+      "anchor": "aposentadoria por idade rural",
+      "from_url": "/blog/aposentadoria-por-idade-mulher/",
+      "to_url": "/blog/aposentadoria-rural/"
+    },
+    {
+      "from": "cluster-0-post-1",
+      "to": "cluster-0-post-4",
+      "type": "recommended",
+      "anchor": "aposentadoria especial",
+      "from_url": "/blog/aposentadoria-por-idade-mulher/",
+      "to_url": "/blog/aposentadoria-especial/"
+    },
+    {
+      "from": "cluster-0-post-2",
+      "to": "cluster-0-post-0",
+      "type": "mandatory",
+      "anchor": "aposentadoria em natal",
+      "from_url": "/blog/aposentadoria-rural/",
+      "to_url": "/aposentadoria-natal/"
+    },
+    {
+      "from": "cluster-0-post-0",
+      "to": "cluster-0-post-2",
+      "type": "mandatory",
+      "anchor": "aposentadoria por idade rural",
+      "from_url": "/aposentadoria-natal/",
+      "to_url": "/blog/aposentadoria-rural/"
+    },
+    {
+      "from": "cluster-0-post-2",
+      "to": "cluster-0-post-3",
+      "type": "recommended",
+      "anchor": "aposentadoria por idade nunca contribuiu",
+      "from_url": "/blog/aposentadoria-rural/",
+      "to_url": "/blog/aposentadoria-quem-nunca-contribuiu/"
+    },
+    {
+      "from": "cluster-0-post-2",
+      "to": "cluster-0-post-1",
+      "type": "recommended",
+      "anchor": "aposentadoria por idade para mulher",
+      "from_url": "/blog/aposentadoria-rural/",
+      "to_url": "/blog/aposentadoria-por-idade-mulher/"
+    },
+    {
+      "from": "cluster-0-post-3",
+      "to": "cluster-0-post-0",
+      "type": "mandatory",
+      "anchor": "aposentadoria em natal",
+      "from_url": "/blog/aposentadoria-quem-nunca-contribuiu/",
+      "to_url": "/aposentadoria-natal/"
+    },
+    {
+      "from": "cluster-0-post-0",
+      "to": "cluster-0-post-3",
+      "type": "mandatory",
+      "anchor": "aposentadoria por idade nunca contribuiu",
+      "from_url": "/aposentadoria-natal/",
+      "to_url": "/blog/aposentadoria-quem-nunca-contribuiu/"
+    },
+    {
+      "from": "cluster-0-post-3",
+      "to": "cluster-0-post-4",
+      "type": "recommended",
+      "anchor": "aposentadoria especial",
+      "from_url": "/blog/aposentadoria-quem-nunca-contribuiu/",
+      "to_url": "/blog/aposentadoria-especial/"
+    },
+    {
+      "from": "cluster-0-post-3",
+      "to": "cluster-0-post-2",
+      "type": "recommended",
+      "anchor": "aposentadoria por idade rural",
+      "from_url": "/blog/aposentadoria-quem-nunca-contribuiu/",
+      "to_url": "/blog/aposentadoria-rural/"
+    },
+    {
+      "from": "cluster-0-post-4",
+      "to": "cluster-0-post-0",
+      "type": "mandatory",
+      "anchor": "aposentadoria em natal",
+      "from_url": "/blog/aposentadoria-especial/",
+      "to_url": "/aposentadoria-natal/"
+    },
+    {
+      "from": "cluster-0-post-0",
+      "to": "cluster-0-post-4",
+      "type": "mandatory",
+      "anchor": "aposentadoria especial",
+      "from_url": "/aposentadoria-natal/",
+      "to_url": "/blog/aposentadoria-especial/"
+    },
+    {
+      "from": "cluster-0-post-4",
+      "to": "cluster-0-post-1",
+      "type": "recommended",
+      "anchor": "aposentadoria por idade para mulher",
+      "from_url": "/blog/aposentadoria-especial/",
+      "to_url": "/blog/aposentadoria-por-idade-mulher/"
+    },
+    {
+      "from": "cluster-0-post-4",
+      "to": "cluster-0-post-3",
+      "type": "recommended",
+      "anchor": "aposentadoria por idade nunca contribuiu",
+      "from_url": "/blog/aposentadoria-especial/",
+      "to_url": "/blog/aposentadoria-quem-nunca-contribuiu/"
+    },
+    {
+      "from": "pillar",
+      "to": "cluster-1-post-0",
+      "type": "mandatory",
+      "anchor": "bpc loas quem tem direito",
+      "from_url": "/advogada-previdenciaria-natal/",
+      "to_url": "/bpc-loas-natal/"
+    },
+    {
+      "from": "cluster-1-post-0",
+      "to": "pillar",
+      "type": "mandatory",
+      "anchor": "advogada previdenciária em Natal",
+      "from_url": "/bpc-loas-natal/",
+      "to_url": "/advogada-previdenciaria-natal/"
+    },
+    {
+      "from": "cluster-1-post-1",
+      "to": "cluster-1-post-0",
+      "type": "mandatory",
+      "anchor": "bpc/loas em natal",
+      "from_url": "/blog/como-pedir-bpc-loas/",
+      "to_url": "/bpc-loas-natal/"
+    },
+    {
+      "from": "cluster-1-post-0",
+      "to": "cluster-1-post-1",
+      "type": "mandatory",
+      "anchor": "como dar entrada no bpc loas",
+      "from_url": "/bpc-loas-natal/",
+      "to_url": "/blog/como-pedir-bpc-loas/"
+    },
+    {
+      "from": "cluster-1-post-1",
+      "to": "cluster-1-post-2",
+      "type": "recommended",
+      "anchor": "bpc loas para autistas",
+      "from_url": "/blog/como-pedir-bpc-loas/",
+      "to_url": "/blog/bpc-loas-autismo/"
+    },
+    {
+      "from": "cluster-1-post-1",
+      "to": "cluster-1-post-3",
+      "type": "recommended",
+      "anchor": "bpc loas renda familiar",
+      "from_url": "/blog/como-pedir-bpc-loas/",
+      "to_url": "/blog/bpc-loas-renda/"
+    },
+    {
+      "from": "cluster-1-post-2",
+      "to": "cluster-1-post-0",
+      "type": "mandatory",
+      "anchor": "bpc/loas em natal",
+      "from_url": "/blog/bpc-loas-autismo/",
+      "to_url": "/bpc-loas-natal/"
+    },
+    {
+      "from": "cluster-1-post-0",
+      "to": "cluster-1-post-2",
+      "type": "mandatory",
+      "anchor": "bpc loas para autistas",
+      "from_url": "/bpc-loas-natal/",
+      "to_url": "/blog/bpc-loas-autismo/"
+    },
+    {
+      "from": "cluster-1-post-2",
+      "to": "cluster-1-post-3",
+      "type": "recommended",
+      "anchor": "bpc loas renda familiar",
+      "from_url": "/blog/bpc-loas-autismo/",
+      "to_url": "/blog/bpc-loas-renda/"
+    },
+    {
+      "from": "cluster-1-post-2",
+      "to": "cluster-1-post-1",
+      "type": "recommended",
+      "anchor": "como dar entrada no bpc loas",
+      "from_url": "/blog/bpc-loas-autismo/",
+      "to_url": "/blog/como-pedir-bpc-loas/"
+    },
+    {
+      "from": "cluster-1-post-3",
+      "to": "cluster-1-post-0",
+      "type": "mandatory",
+      "anchor": "bpc/loas em natal",
+      "from_url": "/blog/bpc-loas-renda/",
+      "to_url": "/bpc-loas-natal/"
+    },
+    {
+      "from": "cluster-1-post-0",
+      "to": "cluster-1-post-3",
+      "type": "mandatory",
+      "anchor": "bpc loas renda familiar",
+      "from_url": "/bpc-loas-natal/",
+      "to_url": "/blog/bpc-loas-renda/"
+    },
+    {
+      "from": "cluster-1-post-3",
+      "to": "cluster-1-post-1",
+      "type": "recommended",
+      "anchor": "como dar entrada no bpc loas",
+      "from_url": "/blog/bpc-loas-renda/",
+      "to_url": "/blog/como-pedir-bpc-loas/"
+    },
+    {
+      "from": "cluster-1-post-3",
+      "to": "cluster-1-post-2",
+      "type": "recommended",
+      "anchor": "bpc loas para autistas",
+      "from_url": "/blog/bpc-loas-renda/",
+      "to_url": "/blog/bpc-loas-autismo/"
+    },
+    {
+      "from": "pillar",
+      "to": "cluster-2-post-0",
+      "type": "mandatory",
+      "anchor": "auxílio doença negado",
+      "from_url": "/advogada-previdenciaria-natal/",
+      "to_url": "/auxilio-doenca-negado/"
+    },
+    {
+      "from": "cluster-2-post-0",
+      "to": "pillar",
+      "type": "mandatory",
+      "anchor": "advogada previdenciária em Natal",
+      "from_url": "/auxilio-doenca-negado/",
+      "to_url": "/advogada-previdenciaria-natal/"
+    },
+    {
+      "from": "cluster-2-post-1",
+      "to": "cluster-2-post-0",
+      "type": "mandatory",
+      "anchor": "auxílio-doença negado",
+      "from_url": "/blog/auxilio-doenca-quem-tem-direito/",
+      "to_url": "/auxilio-doenca-negado/"
+    },
+    {
+      "from": "cluster-2-post-0",
+      "to": "cluster-2-post-1",
+      "type": "mandatory",
+      "anchor": "auxílio doença quem tem direito",
+      "from_url": "/auxilio-doenca-negado/",
+      "to_url": "/blog/auxilio-doenca-quem-tem-direito/"
+    },
+    {
+      "from": "cluster-2-post-1",
+      "to": "cluster-2-post-2",
+      "type": "recommended",
+      "anchor": "auxílio doença valor",
+      "from_url": "/blog/auxilio-doenca-quem-tem-direito/",
+      "to_url": "/blog/valor-auxilio-doenca/"
+    },
+    {
+      "from": "cluster-2-post-1",
+      "to": "cluster-2-post-4",
+      "type": "recommended",
+      "anchor": "se o inss negar o auxílio doença quem paga",
+      "from_url": "/blog/auxilio-doenca-quem-tem-direito/",
+      "to_url": "/blog/inss-negou-quem-paga-salario/"
+    },
+    {
+      "from": "cluster-2-post-2",
+      "to": "cluster-2-post-0",
+      "type": "mandatory",
+      "anchor": "auxílio-doença negado",
+      "from_url": "/blog/valor-auxilio-doenca/",
+      "to_url": "/auxilio-doenca-negado/"
+    },
+    {
+      "from": "cluster-2-post-0",
+      "to": "cluster-2-post-2",
+      "type": "mandatory",
+      "anchor": "auxílio doença valor",
+      "from_url": "/auxilio-doenca-negado/",
+      "to_url": "/blog/valor-auxilio-doenca/"
+    },
+    {
+      "from": "cluster-2-post-2",
+      "to": "cluster-2-post-3",
+      "type": "recommended",
+      "anchor": "pedido de prorrogação de auxílio doença",
+      "from_url": "/blog/valor-auxilio-doenca/",
+      "to_url": "/blog/prorrogacao-auxilio-doenca/"
+    },
+    {
+      "from": "cluster-2-post-2",
+      "to": "cluster-2-post-1",
+      "type": "recommended",
+      "anchor": "auxílio doença quem tem direito",
+      "from_url": "/blog/valor-auxilio-doenca/",
+      "to_url": "/blog/auxilio-doenca-quem-tem-direito/"
+    },
+    {
+      "from": "cluster-2-post-3",
+      "to": "cluster-2-post-0",
+      "type": "mandatory",
+      "anchor": "auxílio-doença negado",
+      "from_url": "/blog/prorrogacao-auxilio-doenca/",
+      "to_url": "/auxilio-doenca-negado/"
+    },
+    {
+      "from": "cluster-2-post-0",
+      "to": "cluster-2-post-3",
+      "type": "mandatory",
+      "anchor": "pedido de prorrogação de auxílio doença",
+      "from_url": "/auxilio-doenca-negado/",
+      "to_url": "/blog/prorrogacao-auxilio-doenca/"
+    },
+    {
+      "from": "cluster-2-post-3",
+      "to": "cluster-2-post-4",
+      "type": "recommended",
+      "anchor": "se o inss negar o auxílio doença quem paga",
+      "from_url": "/blog/prorrogacao-auxilio-doenca/",
+      "to_url": "/blog/inss-negou-quem-paga-salario/"
+    },
+    {
+      "from": "cluster-2-post-3",
+      "to": "cluster-2-post-2",
+      "type": "recommended",
+      "anchor": "auxílio doença valor",
+      "from_url": "/blog/prorrogacao-auxilio-doenca/",
+      "to_url": "/blog/valor-auxilio-doenca/"
+    },
+    {
+      "from": "cluster-2-post-4",
+      "to": "cluster-2-post-0",
+      "type": "mandatory",
+      "anchor": "auxílio-doença negado",
+      "from_url": "/blog/inss-negou-quem-paga-salario/",
+      "to_url": "/auxilio-doenca-negado/"
+    },
+    {
+      "from": "cluster-2-post-0",
+      "to": "cluster-2-post-4",
+      "type": "mandatory",
+      "anchor": "se o inss negar o auxílio doença quem paga",
+      "from_url": "/auxilio-doenca-negado/",
+      "to_url": "/blog/inss-negou-quem-paga-salario/"
+    },
+    {
+      "from": "cluster-2-post-4",
+      "to": "cluster-2-post-1",
+      "type": "recommended",
+      "anchor": "auxílio doença quem tem direito",
+      "from_url": "/blog/inss-negou-quem-paga-salario/",
+      "to_url": "/blog/auxilio-doenca-quem-tem-direito/"
+    },
+    {
+      "from": "cluster-2-post-4",
+      "to": "cluster-2-post-3",
+      "type": "recommended",
+      "anchor": "pedido de prorrogação de auxílio doença",
+      "from_url": "/blog/inss-negou-quem-paga-salario/",
+      "to_url": "/blog/prorrogacao-auxilio-doenca/"
+    },
+    {
+      "from": "pillar",
+      "to": "cluster-3-post-0",
+      "type": "mandatory",
+      "anchor": "pensão por morte",
+      "from_url": "/advogada-previdenciaria-natal/",
+      "to_url": "/pensao-por-morte-natal/"
+    },
+    {
+      "from": "cluster-3-post-0",
+      "to": "pillar",
+      "type": "mandatory",
+      "anchor": "advogada previdenciária em Natal",
+      "from_url": "/pensao-por-morte-natal/",
+      "to_url": "/advogada-previdenciaria-natal/"
+    },
+    {
+      "from": "cluster-3-post-1",
+      "to": "cluster-3-post-0",
+      "type": "mandatory",
+      "anchor": "pensão por morte em natal",
+      "from_url": "/blog/pensao-por-morte-tabela-idade/",
+      "to_url": "/pensao-por-morte-natal/"
+    },
+    {
+      "from": "cluster-3-post-0",
+      "to": "cluster-3-post-1",
+      "type": "mandatory",
+      "anchor": "tabela de idade para receber pensão por morte",
+      "from_url": "/pensao-por-morte-natal/",
+      "to_url": "/blog/pensao-por-morte-tabela-idade/"
+    },
+    {
+      "from": "cluster-3-post-1",
+      "to": "cluster-3-post-2",
+      "type": "recommended",
+      "anchor": "pensão por morte para filhos",
+      "from_url": "/blog/pensao-por-morte-tabela-idade/",
+      "to_url": "/blog/pensao-por-morte-filhos/"
+    },
+    {
+      "from": "cluster-3-post-1",
+      "to": "cluster-3-post-3",
+      "type": "recommended",
+      "anchor": "sou aposentada posso receber pensão por morte do meu marido",
+      "from_url": "/blog/pensao-por-morte-tabela-idade/",
+      "to_url": "/blog/acumular-pensao-e-aposentadoria/"
+    },
+    {
+      "from": "cluster-3-post-2",
+      "to": "cluster-3-post-0",
+      "type": "mandatory",
+      "anchor": "pensão por morte em natal",
+      "from_url": "/blog/pensao-por-morte-filhos/",
+      "to_url": "/pensao-por-morte-natal/"
+    },
+    {
+      "from": "cluster-3-post-0",
+      "to": "cluster-3-post-2",
+      "type": "mandatory",
+      "anchor": "pensão por morte para filhos",
+      "from_url": "/pensao-por-morte-natal/",
+      "to_url": "/blog/pensao-por-morte-filhos/"
+    },
+    {
+      "from": "cluster-3-post-2",
+      "to": "cluster-3-post-3",
+      "type": "recommended",
+      "anchor": "sou aposentada posso receber pensão por morte do meu marido",
+      "from_url": "/blog/pensao-por-morte-filhos/",
+      "to_url": "/blog/acumular-pensao-e-aposentadoria/"
+    },
+    {
+      "from": "cluster-3-post-2",
+      "to": "cluster-3-post-1",
+      "type": "recommended",
+      "anchor": "tabela de idade para receber pensão por morte",
+      "from_url": "/blog/pensao-por-morte-filhos/",
+      "to_url": "/blog/pensao-por-morte-tabela-idade/"
+    },
+    {
+      "from": "cluster-3-post-3",
+      "to": "cluster-3-post-0",
+      "type": "mandatory",
+      "anchor": "pensão por morte em natal",
+      "from_url": "/blog/acumular-pensao-e-aposentadoria/",
+      "to_url": "/pensao-por-morte-natal/"
+    },
+    {
+      "from": "cluster-3-post-0",
+      "to": "cluster-3-post-3",
+      "type": "mandatory",
+      "anchor": "sou aposentada posso receber pensão por morte do meu marido",
+      "from_url": "/pensao-por-morte-natal/",
+      "to_url": "/blog/acumular-pensao-e-aposentadoria/"
+    },
+    {
+      "from": "cluster-3-post-3",
+      "to": "cluster-3-post-1",
+      "type": "recommended",
+      "anchor": "tabela de idade para receber pensão por morte",
+      "from_url": "/blog/acumular-pensao-e-aposentadoria/",
+      "to_url": "/blog/pensao-por-morte-tabela-idade/"
+    },
+    {
+      "from": "cluster-3-post-3",
+      "to": "cluster-3-post-2",
+      "type": "recommended",
+      "anchor": "pensão por morte para filhos",
+      "from_url": "/blog/acumular-pensao-e-aposentadoria/",
+      "to_url": "/blog/pensao-por-morte-filhos/"
+    },
+    {
+      "from": "cluster-0-post-3",
+      "to": "cluster-1-post-1",
+      "type": "optional",
+      "anchor": "BPC/LOAS para idosos",
+      "from_url": "/blog/aposentadoria-quem-nunca-contribuiu/",
+      "to_url": "/blog/como-pedir-bpc-loas/"
+    },
+    {
+      "from": "cluster-1-post-1",
+      "to": "cluster-0-post-3",
+      "type": "optional",
+      "anchor": "aposentadoria para quem nunca contribuiu",
+      "from_url": "/blog/como-pedir-bpc-loas/",
+      "to_url": "/blog/aposentadoria-quem-nunca-contribuiu/"
+    },
+    {
+      "from": "cluster-3-post-3",
+      "to": "cluster-0-post-1",
+      "type": "optional",
+      "anchor": "aposentadoria por idade da mulher",
+      "from_url": "/blog/acumular-pensao-e-aposentadoria/",
+      "to_url": "/blog/aposentadoria-por-idade-mulher/"
+    },
+    {
+      "from": "cluster-1-post-2",
+      "to": "cluster-3-post-2",
+      "type": "optional",
+      "anchor": "pensão por morte para filhos",
+      "from_url": "/blog/bpc-loas-autismo/",
+      "to_url": "/blog/pensao-por-morte-filhos/"
+    },
+    {
+      "from": "cluster-2-post-1",
+      "to": "cluster-0-post-4",
+      "type": "optional",
+      "anchor": "aposentadoria especial",
+      "from_url": "/blog/auxilio-doenca-quem-tem-direito/",
+      "to_url": "/blog/aposentadoria-especial/"
+    }
+  ],
+  "links_fora_do_mapa": [
+    {
+      "from_url": "/blog/inss-negou-quem-paga-salario/",
+      "to_url": "/advogada-trabalhista-natal/",
+      "anchor": "advogada trabalhista em Natal"
+    },
+    {
+      "from_url": "/blog/auxilio-doenca-quem-tem-direito/",
+      "to_url": "/acidente-de-trabalho/",
+      "anchor": "auxílio-doença por acidente de trabalho"
+    },
+    {
+      "from_url": "/blog/aposentadoria-especial/",
+      "to_url": "/revisao-beneficio-inss/",
+      "anchor": "revisão do benefício do INSS"
+    },
+    {
+      "from_url": "/pensao-por-morte-natal/",
+      "to_url": "/inventario-natal/",
+      "anchor": "inventário em Natal"
+    }
+  ],
+  "incoming": {
+    "/aposentadoria-natal/": 5,
+    "/advogada-previdenciaria-natal/": 4,
+    "/blog/aposentadoria-por-idade-mulher/": 4,
+    "/blog/aposentadoria-rural/": 3,
+    "/blog/aposentadoria-especial/": 4,
+    "/blog/aposentadoria-quem-nunca-contribuiu/": 4,
+    "/bpc-loas-natal/": 4,
+    "/blog/como-pedir-bpc-loas/": 4,
+    "/blog/bpc-loas-autismo/": 3,
+    "/blog/bpc-loas-renda/": 3,
+    "/auxilio-doenca-negado/": 5,
+    "/blog/auxilio-doenca-quem-tem-direito/": 3,
+    "/blog/valor-auxilio-doenca/": 3,
+    "/blog/inss-negou-quem-paga-salario/": 3,
+    "/blog/prorrogacao-auxilio-doenca/": 3,
+    "/pensao-por-morte-natal/": 4,
+    "/blog/pensao-por-morte-tabela-idade/": 3,
+    "/blog/pensao-por-morte-filhos/": 4,
+    "/blog/acumular-pensao-e-aposentadoria/": 3
+  },
+  "meta": {
+    "totalPosts": 19,
+    "totalClusters": 4,
+    "totalLinks": 69,
+    "estimatedWords": 21300,
+    "newPages": 15
+  },
+  "serp_overlap": {
+    "fonte": "Ubersuggest, Google Brasil (pt), top 10 orgânico; coletas de 09/09 a 12/11/2026; alguns SERPs vieram só com 3–5 orgânicos",
+    "pares_url_compartilhadas": {
+      "bpc loas quem tem direito × bpc loas requisitos": 0,
+      "bpc loas quem tem direito × como dar entrada no bpc loas": 0,
+      "aposentadoria por idade para mulher × aposentadoria por idade nunca contribuiu": 0,
+      "aposentadoria por idade rural × aposentadoria por idade nunca contribuiu": 0,
+      "pensão por morte quem tem direito × tabela de idade para receber pensão por morte": 1,
+      "auxílio doença quem tem direito × se o inss negar o auxílio doença quem paga": 0,
+      "aposentadoria especial × demais": 0,
+      "advogado previdenciário natal rn × demais": 0
+    },
+    "leitura": "Nenhum par chegou a 4+: cada termo pede página própria. A sobreposição aparece por domínio (previdenciarista.com, jusbrasil, bocchiadvogados, gov.br), não por URL."
+  },
+  "excluidos": {
+    "calendário bpc loas 2025/2026 (3.600+)": "notícia/navegacional, muda todo mês, não gera cliente",
+    "empréstimo consignado bpc loas (2.900+)": "produto financeiro; pode virar artigo do Direito Bancário, não do Previdenciário",
+    "stf / votação / pec aposentadoria especial": "notícia em andamento; citar dentro do artigo de aposentadoria especial com data",
+    "meu inss bpc loas / meu inss auxílio doença": "navegacional (o usuário quer o app)",
+    "bpc loas quem tem direito (9.900)": "já é o alvo da página /bpc-loas-natal/; artigo igual canibalizaria"
+  }
+}
