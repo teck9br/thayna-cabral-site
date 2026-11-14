@@ -35,6 +35,55 @@ def slugify(t):
     return re.sub(r'[^a-z0-9]+', '-', t).strip('-')
 
 
+# Fontes oficiais citadas no fim das páginas e dos artigos (campo `fontes`, com as chaves abaixo).
+# Links conferidos no Planalto em 14/11/2026.
+PL = 'https://www.planalto.gov.br/ccivil_03/'
+FONTES = {
+    'cf': ('Constituição Federal de 1988', PL + 'constituicao/constituicao.htm'),
+    'ec103': ('Emenda Constitucional 103/2019 (Reforma da Previdência)', PL + 'constituicao/emendas/emc/emc103.htm'),
+    'ec66': ('Emenda Constitucional 66/2010 (divórcio direto)', PL + 'constituicao/emendas/emc/emc66.htm'),
+    'l8213': ('Lei 8.213/1991 (benefícios da Previdência Social)', PL + 'leis/l8213cons.htm'),
+    'd3048': ('Decreto 3.048/1999 (Regulamento da Previdência Social)', PL + 'decreto/d3048.htm'),
+    'lc142': ('Lei Complementar 142/2013 (aposentadoria da pessoa com deficiência)', PL + 'leis/lcp/lcp142.htm'),
+    'l8742': ('Lei 8.742/1993 (Lei Orgânica da Assistência Social, LOAS)', PL + 'leis/l8742.htm'),
+    'l15077': ('Lei 15.077/2024 (mudanças no BPC)', PL + '_ato2023-2026/2024/lei/l15077.htm'),
+    'd12534': ('Decreto 12.534/2025 (regras do BPC)', PL + '_ato2023-2026/2025/decreto/d12534.htm'),
+    'l12764': ('Lei 12.764/2012 (direitos da pessoa com transtorno do espectro autista)', PL + '_ato2011-2014/2012/lei/l12764.htm'),
+    'clt': ('Consolidação das Leis do Trabalho (CLT, Decreto-Lei 5.452/1943)', PL + 'decreto-lei/del5452.htm'),
+    'l12506': ('Lei 12.506/2011 (aviso prévio proporcional)', PL + '_ato2011-2014/2011/lei/l12506.htm'),
+    'lc150': ('Lei Complementar 150/2015 (trabalho doméstico)', PL + 'leis/lcp/lcp150.htm'),
+    'cdc': ('Código de Defesa do Consumidor (Lei 8.078/1990)', PL + 'leis/l8078compilado.htm'),
+    'cc': ('Código Civil (Lei 10.406/2002)', PL + 'leis/2002/l10406compilada.htm'),
+    'cpc': ('Código de Processo Civil (Lei 13.105/2015)', PL + '_ato2015-2018/2015/lei/l13105.htm'),
+    'l14181': ('Lei 14.181/2021 (superendividamento)', PL + '_ato2019-2022/2021/lei/l14181.htm'),
+    'l13058': ('Lei 13.058/2014 (guarda compartilhada)', PL + '_ato2011-2014/2014/lei/l13058.htm'),
+    'l11804': ('Lei 11.804/2008 (alimentos gravídicos)', PL + '_ato2007-2010/2008/lei/l11804.htm'),
+    'l6858': ('Lei 6.858/1980 (valores deixados por quem faleceu)', PL + 'leis/l6858.htm'),
+}
+
+
+def fontes_html(chaves):
+    itens = ''.join(f'<li><a href="{FONTES[k][1]}" target="_blank" rel="noopener">{html.escape(FONTES[k][0])}</a></li>' for k in chaves)
+    return f'<div class="fontes"><strong>Fontes oficiais</strong><ul>{itens}</ul></div>'
+
+
+def fontes_ld(chaves):
+    return [{'@type': 'Legislation', 'name': FONTES[k][0], 'url': FONTES[k][1]} for k in chaves]
+
+
+def erros_fontes(p):
+    if not p.get('fontes'):
+        return ['falta fontes']
+    return [f'fonte "{k}" não existe em FONTES' for k in p['fontes'] if k not in FONTES]
+
+
+def main_hash(s):
+    # hash do <main> sem a data de atualização (<time class="upd">), para a data não mudar o próprio hash
+    m = re.search(r'<main.*?</main>', s, re.S)
+    t = re.sub(r'<time class="upd"[^>]*>.*?</time>', '', m.group(0) if m else s)
+    return hashlib.sha1(t.encode()).hexdigest()[:12]
+
+
 def ico(name):
     return f'<svg class="ico" aria-hidden="true"><use href="#i-{name}"/></svg>'
 
@@ -91,6 +140,7 @@ PAGES = [
             ('Vocês atendem quem mora fora de Natal?', 'Sim. O processo previdenciário é eletrônico, e o atendimento pode ser feito por videochamada, com envio de documentos pelo WhatsApp.'),
         ],
         rel=['aposentadoria-natal', 'bpc-loas-natal', 'auxilio-doenca-negado', 'revisao-beneficio-inss', 'salario-maternidade-natal', 'pensao-por-morte-natal'],
+        fontes=['l8213', 'l8742', 'ec103', 'd3048'],
     ),
     dict(
         slug='aposentadoria-natal',
@@ -139,6 +189,7 @@ PAGES = [
             ('Posso continuar trabalhando depois de aposentado?', 'Na maioria das aposentadorias, sim. A exceção é a aposentadoria especial: quem a recebe não pode continuar exercendo atividade exposta a agentes nocivos.'),
         ],
         rel=['advogada-previdenciaria-natal', 'revisao-beneficio-inss', 'bpc-loas-natal'],
+        fontes=['ec103', 'l8213', 'lc142'],
     ),
     dict(
         slug='bpc-loas-natal',
@@ -167,7 +218,7 @@ PAGES = [
 </ol>
 <p>A Lei 15.077/2024 tornou obrigatório o <strong>cadastro biométrico</strong> (como o da CNH, do título de eleitor ou da Carteira de Identidade Nacional) para pedir e para manter o benefício.</p>'''),
             ('Qual a renda exigida', '''
-<p>O critério geral é renda familiar <strong>por pessoa de até 1/4 do salário mínimo</strong>. Para calcular, soma-se a renda de quem mora na mesma casa (requerente, cônjuge, pais, irmãos solteiros, filhos e enteados solteiros) e divide-se pelo número de pessoas.</p>
+<p>O critério geral é renda familiar <strong>por pessoa de até 1/4 do salário mínimo</strong>. Para calcular, soma-se a renda de quem mora na mesma casa (requerente, cônjuge, pais, irmãos solteiros, filhos e enteados solteiros) e divide-se pelo número de pessoas. Para fazer a conta da sua família, use a <a href="/blog/bpc-loas-renda/#calculadora">calculadora de renda do BPC</a>.</p>
 <p>Esse limite não é absoluto. O Supremo Tribunal Federal já reconheceu que a situação de vulnerabilidade pode ser provada por outros meios, e a Justiça analisa a realidade da família: gastos com remédios, fraldas, tratamentos e condições da moradia.</p>'''),
             ('Por que o INSS nega o BPC', '''
 <ul>
@@ -191,6 +242,7 @@ PAGES = [
             ('Quanto tempo demora o BPC?', 'Depende da fila do INSS, da perícia e da avaliação social. Um pedido com CadÚnico em dia e laudos completos tende a andar mais rápido.'),
         ],
         rel=['advogada-previdenciaria-natal', 'auxilio-doenca-negado', 'aposentadoria-natal'],
+        fontes=['l8742', 'l15077', 'd12534'],
     ),
     dict(
         slug='auxilio-doenca-negado',
@@ -238,6 +290,7 @@ PAGES = [
             ('Posso trabalhar enquanto espero o resultado?', 'Quem recebe auxílio-doença não pode trabalhar na atividade para a qual está incapaz. Se o benefício foi negado e você voltou ao trabalho por necessidade, isso precisa ser explicado no processo.'),
         ],
         rel=['advogada-previdenciaria-natal', 'bpc-loas-natal', 'revisao-beneficio-inss'],
+        fontes=['l8213', 'd3048'],
     ),
     dict(
         slug='revisao-beneficio-inss',
@@ -280,6 +333,7 @@ PAGES = [
             ('Preciso guardar documentos antigos?', 'Sim. Carteiras de trabalho, carnês, contracheques e PPP são as principais provas para corrigir o cálculo. Se você não tiver algum documento, há outros meios de prova a avaliar.'),
         ],
         rel=['advogada-previdenciaria-natal', 'aposentadoria-natal', 'auxilio-doenca-negado'],
+        fontes=['l8213', 'ec103'],
     ),
     dict(
         slug='salario-maternidade-natal',
@@ -325,6 +379,7 @@ PAGES = [
             ('Trabalhadora rural que nunca pagou o INSS recebe?', 'Sim, se comprovar a atividade rural em regime de economia familiar. O valor é de um salário mínimo, e a prova é feita com documentos e, se preciso, testemunhas.'),
         ],
         rel=['advogada-previdenciaria-natal', 'auxilio-doenca-negado', 'aposentadoria-natal'],
+        fontes=['l8213', 'd3048'],
     ),
     dict(
         slug='pensao-por-morte-natal',
@@ -383,6 +438,7 @@ PAGES = [
             ('Perdi o prazo de 90 dias. Perdi a pensão?', 'Não. O direito à pensão continua. O que muda é a data de início: os valores passam a contar a partir da data do pedido, e não do óbito.'),
         ],
         rel=['advogada-previdenciaria-natal', 'aposentadoria-natal', 'inventario-natal'],
+        fontes=['l8213', 'ec103'],
     ),
 
     # ------------------------------------------------------------ Trabalhista
@@ -433,6 +489,7 @@ PAGES = [
             ('A empresa pode me prejudicar por eu entrar na Justiça?', 'Retaliação por exercer o direito de ação é ilegal e pode gerar indenização. Se você ainda trabalha na empresa, avaliamos juntos a melhor estratégia.'),
         ],
         rel=['verbas-rescisorias', 'rescisao-indireta', 'horas-extras', 'trabalho-sem-carteira-assinada', 'acidente-de-trabalho'],
+        fontes=['clt', 'cf'],
     ),
     dict(
         area='trab',
@@ -477,6 +534,7 @@ PAGES = [
             ('Fui demitido por justa causa. Tenho direito ao seguro-desemprego?', 'Não, enquanto a justa causa valer. Se ela for revertida na Justiça, o trabalhador passa a ter direito às verbas da demissão sem justa causa, inclusive a indenização correspondente ao seguro-desemprego, quando cabível.'),
         ],
         rel=['advogada-trabalhista-natal', 'rescisao-indireta', 'horas-extras'],
+        fontes=['clt', 'l12506'],
     ),
     dict(
         area='trab',
@@ -516,6 +574,7 @@ PAGES = [
             ('Posso continuar trabalhando enquanto o processo corre?', 'Nos casos de descumprimento das obrigações do contrato, como salário atrasado e FGTS não depositado, sim (art. 483, § 3º, da CLT). Em situações de assédio ou perigo, o afastamento costuma ser necessário.'),
         ],
         rel=['advogada-trabalhista-natal', 'verbas-rescisorias', 'horas-extras'],
+        fontes=['clt'],
     ),
     dict(
         area='trab',
@@ -557,6 +616,7 @@ PAGES = [
             ('Posso cobrar horas extras de quanto tempo?', 'Dos últimos 5 anos, contados da data da ação, desde que a ação seja proposta em até 2 anos após o fim do contrato.'),
         ],
         rel=['advogada-trabalhista-natal', 'verbas-rescisorias', 'trabalho-sem-carteira-assinada'],
+        fontes=['clt', 'cf'],
     ),
     dict(
         area='trab',
@@ -604,6 +664,7 @@ PAGES = [
             ('Ainda trabalho sem registro. Posso pedir a carteira assinada?', 'Sim. O registro é obrigação do empregador desde o primeiro dia. Avaliamos com você se é o caso de conversar, notificar ou entrar com ação.'),
         ],
         rel=['advogada-trabalhista-natal', 'verbas-rescisorias', 'aposentadoria-natal'],
+        fontes=['clt', 'lc150'],
     ),
     dict(
         area='trab',
@@ -652,6 +713,7 @@ PAGES = [
             ('Qual o prazo para pedir indenização?', 'A ação contra a empresa segue o prazo trabalhista: 5 anos contados da ciência inequívoca da incapacidade, respeitado o limite de 2 anos após o fim do contrato.'),
         ],
         rel=['advogada-trabalhista-natal', 'auxilio-doenca-negado', 'verbas-rescisorias'],
+        fontes=['l8213', 'clt'],
     ),
 
     # ------------------------------------------------------------ Cível
@@ -705,6 +767,7 @@ PAGES = [
             ('Atendem fora de Natal?', 'Sim. Processos judiciais são eletrônicos e muitos atos de cartório podem ser feitos de forma digital, o que permite atender clientes de outras cidades.'),
         ],
         rel=['direito-do-consumidor-natal', 'direito-bancario-natal', 'divorcio-natal', 'pensao-alimenticia-natal', 'inventario-natal'],
+        fontes=['cc', 'cdc', 'cpc'],
     ),
     dict(
         area='civ',
@@ -749,6 +812,7 @@ PAGES = [
             ('O plano de saúde negou meu tratamento. O que fazer?', 'Peça a negativa por escrito e o relatório médico. Em casos urgentes, é possível pedir uma decisão liminar na Justiça para garantir o tratamento rapidamente.'),
         ],
         rel=['advogada-civel-natal', 'revisao-beneficio-inss', 'inventario-natal'],
+        fontes=['cdc'],
     ),
     dict(
         area='civ',
@@ -798,6 +862,7 @@ PAGES = [
             ('Quanto tempo demora um processo de danos morais?', 'Depende do caso e de onde ele tramita. No Juizado Especial costuma ser mais rápido, e muitos processos terminam em acordo já na audiência de conciliação.'),
         ],
         rel=['nome-negativado-indevidamente', 'direito-do-consumidor-natal', 'advogada-civel-natal'],
+        fontes=['cf', 'cc', 'cdc'],
     ),
     dict(
         area='civ',
@@ -836,6 +901,7 @@ PAGES = [
             ('Preciso pagar para consultar meu nome?', 'Não. Serasa, SPC e Boa Vista oferecem consulta gratuita do CPF, e o Registrato, do Banco Central, mostra gratuitamente empréstimos e contas em seu nome.'),
         ],
         rel=['indenizacao-danos-morais-natal', 'direito-do-consumidor-natal', 'advogada-civel-natal'],
+        fontes=['cdc'],
     ),
     dict(
         area='civ',
@@ -880,6 +946,7 @@ PAGES = [
             ('Posso revisar os juros do meu financiamento?', 'Pode, quando a taxa do contrato fica muito acima da média de mercado divulgada pelo Banco Central na época da contratação. Analisamos o contrato para ver se vale a pena.'),
         ],
         rel=['direito-do-consumidor-natal', 'nome-negativado-indevidamente', 'advogada-civel-natal'],
+        fontes=['cdc', 'l14181'],
     ),
     dict(
         area='civ',
@@ -918,6 +985,7 @@ PAGES = [
             ('Posso me divorciar e deixar a partilha para depois?', 'Pode. O divórcio pode ser feito antes, e a partilha dos bens resolvida depois, em cartório ou na Justiça.'),
         ],
         rel=['advogada-civel-natal', 'pensao-alimenticia-natal', 'inventario-natal'],
+        fontes=['ec66', 'cc', 'cpc', 'l13058'],
     ),
     dict(
         area='civ',
@@ -955,6 +1023,7 @@ PAGES = [
             ('Posso pedir pensão sem estar casada com o pai?', 'Sim. O direito à pensão é do filho e não depende de casamento ou união entre os pais. Se a paternidade não estiver registrada, ela pode ser investigada no mesmo processo.'),
         ],
         rel=['advogada-civel-natal', 'divorcio-natal', 'inventario-natal'],
+        fontes=['cc', 'cpc', 'l11804'],
     ),
     dict(
         area='civ',
@@ -993,6 +1062,7 @@ PAGES = [
             ('Um herdeiro não concorda com a partilha. E agora?', 'Sem acordo, o inventário precisa ser feito na Justiça. Ainda assim, buscamos uma solução negociada sempre que possível, para reduzir tempo e custos.'),
         ],
         rel=['advogada-civel-natal', 'divorcio-natal', 'pensao-alimenticia-natal'],
+        fontes=['cc', 'cpc', 'l6858'],
     ),
 ]
 BY_SLUG = {p['slug']: p for p in PAGES}
@@ -1070,6 +1140,22 @@ PAGE_CSS = '''
 .hubcta{margin:48px 0 0;padding:24px 0;border-top:1px solid var(--ink);border-bottom:1px solid var(--line)}
 .hubcta>strong{display:block;margin-bottom:8px;font-family:var(--serif);font-size:26px;font-weight:500;line-height:1.2}
 .hubcta p{margin:0}
+.fontes{margin:40px 0 0;padding-top:20px;border-top:1px solid var(--line);font-size:15px;line-height:1.6}
+.fontes>strong{display:block;margin-bottom:10px;font-size:15px}
+.prose .fontes ul{gap:6px}
+.calc{margin:24px 0 24px;padding:24px;border:1px solid var(--line);border-top:2px solid var(--ink);border-radius:var(--r);background:#fff;display:flex;flex-direction:column;gap:16px}
+.calc__t{font-family:var(--serif);font-size:26px;font-weight:500;line-height:1.2}
+.prose .calc p{margin:0;font-size:15px;color:var(--muted)}
+.calc label{display:flex;flex-direction:column;gap:6px;font-size:15px;line-height:1.5;color:var(--ink);font-weight:500}
+.prose .calc .calc__wa{margin-top:4px;color:var(--ink);font-weight:500}
+.prose .calc .btn{align-self:flex-start;text-decoration:none;color:#fff}
+.prose .calc .btn:hover{color:#fff}
+.calc__h{font-weight:400;color:var(--muted)}
+.calc input{font:inherit;font-size:17px;font-weight:400;color:var(--ink);padding:12px 14px;border:1px solid rgba(20,29,51,.35);border-radius:var(--r);background:#fff;width:100%;max-width:16em}
+.calc input:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+.calc output{display:block;padding:16px 18px;border-left:2px solid var(--gold);background:var(--sand);font-size:16px;line-height:1.6;color:var(--text)}
+.calc output:empty{display:none}
+.calc output strong{display:block;font-family:var(--serif);font-size:28px;font-weight:500;line-height:1.2;margin-bottom:4px}
 '''
 
 
@@ -1126,7 +1212,7 @@ def faq_html(faq):
     return '\n'.join(out)
 
 
-def jsonld(p):
+def jsonld(p, atualizado):
     url = f'{BASE}/{p["slug"]}/'
     crumbs = [('Início', f'{BASE}/')]
     ar = area(p)
@@ -1155,6 +1241,18 @@ def jsonld(p):
                 'image': f'{BASE}/og.jpg',
                 'address': {'@type': 'PostalAddress', 'addressLocality': 'Natal', 'addressRegion': 'RN', 'addressCountry': 'BR'},
             },
+            {
+                '@type': 'WebPage',
+                '@id': url,
+                'url': url,
+                'name': p['title'],
+                'inLanguage': 'pt-BR',
+                'dateModified': atualizado,
+                'about': {'@id': url + '#servico'},
+                'author': {'@id': f'{BASE}/#thayna'},
+                'citation': fontes_ld(p['fontes']),
+            },
+            autora_ld(),
             {
                 '@type': 'BreadcrumbList',
                 'itemListElement': [{'@type': 'ListItem', 'position': i + 1, 'name': n, 'item': u} for i, (n, u) in enumerate(crumbs)],
@@ -1313,9 +1411,14 @@ def posts_da_pagina(p):
     return [q for q in POSTS if q['hub'] == p['slug']]
 
 
-def render(p):
+def upd(d):
+    return f'<time class="upd" datetime="{d}">{data_br(d)}</time>'
+
+
+def render(p, atualizado=HOJE):
+    # atualizado: data da última mudança do conteúdo (vem do lastmod.json; ver o __main__)
     url = f'{BASE}/{p["slug"]}/'
-    ld, crumbs = jsonld(p)
+    ld, crumbs = jsonld(p, atualizado)
     w = html.escape(wa(p['wa']))
     secoes = '\n'.join(f'<h2 id="{slugify(h)}">{h}</h2>{b}' for h, b in p['secoes'])
     rel = ''.join(
@@ -1341,12 +1444,14 @@ def render(p):
     {btn_wa(w)}
     <a class="link" href="#duvidas">Ver perguntas frequentes</a>
   </div>
+  <p class="art-meta">Por <a href="/#sobre">Dra. Thayná Cabral</a>, advogada, {OAB} · Atualizado em {upd(atualizado)}</p>
 </section>
 
 <div class="layout">
   <article class="prose">
 {secoes}
-    <p class="note">Conteúdo informativo, atualizado em 2026. Cada caso tem particularidades e precisa de análise individual dos documentos.</p>
+    {fontes_html(p['fontes'])}
+    <p class="note">Conteúdo informativo, atualizado em {upd(atualizado)}. Cada caso tem particularidades e precisa de análise individual dos documentos.</p>
   </article>
 {aside(w)}
 </div>
@@ -1396,10 +1501,11 @@ def render_post(q):
          'datePublished': q['publicado'], 'dateModified': q['atualizado'], 'inLanguage': 'pt-BR',
          'author': {'@id': f'{BASE}/#thayna'}, 'publisher': {'@id': f'{BASE}/#escritorio'},
          'mainEntityOfPage': url, 'image': f'{BASE}/og.jpg', 'articleSection': area(q)['nome'],
+         'citation': fontes_ld(q['fontes']),
          'isPartOf': {'@type': 'Blog', '@id': f'{BASE}/blog/#blog'}},
         autora_ld(), escritorio_ld(), breadcrumb_ld(crumbs)]}
     w = html.escape(wa(q['wa']))
-    secoes = '\n'.join(f'<h2 id="{slugify(h)}">{h}</h2>{b}' for h, b in q['secoes'])
+    secoes = '\n'.join(f'<h2 id="{slugify(h)}">{h}</h2>{b}' for h, b in q['secoes']).replace('{{WA_BTN}}', btn_wa(w))
     hub_nome = hub['crumb'] if hub['crumb'].startswith(('Direito', 'BPC')) else hub['crumb'][0].lower() + hub['crumb'][1:]
     rel = ''.join(post_card(BY_POST[s]) for s in q['rel'])
     rel += f'<a href="/{hub["slug"]}/"><strong>{html.escape(hub["crumb"])} em Natal</strong><span>{html.escape(hub["desc"].split(". ")[0].rstrip("."))}.</span></a>'
@@ -1417,6 +1523,7 @@ def render_post(q):
   <article class="prose">
     <div class="answer"><strong>Resposta rápida</strong><p>{q['answer']}</p></div>
 {secoes}
+    {fontes_html(q['fontes'])}
     <div class="hubcta">
       <strong>{html.escape(q['cta'][0])}</strong>
       <p>{q['cta'][1]} Veja como funciona o atendimento em <a href="/{hub['slug']}/">{hub_nome} em Natal</a>.</p>
@@ -1507,7 +1614,7 @@ def check_post(q):
         erros.append('atualizado antes de publicado')
     if q.get('slug') != slugify(q.get('slug', '')):
         erros.append('slug com acento, maiúscula ou espaço')
-    return erros
+    return erros + erros_fontes(q)
 
 
 def build_sitemap():
@@ -1520,9 +1627,7 @@ def build_sitemap():
     datas = json.loads(reg.read_text(encoding='utf-8')) if reg.exists() else {}
     for u in urls:
         f = ROOT / u.strip('/') if u.endswith('.html') else ROOT / u.strip('/') / 'index.html'
-        s = f.read_text(encoding='utf-8')
-        m = re.search(r'<main.*?</main>', s, re.S)
-        h = hashlib.sha1((m.group(0) if m else s).encode()).hexdigest()[:12]
+        h = main_hash(f.read_text(encoding='utf-8'))
         if datas.get(u, {}).get('hash') != h:
             datas[u] = {'hash': h, 'data': HOJE}
     reg.write_text(json.dumps(datas, indent=1) + '\n', encoding='utf-8', newline='\n')
@@ -1557,12 +1662,17 @@ def update_index_footer():
 
 if __name__ == '__main__':
     falhas = 0
+    registro = Path(__file__).parent / 'lastmod.json'
+    registro = json.loads(registro.read_text(encoding='utf-8')) if registro.exists() else {}
     for p in PAGES:
-        out = render(p)
+        # a data visível de atualização é a do lastmod.json, e só vira hoje se o conteúdo mudou
+        anterior = registro.get(f'/{p["slug"]}/', {})
+        mudou = anterior.get('hash') != main_hash(render(p))
+        out = render(p, HOJE if mudou else anterior['data'])
         d = ROOT / p['slug']
         d.mkdir(exist_ok=True)
         (d / 'index.html').write_text(out, encoding='utf-8', newline='\n')
-        erros = check(p['title'], p['desc'], f'/{p["slug"]}/', out)
+        erros = check(p['title'], p['desc'], f'/{p["slug"]}/', out) + erros_fontes(p)
         falhas += bool(erros)
         print(f'{"OK " if not erros else "ERRO"} /{p["slug"]}/  title {len(p["title"])} · desc {len(p["desc"])}' + (' · ' + '; '.join(erros) if erros else ''))
 

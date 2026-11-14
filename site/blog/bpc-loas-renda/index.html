@@ -36,7 +36,7 @@
    "headline": "Renda por pessoa no BPC/LOAS: como o INSS calcula",
    "description": "Como o INSS calcula a renda por pessoa no BPC/LOAS em 2026: quem entra na família, o limite de R$ 405,25, o que não conta e quando a Justiça aceita renda maior.",
    "datePublished": "2026-11-12",
-   "dateModified": "2026-11-12",
+   "dateModified": "2026-11-14",
    "inLanguage": "pt-BR",
    "author": {
     "@id": "https://thaynacabraladvocacia.com.br/#thayna"
@@ -47,6 +47,18 @@
    "mainEntityOfPage": "https://thaynacabraladvocacia.com.br/blog/bpc-loas-renda/",
    "image": "https://thaynacabraladvocacia.com.br/og.jpg",
    "articleSection": "Direito Previdenciário",
+   "citation": [
+    {
+     "@type": "Legislation",
+     "name": "Lei 8.742/1993 (Lei Orgânica da Assistência Social, LOAS)",
+     "url": "https://www.planalto.gov.br/ccivil_03/leis/l8742.htm"
+    },
+    {
+     "@type": "Legislation",
+     "name": "Decreto 12.534/2025 (regras do BPC)",
+     "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/decreto/d12534.htm"
+    }
+   ],
    "isPartOf": {
     "@type": "Blog",
     "@id": "https://thaynacabraladvocacia.com.br/blog/#blog"
@@ -407,6 +419,22 @@ a:hover{color:var(--ink)}
 .hubcta{margin:48px 0 0;padding:24px 0;border-top:1px solid var(--ink);border-bottom:1px solid var(--line)}
 .hubcta>strong{display:block;margin-bottom:8px;font-family:var(--serif);font-size:26px;font-weight:500;line-height:1.2}
 .hubcta p{margin:0}
+.fontes{margin:40px 0 0;padding-top:20px;border-top:1px solid var(--line);font-size:15px;line-height:1.6}
+.fontes>strong{display:block;margin-bottom:10px;font-size:15px}
+.prose .fontes ul{gap:6px}
+.calc{margin:24px 0 24px;padding:24px;border:1px solid var(--line);border-top:2px solid var(--ink);border-radius:var(--r);background:#fff;display:flex;flex-direction:column;gap:16px}
+.calc__t{font-family:var(--serif);font-size:26px;font-weight:500;line-height:1.2}
+.prose .calc p{margin:0;font-size:15px;color:var(--muted)}
+.calc label{display:flex;flex-direction:column;gap:6px;font-size:15px;line-height:1.5;color:var(--ink);font-weight:500}
+.prose .calc .calc__wa{margin-top:4px;color:var(--ink);font-weight:500}
+.prose .calc .btn{align-self:flex-start;text-decoration:none;color:#fff}
+.prose .calc .btn:hover{color:#fff}
+.calc__h{font-weight:400;color:var(--muted)}
+.calc input{font:inherit;font-size:17px;font-weight:400;color:var(--ink);padding:12px 14px;border:1px solid rgba(20,29,51,.35);border-radius:var(--r);background:#fff;width:100%;max-width:16em}
+.calc input:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+.calc output{display:block;padding:16px 18px;border-left:2px solid var(--gold);background:var(--sand);font-size:16px;line-height:1.6;color:var(--text)}
+.calc output:empty{display:none}
+.calc output strong{display:block;font-family:var(--serif);font-size:28px;font-weight:500;line-height:1.2;margin-bottom:4px}
 </style>
 </head>
 <body>
@@ -470,7 +498,7 @@ a:hover{color:var(--ink)}
   <p class="eyebrow" style="margin:0">Direito Previdenciário</p>
   <h1 id="h1">Renda por pessoa no BPC/LOAS: como o INSS calcula</h1>
   <p class="hero__sub">A renda é o motivo mais comum de negativa do BPC. Entender quem entra na conta e o que fica de fora ajuda a evitar erros no pedido e a saber se vale recorrer.</p>
-  <p class="art-meta">Por <a href="/#sobre">Dra. Thayná Cabral</a>, advogada, OAB/RN 21.175 · Publicado em 12 de novembro de 2026 · 3 min de leitura</p>
+  <p class="art-meta">Por <a href="/#sobre">Dra. Thayná Cabral</a>, advogada, OAB/RN 21.175 · Publicado em 12 de novembro de 2026 · Atualizado em 14 de novembro de 2026 · 4 min de leitura</p>
 </section>
 
 <div class="layout">
@@ -488,13 +516,43 @@ a:hover{color:var(--ink)}
 <h2 id="como-fazer-a-conta">Como fazer a conta</h2>
 <p>Some a renda bruta mensal das pessoas da família e divida pelo número delas. Exemplo: casal de idosos em que o marido, de 67 anos, recebe aposentadoria de R$ 2.000. A renda por pessoa é de R$ 1.000, acima do limite, e a esposa não recebe o BPC pelo critério do INSS.</p>
 <p>Agora, se a aposentadoria do marido fosse de <strong>um salário mínimo</strong>, ela ficaria fora da conta (veja abaixo), e a esposa poderia receber.</p>
+<div class="calc" id="calculadora" data-sm="1621.0">
+<strong class="calc__t">Calcule a renda por pessoa</strong>
+<p>Use os valores <strong>brutos</strong> do mês. A conta é só uma estimativa: o INSS confere os dados do CadÚnico, e cada caso precisa de análise dos documentos.</p>
+<label for="cb-n">Quantas pessoas da família moram na casa, contando você?<input id="cb-n" type="number" min="1" max="30" step="1" inputmode="numeric" value="2"></label>
+<label for="cb-r">Renda bruta do mês de todas essas pessoas, somada (R$)<span class="calc__h">Some salários, aposentadorias, pensões, pensão alimentícia e Bolsa Família.</span><input id="cb-r" type="text" inputmode="decimal" autocomplete="off" placeholder="Ex.: 1.621,00"></label>
+<label for="cb-x">Quanto dessa soma é BPC ou benefício do INSS de até um salário mínimo? (R$)<span class="calc__h">Só o de outro idoso de 65 anos ou mais ou de pessoa com deficiência da casa. Esse valor sai da conta; se não houver, deixe em branco.</span><input id="cb-x" type="text" inputmode="decimal" autocomplete="off" placeholder="0,00"></label>
+<output id="cb-out" for="cb-n cb-r cb-x" aria-live="polite"></output>
+<p class="calc__wa">Quer que a advogada analise a renda da sua família?</p>
+<a class="btn btn--gold" data-wa href="https://wa.me/5584997010660?text=Ol%C3%A1%2C%20Dra.%20Thayn%C3%A1%21%20Li%20o%20artigo%20sobre%20a%20renda%20do%20BPC%20e%20quero%20saber%20se%20tenho%20direito." target="_blank" rel="noopener"><svg class="wa-i" aria-hidden="true"><use href="#i-wa"/></svg><span class="long">Falar com a advogada no WhatsApp</span><span class="short">Falar no WhatsApp</span></a>
+<noscript><p>Para usar a calculadora, ative o JavaScript. A conta é: soma da renda bruta da família, menos o que não entra na renda, dividida pelo número de pessoas.</p></noscript>
+</div>
+<script>
+(function(){
+  var c=document.getElementById('calculadora'),sm=parseFloat(c.dataset.sm),q=sm/4,m=sm/2;
+  var n=document.getElementById('cb-n'),r=document.getElementById('cb-r'),x=document.getElementById('cb-x'),o=document.getElementById('cb-out'),a=c.querySelector('a[data-wa]');
+  function num(v){v=(v||'').replace(/[^0-9,.]/g,'');if(v.indexOf(',')>-1||/^\d{1,3}(\.\d{3})+$/.test(v))v=v.replace(/\./g,'').replace(',','.');var f=parseFloat(v);return isNaN(f)?0:f}
+  function brl(v){return v.toLocaleString('pt-BR',{style:'currency',currency:'BRL'})}
+  function calc(){
+    var p=parseInt(n.value,10),t=num(r.value),e=Math.min(num(x.value),t);
+    if(!p||p<1||!r.value.trim()){o.innerHTML='';return}
+    var v=(t-e)/p,txt;
+    if(v<=q)txt='Fica dentro de 1/4 do salário mínimo ('+brl(q)+'), o limite geral do INSS em 2026. Além da renda, o INSS confere a idade ou a deficiência e o CadÚnico atualizado.';
+    else if(v<=m)txt='Fica acima de 1/4 do salário mínimo ('+brl(q)+'), o limite geral do INSS. Quando a família tem gastos comprovados com remédios, tratamento, fraldas ou alimentação especial que o SUS não fornece, ou a pessoa depende de cuidados de outra, a lei permite considerar renda de até meio salário mínimo ('+brl(m)+').';
+    else txt='Fica acima de 1/4 do salário mínimo ('+brl(q)+'), o limite geral do INSS, e também acima de meio salário mínimo ('+brl(m)+'), o limite que a lei admite quando há gastos com saúde ou cuidados. Mesmo assim, a Justiça pode analisar a situação real da família, com os gastos e as condições de vida comprovados.';
+    o.innerHTML='<strong>'+brl(v)+' por pessoa</strong>'+txt;
+    if(a)a.href='https://wa.me/'+a.href.split('wa.me/')[1].split('?')[0]+'?text='+encodeURIComponent('Olá, Dra. Thayná! Fiz a conta na calculadora do BPC: '+p+' pessoas na casa e renda de '+brl(v)+' por pessoa. Quero saber se tenho direito.');
+  }
+  [n,r,x].forEach(function(i){i.addEventListener('input',calc)});
+})();
+</script>
 <h2 id="o-que-nao-entra-na-renda">O que não entra na renda</h2>
 <ul>
 <li><strong>BPC ou aposentadoria de até um salário mínimo</strong> recebido por outro idoso de 65 anos ou mais ou por pessoa com deficiência da família;</li>
-<li>a remuneração de estágio ou de aprendiz da pessoa com deficiência;</li>
-<li>pensão especial de natureza indenizatória e alguns auxílios eventuais.</li>
+<li>o que alguém da família ganha como <strong>estagiário ou aprendiz</strong>;</li>
+<li>auxílio financeiro temporário ou indenização recebidos por causa de rompimento de barragem.</li>
 </ul>
-<p>Já o <strong>Bolsa Família</strong> passou a ser somado pelo INSS desde 2025 (Decreto 12.534/2025). A mudança é questionada na Justiça, e há decisões que afastam essa regra.</p>
+<p>O resto entra na soma. Desde 2025 (Decreto 12.534/2025), o INSS passou a somar também o <strong>Bolsa Família</strong> e outros programas de transferência de renda, a pensão especial de natureza indenizatória e os auxílios eventuais, que antes ficavam de fora. A mudança é questionada na Justiça, e há decisões que afastam essa regra.</p>
 <h2 id="quando-a-justica-aceita-renda-maior">Quando a Justiça aceita renda maior</h2>
 <p>O limite de 1/4 não é absoluto. O Supremo Tribunal Federal reconheceu que a miserabilidade pode ser provada por outros meios, e a lei passou a prever a ampliação do limite para até meio salário mínimo em situações regulamentadas. Na prática, a Justiça considera:</p>
 <ul>
@@ -503,11 +561,12 @@ a:hover{color:var(--ink)}
 <li>as condições da moradia, verificadas na avaliação social ou por um perito.</li>
 </ul>
 <p>Guarde receitas, notas fiscais e comprovantes: eles são a prova desses gastos. O passo a passo do pedido está em <a href="/blog/como-pedir-bpc-loas/">como pedir o BPC/LOAS</a>.</p>
+    <div class="fontes"><strong>Fontes oficiais</strong><ul><li><a href="https://www.planalto.gov.br/ccivil_03/leis/l8742.htm" target="_blank" rel="noopener">Lei 8.742/1993 (Lei Orgânica da Assistência Social, LOAS)</a></li><li><a href="https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/decreto/d12534.htm" target="_blank" rel="noopener">Decreto 12.534/2025 (regras do BPC)</a></li></ul></div>
     <div class="hubcta">
       <strong>O BPC foi negado por renda?</strong>
       <p>A conta do INSS nem sempre está certa, e a Justiça analisa a realidade da família. Veja como funciona o atendimento em <a href="/bpc-loas-natal/">BPC/LOAS em Natal</a>.</p>
     </div>
-    <p class="note">Conteúdo informativo, atualizado em 12 de novembro de 2026. As regras do INSS e da Justiça mudam com frequência e cada caso tem particularidades que precisam de análise individual dos documentos.</p>
+    <p class="note">Conteúdo informativo, atualizado em 14 de novembro de 2026. As regras do INSS e da Justiça mudam com frequência e cada caso tem particularidades que precisam de análise individual dos documentos.</p>
   </article>
   <aside class="aside glass" aria-label="Fale com a advogada">
     <div class="aside__who">

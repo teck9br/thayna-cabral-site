@@ -31,7 +31,44 @@
 # Valores de 2026 (Decreto 12.797/2025 e Portaria Interministerial MPS/MF 13/2026): revisar em janeiro.
 SM = 'R$ 1.621,00'
 TETO = 'R$ 8.475,55'
+SM_VALOR = 1621.00  # o mesmo salário mínimo, em número: usado pela calculadora do BPC
+
+# Calculadora da renda por pessoa do BPC (artigo bpc-loas-renda). Sem JavaScript, mostra o aviso
+# do <noscript> e o texto do artigo continua explicando a conta. {{WA_BTN}} vira o botão do WhatsApp
+# (o build.py troca pelo btn_wa); depois da conta, o JavaScript põe o resultado na mensagem.
+CALC_BPC = r'''
+<div class="calc" id="calculadora" data-sm="%(sm)s">
+<strong class="calc__t">Calcule a renda por pessoa</strong>
+<p>Use os valores <strong>brutos</strong> do mês. A conta é só uma estimativa: o INSS confere os dados do CadÚnico, e cada caso precisa de análise dos documentos.</p>
+<label for="cb-n">Quantas pessoas da família moram na casa, contando você?<input id="cb-n" type="number" min="1" max="30" step="1" inputmode="numeric" value="2"></label>
+<label for="cb-r">Renda bruta do mês de todas essas pessoas, somada (R$)<span class="calc__h">Some salários, aposentadorias, pensões, pensão alimentícia e Bolsa Família.</span><input id="cb-r" type="text" inputmode="decimal" autocomplete="off" placeholder="Ex.: 1.621,00"></label>
+<label for="cb-x">Quanto dessa soma é BPC ou benefício do INSS de até um salário mínimo? (R$)<span class="calc__h">Só o de outro idoso de 65 anos ou mais ou de pessoa com deficiência da casa. Esse valor sai da conta; se não houver, deixe em branco.</span><input id="cb-x" type="text" inputmode="decimal" autocomplete="off" placeholder="0,00"></label>
+<output id="cb-out" for="cb-n cb-r cb-x" aria-live="polite"></output>
+<p class="calc__wa">Quer que a advogada analise a renda da sua família?</p>
+{{WA_BTN}}
+<noscript><p>Para usar a calculadora, ative o JavaScript. A conta é: soma da renda bruta da família, menos o que não entra na renda, dividida pelo número de pessoas.</p></noscript>
+</div>
+<script>
+(function(){
+  var c=document.getElementById('calculadora'),sm=parseFloat(c.dataset.sm),q=sm/4,m=sm/2;
+  var n=document.getElementById('cb-n'),r=document.getElementById('cb-r'),x=document.getElementById('cb-x'),o=document.getElementById('cb-out'),a=c.querySelector('a[data-wa]');
+  function num(v){v=(v||'').replace(/[^0-9,.]/g,'');if(v.indexOf(',')>-1||/^\d{1,3}(\.\d{3})+$/.test(v))v=v.replace(/\./g,'').replace(',','.');var f=parseFloat(v);return isNaN(f)?0:f}
+  function brl(v){return v.toLocaleString('pt-BR',{style:'currency',currency:'BRL'})}
+  function calc(){
+    var p=parseInt(n.value,10),t=num(r.value),e=Math.min(num(x.value),t);
+    if(!p||p<1||!r.value.trim()){o.innerHTML='';return}
+    var v=(t-e)/p,txt;
+    if(v<=q)txt='Fica dentro de 1/4 do salário mínimo ('+brl(q)+'), o limite geral do INSS em 2026. Além da renda, o INSS confere a idade ou a deficiência e o CadÚnico atualizado.';
+    else if(v<=m)txt='Fica acima de 1/4 do salário mínimo ('+brl(q)+'), o limite geral do INSS. Quando a família tem gastos comprovados com remédios, tratamento, fraldas ou alimentação especial que o SUS não fornece, ou a pessoa depende de cuidados de outra, a lei permite considerar renda de até meio salário mínimo ('+brl(m)+').';
+    else txt='Fica acima de 1/4 do salário mínimo ('+brl(q)+'), o limite geral do INSS, e também acima de meio salário mínimo ('+brl(m)+'), o limite que a lei admite quando há gastos com saúde ou cuidados. Mesmo assim, a Justiça pode analisar a situação real da família, com os gastos e as condições de vida comprovados.';
+    o.innerHTML='<strong>'+brl(v)+' por pessoa</strong>'+txt;
+    if(a)a.href='https://wa.me/'+a.href.split('wa.me/')[1].split('?')[0]+'?text='+encodeURIComponent('Olá, Dra. Thayná! Fiz a conta na calculadora do BPC: '+p+' pessoas na casa e renda de '+brl(v)+' por pessoa. Quero saber se tenho direito.');
+  }
+  [n,r,x].forEach(function(i){i.addEventListener('input',calc)});
+})();
+</script>''' % {'sm': SM_VALOR}
 D = '2026-11-12'
+D_FONTES = '2026-11-14'  # fontes oficiais acrescentadas a todos os artigos
 
 POSTS = [
     # ============================================================ Aposentadoria
@@ -96,7 +133,8 @@ POSTS = [
         cta=('Quer saber qual regra é melhor para você?', 'O valor depende do seu histórico de contribuições e de períodos que às vezes não aparecem no CNIS.'),
         wa='Olá, Dra. Thayná! Li o artigo sobre aposentadoria da mulher e quero saber se já posso me aposentar.',
         rel=['aposentadoria-rural', 'aposentadoria-quem-nunca-contribuiu', 'acumular-pensao-e-aposentadoria'],
-        publicado=D, atualizado=D, publicar=True,
+        fontes=['ec103', 'l8213'],
+        publicado=D, atualizado=D_FONTES, publicar=True,
     ),
     dict(
         slug='aposentadoria-rural',
@@ -150,7 +188,8 @@ POSTS = [
         cta=('Tem trabalho rural para provar?', 'Cada documento conta, e a forma de apresentar a prova faz diferença no INSS e na Justiça.'),
         wa='Olá, Dra. Thayná! Li o artigo sobre aposentadoria rural e quero saber se tenho direito.',
         rel=['aposentadoria-por-idade-mulher', 'aposentadoria-quem-nunca-contribuiu'],
-        publicado=D, atualizado=D, publicar=True,
+        fontes=['l8213', 'ec103'],
+        publicado=D, atualizado=D_FONTES, publicar=True,
     ),
     dict(
         slug='aposentadoria-quem-nunca-contribuiu',
@@ -191,7 +230,8 @@ POSTS = [
         cta=('Não sabe qual caminho serve para você?', 'Tempo rural, emprego antigo sem registro ou um CNIS incompleto podem mudar a resposta.'),
         wa='Olá, Dra. Thayná! Li o artigo sobre quem nunca contribuiu e quero entender o meu caso.',
         rel=['como-pedir-bpc-loas', 'aposentadoria-rural', 'aposentadoria-por-idade-mulher'],
-        publicado=D, atualizado=D, publicar=True,
+        fontes=['l8742', 'l8213'],
+        publicado=D, atualizado=D_FONTES, publicar=True,
     ),
 
     # ============================================================ BPC/LOAS
@@ -241,7 +281,8 @@ POSTS = [
         cta=('Vai pedir o BPC ou já foi negado?', 'Um CadÚnico correto e laudos completos fazem diferença no resultado.'),
         wa='Olá, Dra. Thayná! Li o artigo sobre como pedir o BPC e tenho uma dúvida.',
         rel=['bpc-loas-renda', 'bpc-loas-autismo', 'aposentadoria-quem-nunca-contribuiu'],
-        publicado=D, atualizado=D, publicar=True,
+        fontes=['l8742', 'l15077'],
+        publicado=D, atualizado=D_FONTES, publicar=True,
     ),
     dict(
         slug='bpc-loas-autismo',
@@ -287,7 +328,8 @@ POSTS = [
         cta=('Seu filho tem autismo e a família tem renda baixa?', 'A forma como o laudo descreve a rotina costuma ser decisiva na perícia.'),
         wa='Olá, Dra. Thayná! Li o artigo sobre BPC para autismo e quero saber se meu filho tem direito.',
         rel=['como-pedir-bpc-loas', 'bpc-loas-renda', 'pensao-por-morte-filhos'],
-        publicado=D, atualizado=D, publicar=True,
+        fontes=['l8742', 'l12764'],
+        publicado=D, atualizado=D_FONTES, publicar=True,
     ),
     dict(
         slug='bpc-loas-renda',
@@ -310,14 +352,14 @@ POSTS = [
 <p>Filhos casados, genros, noras, netos, avós e outros parentes <strong>não entram</strong>, mesmo morando juntos. Também não entra quem mora em outra casa, ainda que ajude com dinheiro.</p>'''),
             ('Como fazer a conta', '''
 <p>Some a renda bruta mensal das pessoas da família e divida pelo número delas. Exemplo: casal de idosos em que o marido, de 67 anos, recebe aposentadoria de R$ 2.000. A renda por pessoa é de R$ 1.000, acima do limite, e a esposa não recebe o BPC pelo critério do INSS.</p>
-<p>Agora, se a aposentadoria do marido fosse de <strong>um salário mínimo</strong>, ela ficaria fora da conta (veja abaixo), e a esposa poderia receber.</p>'''),
+<p>Agora, se a aposentadoria do marido fosse de <strong>um salário mínimo</strong>, ela ficaria fora da conta (veja abaixo), e a esposa poderia receber.</p>''' + CALC_BPC),
             ('O que não entra na renda', '''
 <ul>
 <li><strong>BPC ou aposentadoria de até um salário mínimo</strong> recebido por outro idoso de 65 anos ou mais ou por pessoa com deficiência da família;</li>
-<li>a remuneração de estágio ou de aprendiz da pessoa com deficiência;</li>
-<li>pensão especial de natureza indenizatória e alguns auxílios eventuais.</li>
+<li>o que alguém da família ganha como <strong>estagiário ou aprendiz</strong>;</li>
+<li>auxílio financeiro temporário ou indenização recebidos por causa de rompimento de barragem.</li>
 </ul>
-<p>Já o <strong>Bolsa Família</strong> passou a ser somado pelo INSS desde 2025 (Decreto 12.534/2025). A mudança é questionada na Justiça, e há decisões que afastam essa regra.</p>'''),
+<p>O resto entra na soma. Desde 2025 (Decreto 12.534/2025), o INSS passou a somar também o <strong>Bolsa Família</strong> e outros programas de transferência de renda, a pensão especial de natureza indenizatória e os auxílios eventuais, que antes ficavam de fora. A mudança é questionada na Justiça, e há decisões que afastam essa regra.</p>'''),
             ('Quando a Justiça aceita renda maior', '''
 <p>O limite de 1/4 não é absoluto. O Supremo Tribunal Federal reconheceu que a miserabilidade pode ser provada por outros meios, e a lei passou a prever a ampliação do limite para até meio salário mínimo em situações regulamentadas. Na prática, a Justiça considera:</p>
 <ul>
@@ -336,7 +378,8 @@ POSTS = [
         cta=('O BPC foi negado por renda?', 'A conta do INSS nem sempre está certa, e a Justiça analisa a realidade da família.'),
         wa='Olá, Dra. Thayná! Li o artigo sobre a renda do BPC e quero saber se tenho direito.',
         rel=['como-pedir-bpc-loas', 'bpc-loas-autismo', 'aposentadoria-quem-nunca-contribuiu'],
-        publicado=D, atualizado=D, publicar=True,
+        fontes=['l8742', 'd12534'],
+        publicado=D, atualizado=D_FONTES, publicar=True,
     ),
 
     # ============================================================ Auxílio-doença
@@ -381,7 +424,8 @@ POSTS = [
         cta=('Está sem conseguir trabalhar?', 'O resultado depende muito dos documentos médicos e da forma como a incapacidade é descrita.'),
         wa='Olá, Dra. Thayná! Li o artigo sobre auxílio-doença e quero saber se tenho direito.',
         rel=['valor-auxilio-doenca', 'prorrogacao-auxilio-doenca', 'inss-negou-quem-paga-salario'],
-        publicado=D, atualizado=D, publicar=True,
+        fontes=['l8213', 'd3048'],
+        publicado=D, atualizado=D_FONTES, publicar=True,
     ),
     dict(
         slug='valor-auxilio-doenca',
@@ -427,7 +471,8 @@ POSTS = [
         cta=('Acha que o valor do seu benefício está errado?', 'Salários que faltam no CNIS ou um código de benefício errado mudam o valor.'),
         wa='Olá, Dra. Thayná! Li o artigo sobre o valor do auxílio-doença e quero conferir o meu.',
         rel=['auxilio-doenca-quem-tem-direito', 'prorrogacao-auxilio-doenca'],
-        publicado=D, atualizado=D, publicar=True,
+        fontes=['l8213', 'ec103'],
+        publicado=D, atualizado=D_FONTES, publicar=True,
     ),
     dict(
         slug='prorrogacao-auxilio-doenca',
@@ -469,7 +514,8 @@ POSTS = [
         cta=('A prorrogação foi negada?', 'Ainda há caminhos, com prazos curtos e documentos médicos que precisam ser bem preparados.'),
         wa='Olá, Dra. Thayná! Li o artigo sobre prorrogação do auxílio-doença e preciso de orientação.',
         rel=['auxilio-doenca-quem-tem-direito', 'inss-negou-quem-paga-salario', 'valor-auxilio-doenca'],
-        publicado=D, atualizado=D, publicar=True,
+        fontes=['l8213', 'd3048'],
+        publicado=D, atualizado=D_FONTES, publicar=True,
     ),
     dict(
         slug='inss-negou-quem-paga-salario',
@@ -504,7 +550,8 @@ POSTS = [
         cta=('Está sem benefício e sem salário?', 'O caso envolve o INSS e a empresa ao mesmo tempo, e os prazos dos dois lados correm juntos.'),
         wa='Olá, Dra. Thayná! Li o artigo sobre limbo previdenciário: o INSS me deu alta e a empresa não aceita minha volta.',
         rel=['prorrogacao-auxilio-doenca', 'auxilio-doenca-quem-tem-direito'],
-        publicado=D, atualizado=D, publicar=True,
+        fontes=['l8213', 'clt'],
+        publicado=D, atualizado=D_FONTES, publicar=True,
     ),
 
     # ============================================================ Pensão por morte
@@ -555,7 +602,8 @@ POSTS = [
         cta=('A duração da sua pensão está certa?', 'A data de início da união e as contribuições do falecido mudam o prazo, e o INSS às vezes erra nessa conta.'),
         wa='Olá, Dra. Thayná! Li o artigo sobre a tabela da pensão por morte e quero tirar uma dúvida.',
         rel=['pensao-por-morte-filhos', 'acumular-pensao-e-aposentadoria'],
-        publicado=D, atualizado=D, publicar=True,
+        fontes=['l8213', 'ec103'],
+        publicado=D, atualizado=D_FONTES, publicar=True,
     ),
     dict(
         slug='pensao-por-morte-filhos',
@@ -599,7 +647,8 @@ POSTS = [
         cta=('Ficou com filhos menores depois de uma perda na família?', 'O prazo de 180 dias garante os valores desde o óbito, e os documentos certos evitam atraso.'),
         wa='Olá, Dra. Thayná! Li o artigo sobre pensão por morte para filhos e preciso de orientação.',
         rel=['pensao-por-morte-tabela-idade', 'acumular-pensao-e-aposentadoria', 'bpc-loas-autismo'],
-        publicado=D, atualizado=D, publicar=True,
+        fontes=['l8213', 'ec103'],
+        publicado=D, atualizado=D_FONTES, publicar=True,
     ),
     dict(
         slug='acumular-pensao-e-aposentadoria',
@@ -650,6 +699,7 @@ POSTS = [
         cta=('O INSS aplicou o desconto certo?', 'A data do óbito e a data em que você adquiriu o direito à aposentadoria mudam o cálculo.'),
         wa='Olá, Dra. Thayná! Li o artigo sobre acumular pensão e aposentadoria e quero conferir o meu caso.',
         rel=['pensao-por-morte-tabela-idade', 'aposentadoria-por-idade-mulher', 'pensao-por-morte-filhos'],
-        publicado=D, atualizado=D, publicar=True,
+        fontes=['ec103', 'l8213'],
+        publicado=D, atualizado=D_FONTES, publicar=True,
     ),
 ]
