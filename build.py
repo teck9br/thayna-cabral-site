@@ -103,7 +103,7 @@ PAGES = [
         lead='Pedidos de aposentadoria, BPC/LOAS, auxílio-doença, salário-maternidade, revisões e recursos contra benefícios negados, no INSS e na Justiça. Atendimento no escritório em Natal ou online, com explicação clara de cada etapa.',
         wa='Olá, Dra. Thayná! Preciso de orientação sobre um benefício do INSS.',
         secoes=[
-            ('Quando procurar uma advogada previdenciária', '''
+            ('Quando procurar uma advogada previdenciária?', '''
 <p>Muita gente só procura ajuda depois de um benefício negado, mas o melhor momento costuma ser <strong>antes do pedido</strong>. Um erro no cadastro do INSS, um período de trabalho que não aparece no CNIS ou um documento que faltou pode atrasar a concessão por meses ou reduzir o valor do benefício para sempre.</p>
 <p>Vale buscar orientação quando:</p>
 <ul>
@@ -113,7 +113,7 @@ PAGES = [
 <li>alguém da família é idoso ou tem deficiência e vive com renda baixa;</li>
 <li>o valor da sua aposentadoria parece menor do que deveria.</li>
 </ul>'''),
-            ('O que fazemos no Direito Previdenciário', '''
+            ('Quais casos do INSS o escritório atende?', '''
 <div class="links">
 <a href="/aposentadoria-natal/"><strong>Aposentadoria</strong><span>Por idade, tempo de contribuição, especial, rural e da pessoa com deficiência.</span></a>
 <a href="/bpc-loas-natal/"><strong>BPC/LOAS</strong><span>Benefício de um salário mínimo para idosos e pessoas com deficiência de baixa renda.</span></a>
@@ -123,14 +123,14 @@ PAGES = [
 <a href="/pensao-por-morte-natal/"><strong>Pensão por morte</strong><span>Para cônjuge, companheiro, filhos e outros dependentes de quem faleceu.</span></a>
 </div>
 <p>Também atuamos em aposentadoria por incapacidade permanente (antiga aposentadoria por invalidez), auxílio-acidente e planejamento previdenciário. Os casos são conduzidos tanto no INSS (via administrativa) quanto na Justiça (via judicial).</p>'''),
-            ('Como funciona o caminho até o benefício', '''
+            ('Como é o caminho até o benefício?', '''
 <ol class="steps-l">
 <li><strong>Análise dos documentos.</strong> Conferimos o CNIS, as carteiras de trabalho e os laudos para descobrir o que você já tem de direito e o que falta provar.</li>
 <li><strong>Pedido administrativo.</strong> O requerimento é feito no INSS (pelo Meu INSS) com toda a documentação organizada, o que reduz o risco de negativa.</li>
 <li><strong>Recurso.</strong> Se o INSS negar, é possível recorrer ao Conselho de Recursos da Previdência Social (CRPS), em regra no prazo de 30 dias.</li>
 <li><strong>Ação judicial.</strong> Quando a via administrativa não resolve, o caso vai à Justiça Federal. No Rio Grande do Norte, os processos tramitam na Justiça Federal do RN (TRF da 5ª Região), com Juizados Especiais Federais em Natal para causas de até 60 salários mínimos.</li>
 </ol>'''),
-            ('Atendimento em Natal e em todo o Brasil', '''
+            ('O atendimento é só em Natal?', '''
 <p>O escritório fica em Natal-RN e atende com hora marcada. Como o processo previdenciário é todo eletrônico, também atendemos por videochamada clientes do interior do estado e de outras regiões do país, com o mesmo acompanhamento.</p>'''),
         ],
         faq=[
@@ -152,7 +152,7 @@ PAGES = [
         lead='Depois da Reforma da Previdência, existem várias regras de aposentadoria, e cada uma resulta em um valor diferente. Analisamos o seu histórico para pedir o benefício no momento certo e pela regra mais vantajosa para o seu histórico.',
         wa='Olá, Dra. Thayná! Quero saber se já posso me aposentar.',
         secoes=[
-            ('Tipos de aposentadoria', '''
+            ('Quais são os tipos de aposentadoria?', '''
 <ul>
 <li><strong>Aposentadoria por idade (urbana):</strong> 62 anos para mulheres e 65 para homens. Tempo mínimo de contribuição: 15 anos para mulheres; para homens, 15 anos se já contribuíam antes da Reforma (13/11/2019) e 20 anos se começaram depois.</li>
 <li><strong>Aposentadoria rural:</strong> 55 anos para mulheres e 60 para homens, com 15 anos de atividade rural comprovada, inclusive em regime de economia familiar. É muito comum no interior do Rio Grande do Norte.</li>
@@ -160,7 +160,7 @@ PAGES = [
 <li><strong>Aposentadoria da pessoa com deficiência:</strong> prevista na Lei Complementar 142/2013, com tempo de contribuição reduzido conforme o grau da deficiência, ou por idade (55 anos para mulheres e 60 para homens, com 15 anos de contribuição e deficiência comprovada durante igual período).</li>
 <li><strong>Regras de transição:</strong> para quem já contribuía antes da Reforma, como as regras de pontos, de idade mínima progressiva e de pedágio.</li>
 </ul>'''),
-            ('Regras de transição em 2026', '''
+            ('Quais são as regras de transição em 2026?', '''
 <p>Quem já contribuía antes de 13/11/2019 pode usar regras de transição, que costumam ser mais vantajosas. Em 2026:</p>
 <div class="table-wrap" tabindex="0" role="region" aria-label="Tabela: regras de transição em 2026"><table>
 <thead><tr><th>Regra</th><th>Mulheres</th><th>Homens</th></tr></thead>
@@ -170,9 +170,9 @@ PAGES = [
 <tr><td>Pedágio de 100%</td><td>57 anos, 30 anos de contribuição e o dobro do tempo que faltava em 2019</td><td>60 anos, 35 anos de contribuição e o dobro do tempo que faltava em 2019</td></tr>
 </tbody></table></div>
 <p>As exigências de pontos e de idade sobem a cada ano. Por isso, adiar ou antecipar o pedido em alguns meses pode mudar a regra aplicável e o valor do benefício.</p>'''),
-            ('Planejamento previdenciário', '''
+            ('O que é o planejamento previdenciário?', '''
 <p>O planejamento é uma análise completa do seu histórico (CNIS, carteiras, carnês e PPP) que mostra <strong>quando</strong> você pode se aposentar, <strong>por qual regra</strong> e <strong>com qual valor estimado</strong>. Ele também aponta períodos que faltam no cadastro do INSS, como trabalho rural, tempo especial ou vínculos sem registro, que podem ser comprovados antes do pedido.</p>'''),
-            ('Documentos para dar entrada', '''
+            ('Quais documentos levar para pedir a aposentadoria?', '''
 <ul>
 <li>Documento de identidade e CPF;</li>
 <li>comprovante de residência;</li>
@@ -201,7 +201,7 @@ PAGES = [
         lead='O Benefício de Prestação Continuada garante um salário mínimo mensal a idosos e pessoas com deficiência de baixa renda, mesmo sem nunca ter contribuído para o INSS. Ajudamos no pedido e no recurso quando o benefício é negado.',
         wa='Olá, Dra. Thayná! Quero saber se tenho direito ao BPC/LOAS.',
         secoes=[
-            ('Quem tem direito ao BPC/LOAS', '''
+            ('Quem tem direito ao BPC/LOAS?', '''
 <ul>
 <li><strong>Idosos</strong> a partir de 65 anos;</li>
 <li><strong>pessoas com deficiência</strong> de qualquer idade, inclusive crianças, com impedimento de longo prazo (pelo menos 2 anos) de natureza física, mental, intelectual ou sensorial;</li>
@@ -209,7 +209,7 @@ PAGES = [
 <li>que estejam inscritas no <strong>CadÚnico</strong>, com o cadastro atualizado.</li>
 </ul>
 <p>Não é preciso ter contribuído para o INSS. O BPC está previsto na Lei Orgânica da Assistência Social (Lei 8.742/1993, por isso o nome LOAS).</p>'''),
-            ('Como pedir o BPC/LOAS', '''
+            ('Como pedir o BPC/LOAS?', '''
 <ol class="steps-l">
 <li><strong>Inscreva ou atualize o CadÚnico</strong> no CRAS mais perto de casa. As informações de renda e de quem mora na casa precisam bater com as do pedido.</li>
 <li><strong>Faça o pedido no INSS</strong> pelo Meu INSS (site ou aplicativo) ou pelo telefone 135, escolhendo o Benefício Assistencial à Pessoa Idosa ou à Pessoa com Deficiência.</li>
@@ -217,10 +217,11 @@ PAGES = [
 <li><strong>Acompanhe a perícia médica e a avaliação social</strong>, no caso da pessoa com deficiência, e responda às exigências do INSS dentro do prazo.</li>
 </ol>
 <p>A Lei 15.077/2024 tornou obrigatório o <strong>cadastro biométrico</strong> (como o da CNH, do título de eleitor ou da Carteira de Identidade Nacional) para pedir e para manter o benefício.</p>'''),
-            ('Qual a renda exigida', '''
-<p>O critério geral é renda familiar <strong>por pessoa de até 1/4 do salário mínimo</strong>. Para calcular, soma-se a renda de quem mora na mesma casa (requerente, cônjuge, pais, irmãos solteiros, filhos e enteados solteiros) e divide-se pelo número de pessoas. Para fazer a conta da sua família, use a <a href="/blog/bpc-loas-renda/#calculadora">calculadora de renda do BPC</a>.</p>
+            ('Qual a renda exigida para o BPC em 2026?', '''
+<p>O critério geral é renda familiar <strong>por pessoa de até 1/4 do salário mínimo</strong>, ou seja, R$ 405,25 em 2026. Para calcular, soma-se a renda de quem mora na mesma casa (requerente, cônjuge, pais, irmãos solteiros, filhos e enteados solteiros) e divide-se pelo número de pessoas. Para fazer a conta da sua família, use a <a href="/blog/bpc-loas-renda/#calculadora">calculadora de renda do BPC</a>.</p>
 <p>Esse limite não é absoluto. O Supremo Tribunal Federal já reconheceu que a situação de vulnerabilidade pode ser provada por outros meios, e a Justiça analisa a realidade da família: gastos com remédios, fraldas, tratamentos e condições da moradia.</p>'''),
-            ('Por que o INSS nega o BPC', '''
+            ('Por que o INSS nega o BPC?', '''
+<p>Os motivos mais comuns da negativa são:</p>
 <ul>
 <li>renda por pessoa acima de 1/4 do salário mínimo no cálculo do INSS;</li>
 <li>CadÚnico desatualizado ou com informações diferentes das do pedido;</li>
@@ -228,7 +229,8 @@ PAGES = [
 <li>falta de documentos médicos que mostrem a duração do impedimento.</li>
 </ul>
 <p>Em muitos desses casos, a negativa pode ser revertida com recurso administrativo ou ação na Justiça Federal, com laudos e uma avaliação social que mostrem a realidade da família.</p>'''),
-            ('O que é bom saber', '''
+            ('Quais as regras do BPC depois de concedido?', '''
+<p>Depois de concedido, o BPC tem regras próprias:</p>
 <ul>
 <li>O BPC não é aposentadoria: não paga 13º salário e não deixa pensão por morte.</li>
 <li>O benefício é revisto periodicamente, e o CadÚnico precisa ser mantido atualizado.</li>
@@ -254,21 +256,21 @@ PAGES = [
         lead='A negativa do INSS não é o fim. Dependendo do motivo, é possível pedir de novo, recorrer ou entrar na Justiça Federal com uma nova perícia. Explicamos o caminho mais rápido para o seu caso.',
         wa='Olá, Dra. Thayná! Meu auxílio-doença foi negado/cortado e preciso de orientação.',
         secoes=[
-            ('O que é o auxílio-doença hoje', '''
+            ('O que é o auxílio-doença hoje?', '''
 <p>Desde a Reforma da Previdência, o auxílio-doença se chama <strong>auxílio por incapacidade temporária</strong>. Ele é pago ao segurado que fica incapaz para o trabalho por mais de 15 dias por doença ou acidente. Os requisitos são:</p>
 <ul>
 <li><strong>qualidade de segurado:</strong> estar contribuindo ou dentro do período de graça;</li>
 <li><strong>carência de 12 contribuições</strong>, que não é exigida em caso de acidente de qualquer natureza nem para doenças graves previstas em lei, como câncer, cardiopatia grave e doença de Parkinson;</li>
 <li><strong>incapacidade comprovada</strong> por perícia médica ou por análise de documentos médicos.</li>
 </ul>'''),
-            ('Motivos mais comuns da negativa', '''
+            ('Por que o INSS nega o auxílio-doença?', '''
 <ul>
 <li><strong>"Não constatação de incapacidade":</strong> o perito do INSS entendeu que você pode trabalhar. É o motivo mais frequente;</li>
 <li><strong>falta de carência</strong> ou <strong>perda da qualidade de segurado</strong>, muitas vezes por erro do INSS no cadastro de contribuições;</li>
 <li><strong>doença anterior à filiação</strong> ao INSS;</li>
 <li><strong>documentos médicos incompletos</strong>, sem CID, data de início da doença ou descrição das limitações.</li>
 </ul>'''),
-            ('Os caminhos depois da negativa', '''
+            ('O que fazer quando o INSS nega o auxílio-doença?', '''
 <ol class="steps-l">
 <li><strong>Novo pedido</strong>, com laudos e exames mais completos, quando o problema foi a documentação.</li>
 <li><strong>Recurso ao CRPS</strong>, em regra no prazo de 30 dias da ciência da decisão, pelo Meu INSS.</li>
@@ -276,7 +278,7 @@ PAGES = [
 </ol>
 <p>Se o benefício foi <strong>cortado</strong> (cessado), atenção ao <strong>pedido de prorrogação</strong>, que deve ser feito nos 15 dias anteriores à data de cessação. Se o prazo passou, ainda cabem recurso e ação judicial.</p>
 <p>Quando a doença ou o acidente tem relação com o trabalho, o benefício é acidentário: a ação corre na Justiça Estadual e pode haver reflexos trabalhistas, como estabilidade de 12 meses após o retorno.</p>'''),
-            ('Como se preparar para a perícia', '''
+            ('Como se preparar para a perícia do INSS?', '''
 <ul>
 <li>Leve laudos recentes com CID, data de início da doença, tratamento e <strong>limitações para o trabalho</strong>;</li>
 <li>reúna exames, receitas e relatórios de internação;</li>
@@ -302,7 +304,7 @@ PAGES = [
         lead='Erros no cadastro e no cálculo do INSS são comuns e podem reduzir o seu benefício por toda a vida. A revisão corrige o valor e permite cobrar as diferenças dos últimos 5 anos.',
         wa='Olá, Dra. Thayná! Quero saber se minha aposentadoria pode ser revisada.',
         secoes=[
-            ('Quando a revisão é possível', '''
+            ('Quando é possível pedir a revisão do benefício?', '''
 <ul>
 <li><strong>Vínculos ou salários que não aparecem no CNIS</strong> e ficaram fora do cálculo;</li>
 <li><strong>tempo especial não reconhecido</strong>, como trabalho exposto a ruído, agentes químicos ou biológicos;</li>
@@ -311,18 +313,18 @@ PAGES = [
 <li><strong>tempo de serviço militar, de aluno-aprendiz ou de trabalho no exterior</strong> não contado;</li>
 <li><strong>regra de aposentadoria menos vantajosa</strong> aplicada quando havia outra que pagava mais.</li>
 </ul>'''),
-            ('Prazo para pedir a revisão', '''
+            ('Qual o prazo para pedir a revisão?', '''
 <p>O prazo para revisar o ato de concessão é de <strong>10 anos</strong>, contados do mês seguinte ao do primeiro pagamento (art. 103 da Lei 8.213/1991). Passado esse prazo, o direito à revisão se perde.</p>
 <p>As diferenças atrasadas são pagas, em regra, dos <strong>últimos 5 anos</strong> antes do pedido. Por isso, quanto antes a revisão for feita, maior o valor recuperado.</p>'''),
             ('E a revisão da vida toda?', '''
 <p>A chamada revisão da vida toda, que permitia incluir os salários anteriores a julho de 1994 no cálculo, <strong>foi afastada pelo Supremo Tribunal Federal em 2024</strong>. Hoje essa revisão não é mais possível. Existem outras revisões possíveis, que dependem da análise do seu processo de concessão.</p>'''),
-            ('Como analisamos o seu benefício', '''
+            ('Como é feita a análise do benefício?', '''
 <ol class="steps-l">
 <li>Pedimos a cópia do processo administrativo e a carta de concessão, que mostra como o INSS fez o cálculo.</li>
 <li>Comparamos o cálculo com o seu CNIS, as carteiras de trabalho e os documentos de tempo especial ou rural.</li>
 <li>Se houver diferença, explicamos quanto o benefício pode aumentar e qual o caminho: pedido de revisão no INSS ou ação na Justiça Federal.</li>
 </ol>'''),
-            ('Como os atrasados são pagos depois da ação', '''
+            ('Como os atrasados são pagos depois da ação?', '''
 <p>Quando a revisão é ganha na Justiça Federal, as diferenças atrasadas são pagas por requisição judicial. Até <strong>60 salários mínimos</strong>, o pagamento sai por <strong>RPV</strong>, em poucos meses. Acima disso, vira <strong>precatório</strong>, que entra no orçamento da União e costuma ser pago no ano seguinte ou depois, conforme a data em que foi expedido.</p>
 <p>Expliquei em detalhes como funciona o precatório do INSS, como consultar e quando ele é pago neste artigo: <a href="https://antecipayprecatorios.com.br/blog/precatorio-inss/" target="_blank" rel="noopener">precatório do INSS: o que é e quando é pago</a>.</p>'''),
         ],
@@ -345,7 +347,7 @@ PAGES = [
         lead='O benefício vale para quem tem carteira assinada, para autônomas, MEI, trabalhadoras rurais e até para quem está desempregada. Explicamos os requisitos, o valor e o que fazer se o pedido for negado.',
         wa='Olá, Dra. Thayná! Preciso de orientação sobre salário-maternidade.',
         secoes=[
-            ('Quem tem direito', '''
+            ('Quem tem direito ao salário-maternidade?', '''
 <p>O salário-maternidade é pago por <strong>120 dias</strong> à segurada do INSS em caso de parto, adoção ou guarda judicial para fins de adoção. Têm direito:</p>
 <ul>
 <li><strong>empregadas com carteira assinada</strong> e empregadas domésticas;</li>
@@ -357,7 +359,7 @@ PAGES = [
             ('Carência: é preciso ter contribuído quanto tempo?', '''
 <p>Para empregadas, domésticas e trabalhadoras avulsas, <strong>não há carência</strong>: basta ser segurada. A lei exigia 10 contribuições de autônomas e facultativas, mas em 2024 o <strong>STF declarou essa exigência inconstitucional</strong> (ADIs 2110 e 2111). Hoje, o essencial é comprovar a <strong>qualidade de segurada</strong> na data do parto.</p>
 <p>A trabalhadora rural precisa comprovar a <strong>atividade no campo</strong> antes do parto, com documentos como a autodeclaração, a CAF (antiga DAP), notas de venda da produção e declaração do sindicato.</p>'''),
-            ('Valor e quem paga', '''
+            ('Qual o valor do salário-maternidade e quem paga?', '''
 <ul>
 <li><strong>empregada:</strong> o salário integral, pago pela empresa, que depois compensa com o INSS;</li>
 <li><strong>doméstica:</strong> o último salário de contribuição, pago pelo INSS;</li>
@@ -365,7 +367,7 @@ PAGES = [
 <li><strong>trabalhadora rural e MEI:</strong> em regra, um salário mínimo;</li>
 <li><strong>desempregada:</strong> pago diretamente pelo INSS, com base nas últimas contribuições.</li>
 </ul>'''),
-            ('Como pedir e o que fazer se o INSS negar', '''
+            ('Como pedir o salário-maternidade e o que fazer se o INSS negar?', '''
 <ol class="steps-l">
 <li><strong>Pedido no Meu INSS</strong> (site ou aplicativo) ou pelo telefone 135, com a certidão de nascimento ou o termo de guarda. Quem tem carteira assinada pede na própria empresa.</li>
 <li><strong>Prazo:</strong> o pedido pode ser feito a partir de 28 dias antes do parto. Se você não pediu na época, ainda é possível pedir depois: as parcelas prescrevem em 5 anos.</li>
@@ -391,7 +393,7 @@ PAGES = [
         lead='A pensão por morte é paga pelo INSS aos dependentes de quem contribuía ou já era aposentado. Orientamos sobre quem tem direito, o prazo para pedir, a duração do benefício e o recurso quando o INSS nega.',
         wa='Olá, Dra. Thayná! Quero saber sobre pensão por morte do INSS.',
         secoes=[
-            ('Quem tem direito à pensão por morte', '''
+            ('Quem tem direito à pensão por morte?', '''
 <p>Recebem a pensão os <strong>dependentes</strong> do segurado que faleceu, em três classes. Se existe dependente de uma classe, os das classes seguintes não recebem:</p>
 <ul>
 <li><strong>1ª classe:</strong> cônjuge, companheiro ou companheira em união estável e filhos menores de 21 anos, ou de qualquer idade se forem inválidos ou tiverem deficiência intelectual, mental ou grave. Enteado e menor sob tutela entram como filhos, se provada a dependência econômica;</li>
@@ -399,7 +401,7 @@ PAGES = [
 <li><strong>3ª classe:</strong> irmãos menores de 21 anos, inválidos ou com deficiência, também com prova de dependência econômica.</li>
 </ul>
 <p>A dependência do cônjuge, do companheiro e dos filhos é presumida. A pensão não exige número mínimo de contribuições, mas quem faleceu precisava ter <strong>qualidade de segurado</strong>: estar contribuindo, estar no período de graça depois da última contribuição ou já ser aposentado.</p>'''),
-            ('Quanto tempo dura a pensão do cônjuge', '''
+            ('Quanto tempo dura a pensão do cônjuge?', '''
 <p>A duração para o cônjuge ou companheiro depende da idade dele na data do óbito, desde que o falecido tivesse pelo menos <strong>18 contribuições</strong> e o casamento ou a união tivesse pelo menos <strong>2 anos</strong>. Sem esses dois requisitos, a pensão dura 4 meses.</p>
 <div class="table-wrap"><table>
 <tr><th>Idade do cônjuge no óbito</th><th>Duração da pensão</th></tr>
@@ -411,10 +413,10 @@ PAGES = [
 <tr><td>45 anos ou mais</td><td>Vitalícia</td></tr>
 </table></div>
 <p>Idades da Portaria ME 424/2020, válidas para óbitos a partir de 2021. Se o óbito decorreu de acidente ou de doença do trabalho, a regra das 18 contribuições e dos 2 anos não se aplica.</p>'''),
-            ('Qual o valor da pensão', '''
+            ('Qual o valor da pensão por morte?', '''
 <p>Desde a Reforma da Previdência (EC 103/2019), a pensão é formada por uma <strong>cota familiar de 50%</strong> da aposentadoria que o falecido recebia, ou da que teria direito se fosse aposentado por incapacidade, <strong>mais 10% por dependente</strong>, até o limite de 100%.</p>
 <p>Exemplo: viúva com um filho menor recebe 70% (50% + 10% + 10%). Quando o filho completa 21 anos, a cota dele acaba e não passa para a mãe. Se houver dependente inválido ou com deficiência grave, a pensão é de 100%. Quando a pensão é a única renda formal do dependente, ela não pode ser menor que o salário mínimo (R$ 1.621,00 em 2026).</p>'''),
-            ('Prazo para pedir e documentos', '''
+            ('Qual o prazo para pedir a pensão e quais documentos levar?', '''
 <p>Para receber desde a data do óbito, o pedido deve ser feito em até <strong>90 dias</strong>, ou em até <strong>180 dias</strong> para filhos menores de 16 anos. Depois desse prazo, a pensão é paga a partir da data do pedido. O pedido é feito pelo Meu INSS ou pelo telefone 135, com:</p>
 <ul>
 <li>certidão de óbito e documentos de identidade e CPF do falecido e dos dependentes;</li>
@@ -422,7 +424,7 @@ PAGES = [
 <li>na união estável, provas da vida em comum, como conta conjunta, comprovante de mesmo endereço, plano de saúde ou seguro com o companheiro como dependente.</li>
 </ul>
 <p>A lei exige ao menos um <strong>documento</strong> da união produzido nos 24 meses anteriores ao óbito: só testemunhas não bastam.</p>'''),
-            ('Por que o INSS nega a pensão', '''
+            ('Por que o INSS nega a pensão por morte?', '''
 <ul>
 <li>o INSS entendeu que o falecido tinha perdido a qualidade de segurado;</li>
 <li>a união estável não foi aceita por falta de documentos;</li>
@@ -453,7 +455,7 @@ PAGES = [
         lead='Verbas rescisórias não pagas, horas extras, trabalho sem carteira, rescisão indireta e acidente de trabalho. Analisamos o seu caso, explicamos com clareza o que pode ser cobrado da empresa e acompanhamos você de perto em cada etapa.',
         wa='Olá, Dra. Thayná! Preciso de orientação sobre uma questão trabalhista.',
         secoes=[
-            ('Quando procurar uma advogada trabalhista', '''
+            ('Quando procurar uma advogada trabalhista?', '''
 <p>O momento mais comum é logo depois da saída da empresa, mas muitas situações pedem orientação <strong>ainda durante o contrato</strong>, quando é possível reunir provas com mais facilidade. Vale buscar ajuda quando:</p>
 <ul>
 <li>a empresa não pagou a rescisão no prazo ou pagou valores menores;</li>
@@ -462,7 +464,7 @@ PAGES = [
 <li>a empresa atrasa salários, não deposita o FGTS ou trata você com abuso;</li>
 <li>sofreu acidente ou adoeceu por causa do trabalho.</li>
 </ul>'''),
-            ('O que fazemos no Direito Trabalhista', '''
+            ('Quais casos trabalhistas o escritório atende?', '''
 <div class="links">
 <a href="/verbas-rescisorias/"><strong>Verbas rescisórias</strong><span>Rescisão não paga, paga com atraso ou calculada errado.</span></a>
 <a href="/rescisao-indireta/"><strong>Rescisão indireta</strong><span>Quando a falta grave é da empresa e o trabalhador pode sair com todos os direitos.</span></a>
@@ -470,12 +472,12 @@ PAGES = [
 <a href="/trabalho-sem-carteira-assinada/"><strong>Trabalho sem carteira</strong><span>Reconhecimento do vínculo e dos direitos de todo o período.</span></a>
 <a href="/acidente-de-trabalho/"><strong>Acidente de trabalho</strong><span>Estabilidade, benefício do INSS e indenização contra a empresa.</span></a>
 </div>'''),
-            ('Prazo para entrar com a ação', '''
+            ('Qual o prazo para entrar com a ação trabalhista?', '''
 <p>O trabalhador tem até <strong>2 anos após o fim do contrato</strong> para entrar com a ação, e pode cobrar os direitos dos <strong>últimos 5 anos</strong>, contados da data em que a ação é proposta (art. 7º, XXIX, da Constituição). Cada mês de espera pode representar um mês de direitos perdidos.</p>'''),
-            ('Advogada trabalhista online', '''
+            ('Dá para ter advogada trabalhista online?', '''
 <p>O processo trabalhista é eletrônico, então o atendimento pode ser feito <strong>online</strong>, por videochamada, com envio de documentos pelo WhatsApp. As audiências podem ser presenciais ou por videoconferência, conforme a vara.</p>
 <p>Isso permite atender trabalhadores do interior do Rio Grande do Norte e de outros estados. A ação costuma ser proposta no local onde o trabalho foi prestado (art. 651 da CLT), e avaliamos cada caso antes de começar.</p>'''),
-            ('Como funciona o processo', '''
+            ('Como funciona o processo trabalhista?', '''
 <ol class="steps-l">
 <li><strong>Análise do caso.</strong> Conferimos contrato, carteira de trabalho, contracheques, extrato do FGTS, termo de rescisão e as provas que você tem, como mensagens e testemunhas.</li>
 <li><strong>Tentativa de acordo</strong>, quando faz sentido, antes ou durante o processo.</li>
@@ -502,7 +504,7 @@ PAGES = [
         lead='A empresa tem 10 dias, contados do fim do contrato, para pagar a rescisão. Se não pagou, atrasou ou calculou errado, é possível cobrar a diferença e as multas na Justiça do Trabalho.',
         wa='Olá, Dra. Thayná! A empresa não pagou (ou pagou errado) minha rescisão.',
         secoes=[
-            ('O que você recebe em cada tipo de saída', '''
+            ('O que você recebe em cada tipo de demissão?', '''
 <div class="table-wrap" tabindex="0" role="region" aria-label="Tabela: verbas por tipo de saída"><table>
 <thead><tr><th>Tipo de saída</th><th>Verbas</th></tr></thead>
 <tbody>
@@ -512,10 +514,10 @@ PAGES = [
 <tr><td>Justa causa</td><td>Saldo de salário e férias vencidas com 1/3.</td></tr>
 </tbody></table></div>
 <p>O <strong>aviso prévio</strong> é de 30 dias, com mais 3 dias por ano completo de trabalho, até o limite de 90 dias (Lei 12.506/2011).</p>'''),
-            ('Prazo de pagamento e multas', '''
+            ('Qual o prazo para pagar a rescisão e a multa pelo atraso?', '''
 <p>As verbas rescisórias devem ser pagas em até <strong>10 dias</strong> contados do fim do contrato (art. 477, § 6º, da CLT). Se a empresa atrasar, deve pagar uma <strong>multa de um salário</strong> do trabalhador (art. 477, § 8º).</p>
 <p>Se o caso chegar à Justiça e a empresa não pagar, na primeira audiência, as verbas que ela mesma reconhece como devidas, esses valores são acrescidos de <strong>50%</strong> (art. 467 da CLT).</p>'''),
-            ('Erros comuns na rescisão', '''
+            ('Quais são os erros mais comuns na rescisão?', '''
 <ul>
 <li>horas extras, adicionais e comissões que não entraram na média das férias e do 13º;</li>
 <li>FGTS com depósitos faltando ao longo do contrato, o que reduz também a multa de 40%;</li>
@@ -524,7 +526,7 @@ PAGES = [
 <li>pedido de demissão "forçado", quando na verdade a saída foi decisão da empresa.</li>
 </ul>
 <p>Confira o seu extrato do FGTS no aplicativo da Caixa: depósitos faltando são um dos problemas mais frequentes.</p>'''),
-            ('Justa causa injusta', '''
+            ('O que fazer quando a justa causa é injusta?', '''
 <p>A justa causa só pode ser aplicada nas hipóteses do art. 482 da CLT e precisa de prova, proporcionalidade e aplicação imediata. Se for revertida na Justiça, o trabalhador recebe tudo o que receberia numa demissão sem justa causa, e, conforme o caso, indenização por danos morais.</p>'''),
         ],
         faq=[
@@ -547,7 +549,7 @@ PAGES = [
         lead='Se a empresa descumpre obrigações sérias, o trabalhador pode encerrar o contrato e receber tudo o que receberia se fosse demitido sem justa causa. Mas o caminho exige cuidado: um passo errado pode virar pedido de demissão.',
         wa='Olá, Dra. Thayná! Acho que meu caso pode ser de rescisão indireta.',
         secoes=[
-            ('Quando cabe a rescisão indireta', '''
+            ('Quando cabe a rescisão indireta?', '''
 <p>As hipóteses estão no art. 483 da CLT. As mais comuns na prática são:</p>
 <ul>
 <li><strong>atraso frequente de salários</strong> ou pagamento "por fora";</li>
@@ -557,9 +559,9 @@ PAGES = [
 <li>exposição a <strong>perigo manifesto</strong>, como falta de equipamentos de proteção;</li>
 <li>redução do trabalho de forma a reduzir muito o salário de quem ganha por produção.</li>
 </ul>'''),
-            ('Direitos na rescisão indireta', '''
+            ('Quais são os direitos na rescisão indireta?', '''
 <p>Reconhecida a rescisão indireta, o trabalhador recebe as mesmas verbas da <a href="/verbas-rescisorias/">demissão sem justa causa</a>: saldo de salário, aviso prévio proporcional, 13º e férias proporcionais com 1/3, saque do FGTS com multa de 40% e as guias do seguro-desemprego. Também podem ser cobradas as dívidas que motivaram a saída, como salários e FGTS atrasados, e, em casos de assédio, indenização por danos morais.</p>'''),
-            ('Como fazer da forma certa', '''
+            ('Como pedir a rescisão indireta da forma certa?', '''
 <ol class="steps-l">
 <li><strong>Reúna provas</strong> antes de qualquer passo: extrato do FGTS, contracheques, mensagens, áudios, e-mails e nomes de testemunhas.</li>
 <li><strong>Busque orientação antes de sair.</strong> Em alguns casos, como atraso de salário e falta de FGTS, a lei permite continuar trabalhando enquanto o processo corre (art. 483, § 3º). Em outros, o afastamento precisa ser bem documentado.</li>
@@ -587,7 +589,7 @@ PAGES = [
         lead='Chegar antes, sair depois, almoçar em 20 minutos ou responder mensagens fora do expediente pode gerar horas extras. Elas valem pelo menos 50% a mais e refletem no FGTS, nas férias e no 13º.',
         wa='Olá, Dra. Thayná! Trabalho (ou trabalhei) além do horário e não recebi horas extras.',
         secoes=[
-            ('O que conta como hora extra', '''
+            ('O que conta como hora extra?', '''
 <p>A jornada normal é de até <strong>8 horas por dia e 44 por semana</strong> (art. 7º, XIII, da Constituição), salvo regras específicas da categoria. O tempo além disso é hora extra e deve ser pago com adicional de, no mínimo, <strong>50%</strong>. O trabalho em domingos e feriados sem folga compensatória é pago em dobro.</p>
 <p>Situações comuns:</p>
 <ul>
@@ -597,11 +599,11 @@ PAGES = [
 <li>banco de horas sem acordo válido ou com horas que nunca foram compensadas;</li>
 <li>cursos e reuniões obrigatórios fora do horário.</li>
 </ul>'''),
-            ('Intervalo de almoço não concedido', '''
+            ('A empresa deve pagar o intervalo de almoço que não deu?', '''
 <p>Quem trabalha mais de 6 horas tem direito a intervalo de pelo menos 1 hora. Se a empresa concede menos, deve pagar o <strong>tempo suprimido com adicional de 50%</strong> (art. 71, § 4º, da CLT). Também há o intervalo de 11 horas entre o fim de uma jornada e o início da outra.</p>'''),
-            ('Reflexos: por que o valor cresce', '''
+            ('O que são os reflexos das horas extras?', '''
 <p>Horas extras habituais entram no cálculo de outras verbas: <strong>descanso semanal remunerado, férias com 1/3, 13º salário, FGTS com multa de 40% e aviso prévio</strong>. Por isso, cobrar horas extras de 5 anos costuma representar um valor bem maior do que a soma das horas.</p>'''),
-            ('Como provar as horas extras', '''
+            ('Como provar as horas extras?', '''
 <ul>
 <li><strong>Cartões de ponto:</strong> empresas com mais de 20 empregados são obrigadas a controlar a jornada (art. 74, § 2º, da CLT). Se a empresa não apresentar os registros, a jornada informada pelo trabalhador pode prevalecer;</li>
 <li><strong>mensagens e e-mails</strong> com horário, registros de acesso a sistemas e fotos;</li>
@@ -629,7 +631,7 @@ PAGES = [
         lead='Quando existe relação de emprego, a falta de registro não tira os direitos do trabalhador. É possível pedir o reconhecimento do vínculo e cobrar tudo o que deixou de ser pago, inclusive o tempo para a aposentadoria.',
         wa='Olá, Dra. Thayná! Trabalhei (ou trabalho) sem carteira assinada.',
         secoes=[
-            ('Quando existe vínculo de emprego', '''
+            ('Quando existe vínculo de emprego?', '''
 <p>Pela CLT (arts. 2º e 3º), há relação de emprego quando o trabalho reúne:</p>
 <ul>
 <li><strong>pessoalidade:</strong> é você quem trabalha, sem poder mandar outra pessoa no seu lugar;</li>
@@ -638,7 +640,7 @@ PAGES = [
 <li><strong>salário:</strong> o trabalho é pago.</li>
 </ul>
 <p>O nome dado ao contrato não importa. "Freelancer fixo", "prestador de serviço" ou MEI contratado como PJ podem ser, na prática, empregados (a chamada pejotização).</p>'''),
-            ('O que pode ser cobrado', '''
+            ('O que dá para cobrar de quem trabalhou sem carteira?', '''
 <ul>
 <li>anotação da carteira de trabalho com as datas e o salário reais;</li>
 <li>FGTS de todo o período, com multa de 40% se a saída foi sem justa causa;</li>
@@ -647,9 +649,9 @@ PAGES = [
 <li>horas extras e adicionais, se houver;</li>
 <li>recolhimento do INSS, que passa a contar para a <a href="/aposentadoria-natal/">aposentadoria</a> e garante cobertura de benefícios.</li>
 </ul>'''),
-            ('Empregada doméstica e diarista', '''
+            ('Diarista tem direito à carteira assinada?', '''
 <p>Quem trabalha em casa de família <strong>mais de 2 dias por semana</strong> para o mesmo empregador é empregado doméstico e tem direito à carteira assinada, FGTS, férias, 13º e controle de jornada (Lei Complementar 150/2015). Até 2 dias por semana, em regra, é diarista, sem vínculo.</p>'''),
-            ('Como provar o vínculo', '''
+            ('Como provar o vínculo de emprego?', '''
 <ul>
 <li>mensagens de WhatsApp com ordens, escalas e cobranças;</li>
 <li>comprovantes de pagamento, PIX e transferências regulares;</li>
@@ -677,28 +679,28 @@ PAGES = [
         lead='Quem sofre acidente ou adoece por causa do trabalho tem proteção dupla: benefícios do INSS e direitos contra a empresa, como estabilidade no emprego e indenização por danos.',
         wa='Olá, Dra. Thayná! Sofri um acidente de trabalho (ou doença ocupacional) e preciso de orientação.',
         secoes=[
-            ('O que é acidente de trabalho', '''
+            ('O que é acidente de trabalho?', '''
 <ul>
 <li><strong>acidente típico:</strong> ocorre durante o trabalho, como quedas, cortes e lesões com máquinas;</li>
 <li><strong>doença ocupacional:</strong> causada ou agravada pelo trabalho, como LER/DORT, problemas de coluna, perda auditiva e transtornos psicológicos ligados ao ambiente de trabalho;</li>
 <li><strong>acidente a serviço da empresa</strong> fora do local de trabalho, como em viagens e entregas.</li>
 </ul>
 <p>A empresa deve emitir a <strong>CAT</strong> (Comunicação de Acidente de Trabalho). Se não emitir, o próprio trabalhador, o sindicato, o médico ou um familiar podem fazer isso.</p>'''),
-            ('Direitos junto ao INSS', '''
+            ('Quais são os direitos no INSS depois do acidente?', '''
 <ul>
 <li><strong>auxílio por incapacidade temporária acidentário</strong> (o antigo auxílio-doença acidentário) a partir do 16º dia de afastamento, sem exigência de carência;</li>
 <li><strong>auxílio-acidente</strong>, de 50% do salário de benefício, se ficar sequela que reduza a capacidade para o trabalho, pago mesmo depois da volta ao emprego;</li>
 <li><strong>aposentadoria por incapacidade permanente</strong>, se não houver possibilidade de reabilitação.</li>
 </ul>
 <p>Se o INSS negar ou cortar o benefício, veja o que fazer em <a href="/auxilio-doenca-negado/">auxílio-doença negado</a>.</p>'''),
-            ('Direitos contra a empresa', '''
+            ('Quais são os direitos contra a empresa?', '''
 <ul>
 <li><strong>estabilidade de 12 meses</strong> após o fim do auxílio acidentário (art. 118 da Lei 8.213/1991): a empresa não pode demitir sem justa causa nesse período;</li>
 <li><strong>depósito do FGTS</strong> durante todo o afastamento por acidente;</li>
 <li><strong>indenização por danos morais, materiais e estéticos</strong>, quando a empresa teve culpa (falta de equipamento de proteção, treinamento ou fiscalização) ou quando a atividade é de risco;</li>
 <li><strong>pensão mensal</strong> proporcional à perda da capacidade de trabalho, em casos de sequela permanente.</li>
 </ul>'''),
-            ('O que fazer depois do acidente', '''
+            ('O que fazer depois do acidente de trabalho?', '''
 <ol class="steps-l">
 <li>Procure atendimento médico e guarde todos os laudos, exames e atestados.</li>
 <li>Peça a emissão da CAT e guarde uma cópia.</li>
@@ -728,7 +730,7 @@ PAGES = [
         lead='Golpes e fraudes bancárias, divórcio, guarda, pensão alimentícia, inventário e indenizações. Orientação clara para resolver, sempre que possível, de forma rápida e com menos desgaste.',
         wa='Olá, Dra. Thayná! Preciso de orientação sobre uma questão cível ou de família.',
         secoes=[
-            ('O que fazemos no Direito Cível', '''
+            ('Quais casos cíveis o escritório atende?', '''
 <h3>Golpes e fraudes bancárias</h3>
 <div class="links">
 <a href="/direito-bancario-natal/"><strong>Golpes do Pix e fraudes</strong><span>Transferências feitas por golpistas e falhas de segurança do banco.</span></a>
@@ -739,7 +741,7 @@ PAGES = [
 <h3>Direito de Família</h3>
 <div class="links">
 <a href="/divorcio-natal/"><strong>Divórcio e partilha de bens</strong><span>Em cartório ou na Justiça, conforme o regime de bens.</span></a>
-<a href="/divorcio-natal/#filhos-guarda-convivencia-e-pensao"><strong>Guarda e visitas</strong><span>Guarda dos filhos e regulamentação de visitas (convivência).</span></a>
+<a href="/divorcio-natal/#como-ficam-a-guarda-e-a-pensao-dos-filhos"><strong>Guarda e visitas</strong><span>Guarda dos filhos e regulamentação de visitas (convivência).</span></a>
 <a href="/pensao-alimenticia-natal/"><strong>Pensão alimentícia</strong><span>Pedido, revisão, exoneração e cobrança de pensão atrasada.</span></a>
 </div>
 <h3>Direito das Sucessões</h3>
@@ -751,9 +753,9 @@ PAGES = [
 <a href="/indenizacao-danos-morais-natal/"><strong>Danos morais e materiais</strong><span>Indenização por ofensas, falhas de serviço e acidentes.</span></a>
 <a href="/nome-negativado-indevidamente/"><strong>Negativação indevida</strong><span>Retirada do nome do Serasa e SPC e indenização.</span></a>
 </div>'''),
-            ('Resolver no cartório ou na Justiça', '''
+            ('Dá para resolver no cartório, sem processo?', '''
 <p>Muitas questões de família podem ser resolvidas <strong>em cartório</strong>, de forma mais rápida, quando há acordo entre as partes, como divórcio consensual e inventário. Quando não há acordo, ou a lei exige, o caminho é a Justiça, nas Varas de Família e Cíveis da Comarca de Natal ou nos Juizados Especiais Cíveis para causas de menor valor.</p>'''),
-            ('Como funciona o atendimento', '''
+            ('Como funciona o atendimento?', '''
 <ol class="steps-l">
 <li><strong>Conversa inicial</strong> para entender a situação e os documentos que você já tem.</li>
 <li><strong>Caminhos possíveis</strong>, com vantagens, prazos e custos de cada um, incluindo a tentativa de acordo.</li>
@@ -780,7 +782,7 @@ PAGES = [
         lead='Negativação indevida, cobranças que você não reconhece, plano de saúde que nega tratamento e voos cancelados. O Código de Defesa do Consumidor prevê a devolução de valores e, conforme o caso, indenização.',
         wa='Olá, Dra. Thayná! Tenho um problema com uma empresa e preciso de orientação.',
         secoes=[
-            ('Situações mais comuns', '''
+            ('Quais são os problemas de consumo mais comuns?', '''
 <ul>
 <li><strong><a href="/nome-negativado-indevidamente/">Nome negativado indevidamente</a></strong> no Serasa ou SPC por dívida já paga ou que não existe: segundo o STJ, o dano moral é presumido;</li>
 <li><strong>cobrança indevida paga:</strong> o consumidor tem direito à devolução em dobro do que pagou a mais, com correção (art. 42, parágrafo único, do CDC), salvo engano justificável;</li>
@@ -789,15 +791,15 @@ PAGES = [
 <li><strong>voo cancelado ou atrasado</strong>, extravio de bagagem e overbooking;</li>
 <li><strong>produto com defeito</strong> não resolvido em 30 dias, e compras on-line não entregues.</li>
 </ul>'''),
-            ('Descontos indevidos no benefício do INSS', '''
+            ('O que fazer com descontos indevidos no benefício do INSS?', '''
 <p>Aposentados e pensionistas são alvo frequente de empréstimos consignados e mensalidades de associações que nunca autorizaram. É possível pedir o cancelamento, a devolução dos valores descontados e, conforme o caso, indenização. Confira o extrato do benefício no Meu INSS.</p>'''),
-            ('Prazos e onde reclamar', '''
+            ('Qual o prazo e onde reclamar?', '''
 <ul>
 <li>Antes da Justiça, uma reclamação no <strong>consumidor.gov.br</strong> ou no <strong>Procon</strong> pode resolver e serve como prova;</li>
 <li>o prazo para pedir indenização por danos causados por produto ou serviço é de <strong>5 anos</strong> (art. 27 do CDC);</li>
 <li>causas de até 40 salários mínimos podem tramitar no <strong>Juizado Especial Cível</strong>, sem custas na primeira instância.</li>
 </ul>'''),
-            ('Provas que ajudam', '''
+            ('Quais provas ajudam contra a empresa?', '''
 <ul>
 <li>prints de cobranças, faturas, extratos e da consulta ao Serasa ou SPC;</li>
 <li>protocolos de atendimento, e-mails e conversas com a empresa;</li>
@@ -825,10 +827,10 @@ PAGES = [
         lead='Ofensas, negativação indevida, falhas graves de serviço e acidentes podem gerar o dever de indenizar. Explicamos se o seu caso tem fundamento, quais provas reunir e qual o caminho mais adequado.',
         wa='Olá, Dra. Thayná! Quero saber se o meu caso dá direito a indenização por danos morais.',
         secoes=[
-            ('O que é dano moral', '''
+            ('O que é dano moral?', '''
 <p>Dano moral é a ofensa a direitos ligados à pessoa, como a <strong>honra, a imagem, a intimidade e a integridade física e psíquica</strong>. Quem causa esse dano por ação, omissão ou negligência tem o dever de indenizar (arts. 186 e 927 do Código Civil e art. 5º, V e X, da Constituição).</p>
 <p>Nem todo aborrecimento gera indenização. A Justiça analisa a gravidade do fato, a repercussão na vida da pessoa e as provas apresentadas.</p>'''),
-            ('Situações que costumam gerar indenização', '''
+            ('Quais situações costumam gerar indenização?', '''
 <ul>
 <li><a href="/nome-negativado-indevidamente/">nome negativado indevidamente</a> no Serasa ou SPC;</li>
 <li>descontos não autorizados em conta ou no benefício do INSS;</li>
@@ -838,16 +840,16 @@ PAGES = [
 <li>erro médico e falhas no atendimento de saúde;</li>
 <li><a href="/acidente-de-trabalho/">acidente ou doença causada pelo trabalho</a>, que é julgado pela Justiça do Trabalho.</li>
 </ul>'''),
-            ('Danos morais, materiais e estéticos', '''
+            ('Qual a diferença entre dano moral, material e estético?', '''
 <p>O <strong>dano material</strong> é o prejuízo financeiro comprovado: o que você gastou ou perdeu (danos emergentes) e o que deixou de ganhar (lucros cessantes). O <strong>dano moral</strong> é o sofrimento causado pelo fato. Quando há marca ou deformidade permanente, pode haver também <strong>dano estético</strong>. Os três podem ser pedidos na mesma ação.</p>'''),
-            ('Prazo para pedir', '''
+            ('Qual o prazo para pedir indenização por danos morais?', '''
 <ul>
 <li><strong>3 anos</strong> é a regra geral para a reparação civil (art. 206, §3º, V, do Código Civil);</li>
 <li><strong>5 anos</strong> quando o dano vem de produto ou serviço, numa relação de consumo (art. 27 do CDC);</li>
 <li>na Justiça do Trabalho, <strong>2 anos</strong> após o fim do contrato.</li>
 </ul>
 <p>Em regra, o prazo conta a partir do momento em que a pessoa soube do dano e de quem o causou.</p>'''),
-            ('Provas que ajudam', '''
+            ('Quais provas ajudam a pedir indenização?', '''
 <ul>
 <li>prints com data, link e nome do autor; para conteúdo que pode ser apagado, a <strong>ata notarial</strong> em cartório dá mais segurança;</li>
 <li>boletim de ocorrência, laudos, receitas e atestados médicos;</li>
@@ -875,7 +877,7 @@ PAGES = [
         lead='Dívida já paga, conta que você não abriu, cobrança de valor errado ou negativação sem aviso. Nesses casos, é possível pedir a retirada do nome dos cadastros e, conforme o caso, indenização.',
         wa='Olá, Dra. Thayná! Meu nome foi negativado indevidamente e preciso de orientação.',
         secoes=[
-            ('Quando a negativação é indevida', '''
+            ('Quando a negativação é indevida?', '''
 <ul>
 <li><strong>dívida já paga:</strong> depois do pagamento, o credor tem <strong>5 dias úteis</strong> para pedir a retirada do nome (Súmula 548 do STJ);</li>
 <li><strong>dívida que não é sua:</strong> contas, cartões ou empréstimos abertos por terceiros com os seus dados;</li>
@@ -883,14 +885,14 @@ PAGES = [
 <li><strong>sem aviso prévio:</strong> você deve ser comunicado por escrito antes da inclusão (art. 43, §2º, do CDC);</li>
 <li><strong>mais de 5 anos:</strong> a informação negativa não pode ficar nos cadastros por mais de 5 anos (art. 43, §1º, do CDC), mesmo que a dívida não tenha sido paga.</li>
 </ul>'''),
-            ('O que fazer agora', '''
+            ('O que fazer quando o nome foi negativado indevidamente?', '''
 <ol class="steps-l">
 <li><strong>Consulte o seu CPF</strong> de graça no Serasa, no SPC, na Boa Vista e no Registrato, do Banco Central, e salve os comprovantes da consulta.</li>
 <li><strong>Reúna as provas:</strong> comprovantes de pagamento, contratos, faturas e, em caso de fraude, o boletim de ocorrência.</li>
 <li><strong>Reclame com a empresa</strong> e no consumidor.gov.br, e anote os protocolos.</li>
 <li><strong>Se não resolver,</strong> é possível pedir na Justiça a retirada do nome com urgência (liminar) e indenização.</li>
 </ol>'''),
-            ('Quando cabe indenização', '''
+            ('Nome negativado indevidamente dá direito a indenização?', '''
 <p>Segundo o STJ, a inscrição indevida em cadastro de inadimplentes gera <strong>dano moral presumido</strong>: não é preciso provar o constrangimento. A exceção é quando a pessoa já tinha outras negativações legítimas na mesma época (Súmula 385 do STJ). Mesmo nesse caso, é possível pedir a retirada da negativação indevida.</p>
 <p>Em fraudes bancárias praticadas por terceiros, o banco responde pelos danos (Súmula 479 do STJ). Veja também a página sobre <a href="/indenizacao-danos-morais-natal/">indenização por danos morais</a>.</p>'''),
         ],
@@ -914,7 +916,7 @@ PAGES = [
         lead='Empréstimos que você não contratou, descontos no benefício do INSS, juros muito acima do mercado e golpes em conta. A relação com o banco é de consumo, e a lei protege o cliente.',
         wa='Olá, Dra. Thayná! Tenho um problema com um banco e preciso de orientação.',
         secoes=[
-            ('Situações mais comuns', '''
+            ('Quais são os problemas mais comuns com bancos?', '''
 <ul>
 <li><strong>empréstimo consignado que você não pediu</strong>, descontado do salário ou do benefício do INSS;</li>
 <li><strong>cartão de crédito consignado (RMC ou RCC)</strong> contratado como se fosse empréstimo, com desconto mensal que não diminui a dívida;</li>
@@ -923,14 +925,14 @@ PAGES = [
 <li><strong>golpes e fraudes</strong> em conta, Pix e cartão clonado;</li>
 <li><strong>dívidas que comprometem o sustento</strong> da família (superendividamento).</li>
 </ul>'''),
-            ('O que a lei garante', '''
+            ('O que a lei garante ao cliente do banco?', '''
 <ul>
 <li>o banco responde pelos danos de <strong>fraudes praticadas por terceiros</strong> nas operações bancárias (Súmula 479 do STJ);</li>
 <li>quem pagou valor indevido tem direito à <strong>devolução em dobro</strong>, com correção (art. 42, parágrafo único, do CDC), salvo engano justificável;</li>
 <li>os juros podem ser revistos quando ficam <strong>muito acima da taxa média</strong> divulgada pelo Banco Central para o mesmo tipo de operação, segundo o STJ. Juros acima de 12% ao ano, por si sós, não são abusivos (Súmula 382 do STJ);</li>
 <li>a <strong>Lei do Superendividamento</strong> (Lei 14.181/2021) permite renegociar todas as dívidas de consumo em um plano de pagamento que preserve o mínimo para viver.</li>
 </ul>'''),
-            ('O que fazer agora', '''
+            ('O que fazer em caso de golpe ou empréstimo não contratado?', '''
 <ol class="steps-l">
 <li><strong>Reúna os documentos:</strong> extratos, contratos, faturas e o extrato de empréstimos do Meu INSS, se for aposentado ou pensionista.</li>
 <li><strong>Consulte o Registrato</strong>, do Banco Central, que mostra de graça os empréstimos e contas em seu nome.</li>
@@ -959,18 +961,18 @@ PAGES = [
         lead='O divórcio pode ser feito em cartório, quando há acordo, ou na Justiça. Explicamos cada caminho, os prazos e o que acontece com os bens, a guarda dos filhos e a pensão.',
         wa='Olá, Dra. Thayná! Preciso de orientação sobre divórcio.',
         secoes=[
-            ('Divórcio em cartório ou na Justiça', '''
+            ('Como fazer o divórcio: em cartório ou na Justiça?', '''
 <p>Desde a Emenda Constitucional 66/2010, não é preciso separação prévia nem tempo mínimo de casamento para se divorciar, e não é necessário apontar culpado.</p>
 <ul>
 <li><strong>Divórcio extrajudicial (em cartório):</strong> quando o casal está de acordo sobre o divórcio e a partilha. É feito por escritura pública, com advogado, e costuma ser concluído rapidamente. Desde 2024, o CNJ admite o divórcio em cartório mesmo com filhos menores, desde que guarda, convivência e pensão já tenham sido resolvidas na Justiça;</li>
 <li><strong>divórcio judicial consensual:</strong> quando há acordo, mas as questões dos filhos ainda precisam ser definidas pelo juiz;</li>
 <li><strong>divórcio litigioso:</strong> quando não há acordo. Mesmo assim, o divórcio em si pode ser decretado logo, e as discussões sobre bens e filhos seguem no processo.</li>
 </ul>'''),
-            ('Partilha de bens', '''
+            ('Como fica a partilha de bens no divórcio?', '''
 <p>A divisão depende do <strong>regime de bens</strong>. No mais comum, a comunhão parcial (aplicada quando não há pacto antenupcial), dividem-se os bens adquiridos de forma onerosa durante o casamento. Ficam de fora, em regra, os bens anteriores ao casamento e os recebidos por herança ou doação. Na união estável, sem contrato escrito, valem as mesmas regras da comunhão parcial.</p>'''),
-            ('Filhos: guarda, convivência e pensão', '''
+            ('Como ficam a guarda e a pensão dos filhos?', '''
 <p>A <strong>guarda compartilhada</strong> é a regra quando ambos os pais estão aptos (Lei 13.058/2014). Ela divide as decisões sobre a vida da criança, mas não significa que a criança more metade do tempo com cada um. Também são definidos o regime de convivência (a antiga regulamentação de visitas) e a <a href="/pensao-alimenticia-natal/">pensão alimentícia</a>.</p>'''),
-            ('Documentos para o divórcio', '''
+            ('Quais documentos são necessários para o divórcio?', '''
 <ul>
 <li>certidão de casamento atualizada e pacto antenupcial, se houver;</li>
 <li>documentos pessoais dos dois e certidões de nascimento dos filhos;</li>
@@ -998,18 +1000,18 @@ PAGES = [
         lead='A pensão garante o sustento de quem não pode se manter sozinho, principalmente dos filhos. O valor depende da necessidade de quem recebe e da possibilidade de quem paga, e pode ser revisto quando a situação muda.',
         wa='Olá, Dra. Thayná! Preciso de orientação sobre pensão alimentícia.',
         secoes=[
-            ('Como o valor é definido', '''
+            ('Como é definido o valor da pensão alimentícia?', '''
 <p>Não existe percentual fixo em lei. O juiz considera o <strong>binômio necessidade e possibilidade</strong> (art. 1.694 do Código Civil): as despesas de quem recebe (alimentação, escola, saúde, moradia, lazer) e a renda de quem paga. O valor pode ser fixado em percentual do salário, quando há emprego formal, ou em valor fixo.</p>'''),
-            ('Até quando a pensão é paga', '''
+            ('Até quando a pensão alimentícia é paga?', '''
 <ul>
 <li>Para filhos, em regra, até os 18 anos, podendo se estender até os 24 anos se estiverem cursando faculdade ou curso técnico;</li>
 <li>a pensão <strong>não termina automaticamente</strong> aos 18 anos: o fim depende de uma ação de <strong>exoneração de alimentos</strong> e de decisão judicial (Súmula 358 do STJ);</li>
 <li>a gestante pode pedir <strong>alimentos gravídicos</strong> durante a gravidez (Lei 11.804/2008), que se convertem em pensão após o nascimento;</li>
 <li>na falta ou impossibilidade dos pais, os avós podem ser chamados a complementar.</li>
 </ul>'''),
-            ('Revisão da pensão', '''
+            ('Dá para pedir a revisão da pensão alimentícia?', '''
 <p>Se a situação de quem paga ou de quem recebe mudar, como desemprego, aumento de renda, novas despesas de saúde ou escola, é possível pedir a <strong>revisão</strong> para aumentar ou diminuir o valor. Até a nova decisão, continua valendo o valor anterior: deixar de pagar por conta própria gera dívida.</p>'''),
-            ('Pensão atrasada', '''
+            ('Como cobrar pensão alimentícia atrasada?', '''
 <p>A cobrança pode ser feita por dois caminhos (art. 528 do Código de Processo Civil):</p>
 <ul>
 <li><strong>pelo rito da prisão:</strong> para as 3 últimas parcelas vencidas antes da ação e as que vencerem durante o processo, o devedor pode ser preso por 1 a 3 meses se não pagar (Súmula 309 do STJ);</li>
@@ -1036,15 +1038,15 @@ PAGES = [
         lead='Quando alguém falece deixando bens, é o inventário que transfere o patrimônio aos herdeiros. Ele pode ser feito em cartório, quando há acordo, ou na Justiça. Orientamos sobre prazos, impostos e documentos.',
         wa='Olá, Dra. Thayná! Preciso de orientação sobre inventário.',
         secoes=[
-            ('Inventário em cartório ou judicial', '''
+            ('Quando o inventário pode ser feito em cartório?', '''
 <ul>
 <li><strong>Inventário extrajudicial (em cartório):</strong> quando todos os herdeiros estão de acordo com a partilha. É feito por escritura pública, com advogado, e costuma ser muito mais rápido. Desde 2024, o CNJ passou a admitir o inventário em cartório também em situações antes restritas à Justiça, como a existência de herdeiros menores, com regras específicas;</li>
 <li><strong>inventário judicial:</strong> obrigatório quando não há acordo entre os herdeiros e em outros casos previstos em lei.</li>
 </ul>'''),
-            ('Prazo e impostos', '''
+            ('Qual o prazo do inventário e quais impostos pagar?', '''
 <p>O inventário deve ser aberto em até <strong>2 meses</strong> a partir do falecimento (art. 611 do Código de Processo Civil). O atraso pode gerar multa sobre o ITCMD, o imposto estadual sobre heranças, cobrado no Rio Grande do Norte pela Secretaria de Estado da Tributação (SET-RN).</p>
 <p>Enquanto o inventário não termina, os bens, em regra, só podem ser vendidos ou transferidos com autorização judicial (alvará), e contas bancárias e imóveis ficam indisponíveis para os herdeiros.</p>'''),
-            ('Documentos necessários', '''
+            ('Quais documentos são necessários para o inventário?', '''
 <ul>
 <li>certidão de óbito e documentos pessoais do falecido;</li>
 <li>certidão de casamento ou prova de união estável, e documentos do cônjuge ou companheiro;</li>
@@ -1052,7 +1054,7 @@ PAGES = [
 <li>documentos dos bens: matrículas de imóveis, documentos de veículos, extratos bancários e de investimentos;</li>
 <li>certidões negativas de débitos do falecido e testamento, se houver.</li>
 </ul>'''),
-            ('Quem são os herdeiros', '''
+            ('Quem são os herdeiros?', '''
 <p>Pelo Código Civil, os herdeiros necessários são os <strong>descendentes</strong> (filhos, netos), os <strong>ascendentes</strong> (pais, avós) e o <strong>cônjuge</strong> (a situação do companheiro em união estável é tratada de forma semelhante pelos tribunais). Com os filhos, o cônjuge concorre conforme o regime de bens; com os pais, herda independentemente do regime. Na falta desses, herdam os irmãos, sobrinhos, tios e primos, nessa ordem.</p>'''),
         ],
         faq=[
